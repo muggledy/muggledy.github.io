@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Muggledy&#39;s Blog</title>
+  <icon>https://muggledy.github.io/icon.png</icon>
+  
+  <link href="https://muggledy.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://muggledy.github.io/"/>
+  <updated>2021-03-20T12:20:34.695Z</updated>
+  <id>https://muggledy.github.io/</id>
+  
+  <author>
+    <name>Muggledy</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://muggledy.github.io/posts/16107/"/>
+    <id>https://muggledy.github.io/posts/16107/</id>
+    <published>2021-03-20T07:38:21.156Z</published>
+    <updated>2021-03-20T12:20:34.695Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="其他" scheme="https://muggledy.github.io/categories/%E5%85%B6%E4%BB%96/"/>
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://muggledy.github.io/posts/16108/"/>
+    <id>https://muggledy.github.io/posts/16108/</id>
+    <published>2021-03-19T13:02:51.559Z</published>
+    <updated>2021-03-20T12:20:34.703Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="环境配置" scheme="https://muggledy.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42638/"/>
+    <id>https://muggledy.github.io/posts/42638/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-03-20T12:31:22.881Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="mathematics" scheme="https://muggledy.github.io/categories/mathematics/"/>
+    
+    
+    <category term="fit theory" scheme="https://muggledy.github.io/tags/fit-theory/"/>
+    
+  </entry>
+  
+</feed>
