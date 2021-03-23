@@ -44,10 +44,6 @@
     color: var(--font-color) !important;
 }
 
-/* 适配暗夜模式 */
-[data-theme="dark"] #footer-wrap {
-    background-color: #030808;
-}
 
 /*相关文章 圆角*/
 .relatedPosts-list div {
