@@ -25,25 +25,29 @@
 
 /*透明底部*/
 #footer {
-    background: rgba(255,255,255,0) !important;
-    color: #000 !important;
+    background: rgba(255,255,255,0);
+    color: #000;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    backdrop-filter: saturate(100%) blur(5px) !important;
+    backdrop-filter: saturate(100%) blur(5px)
 }
 
 #footer::before {
-    background: rgba(255,255,255,0) !important;
+    background: rgba(255,255,255,0)
 }
 
 #footer #footer-wrap {
-    color: var(--font-color) !important;
+    color: var(--font-color);
 }
 
 #footer #footer-wrap a {
-    color: var(--font-color) !important;
+    color: var(--font-color);
 }
 
+/* 适配暗夜模式 */
+[data-theme="dark"] #footer-wrap {
+    background-color: #030808;
+}
 
 /*相关文章 圆角*/
 .relatedPosts-list div {
@@ -392,8 +396,8 @@ div.timenode:before {
 }
 /*由于时间线显示有点错位，所以这里的数值改了点，之前是top: 26px; height: calc(100% - 26px)*/
 div.timenode:after {
-  top: 25px;
-  height: calc(100% - 2px);
+  top: 26px;
+  height: calc(100% - 10px);
 }
 div.timenode:last-child:after {
   height: calc(100% - 26px - 16px);
