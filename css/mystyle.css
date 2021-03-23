@@ -663,3 +663,61 @@ div.timenode:hover .meta:after {
 #canvas {
 	pointer-events: none;
 }
+
+/*所有头部顶图（除了post页面）施加“质感”（细密的线条纹理） 直接F12爬的https://nekodeng.gitee.io*/
+/*#page-header:not(.post-bg)::before {*/
+/*改为 非首页以及非post页面 施加该特效*/
+.not-home-page::before {
+	background-image: url(https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210323130806.png);
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	left: 0;
+	top: 0;
+	content: "";
+}
+
+/*解决哔哩哔哩banner图（也是非post非首页显示）被上面的线条纹理所遮挡 目前电脑端细密纹理层被banner层遮挡，而手机端则隐藏banner层，显示出细密纹理*/
+#winterBanner, #autumnBanner {
+	z-index: 5;
+}
+
+/*解决页面标题被哔哩哔哩banner所遮挡，解决后标题所在整行在banner之前又会遮挡banner，因此为了最大限度减小影响，通过width属性（fit-content）使标题所在div宽度自动适应其中的内容，这时标题会从左排列，因此再设置left属性及transform属性，使其居（父容器）中*/
+#page-site-info {
+	z-index: 6;
+	width: fit-content !important;
+	width: -webkit-fit-content !important;
+	width: -moz-fit-content !important;
+	left: 50%;
+	transform: translate(-50%);
+}
+
+/*解决搜索框被标题所遮挡*/
+.search-dialog {
+	z-index:1000000;
+}
+
+/* 斜纹滚动条 似乎感官上不是很融洽 */
+/*
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e58a8a;
+    background-image: -webkit-linear-gradient( 45deg, rgba(255, 255, 255, 0.4) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.4) 75%, transparent 75%, transparent);
+    border-radius: 2em;
+}
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #fff;
+    background-color: #e58a8a;
+}
+*/

@@ -6,7 +6,7 @@
   <link href="https://muggledy.github.io/atom.xml" rel="self"/>
   
   <link href="https://muggledy.github.io/"/>
-  <updated>2021-03-22T18:00:56.517Z</updated>
+  <updated>2021-03-23T07:22:03.225Z</updated>
   <id>https://muggledy.github.io/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>主题语法合集</title>
-    <link href="https://muggledy.github.io/posts/1/"/>
-    <id>https://muggledy.github.io/posts/1/</id>
+    <link href="https://muggledy.github.io/posts/63886/"/>
+    <id>https://muggledy.github.io/posts/63886/</id>
     <published>2021-03-21T04:44:11.750Z</published>
-    <updated>2021-03-22T18:00:56.517Z</updated>
+    <updated>2021-03-23T07:22:03.225Z</updated>
     
     
     <summary type="html">适用于本主题的全部标签插件以及一些扩展</summary>
@@ -40,14 +40,14 @@
     <link href="https://muggledy.github.io/posts/16107/"/>
     <id>https://muggledy.github.io/posts/16107/</id>
     <published>2021-03-20T07:38:21.156Z</published>
-    <updated>2021-03-20T12:20:34.695Z</updated>
+    <updated>2021-03-23T06:52:24.011Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
     
@@ -72,7 +72,7 @@
       
         
         
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
     
