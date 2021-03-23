@@ -25,23 +25,23 @@
 
 /*透明底部*/
 #footer {
-    background: rgba(255,255,255,0);
-    color: #000;
+    background: rgba(255,255,255,0) !important;
+    color: #000 !important;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
-    backdrop-filter: saturate(100%) blur(5px)
+    backdrop-filter: saturate(100%) blur(5px) !important;
 }
 
 #footer::before {
-    background: rgba(255,255,255,0)
+    background: rgba(255,255,255,0) !important;
 }
 
 #footer #footer-wrap {
-    color: var(--font-color);
+    color: var(--font-color) !important;
 }
 
 #footer #footer-wrap a {
-    color: var(--font-color);
+    color: var(--font-color) !important;
 }
 
 /* 适配暗夜模式 */
@@ -394,9 +394,10 @@ div.timenode:before {
   top: 0px;
   height: 6px;
 }
+/*由于时间线显示有点错位，所以这里的数值改了点，之前是top: 26px; height: calc(100% - 26px)*/
 div.timenode:after {
-  top: 26px;
-  height: calc(100% - 26px);
+  top: 25px;
+  height: calc(100% - 2px);
 }
 div.timenode:last-child:after {
   height: calc(100% - 26px - 16px);
