@@ -715,3 +715,7 @@ div.timenode:hover .meta:after {
     background-color: #e58a8a;
 }
 */
+
+#gitcalendar {
+	line-height: 0.8 !important;
+}
