@@ -716,6 +716,33 @@ div.timenode:hover .meta:after {
 }
 */
 
+/*git calendar中行间距设置*/
 #gitcalendar {
 	line-height: 1.4 !important;
+}
+/*
+.recent-post-item{
+	overflow: hidden;
+}
+*/
+
+/*post文章背景高斯模糊设置*/
+.dyblurbg {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-filter: blur(15px);
+	-moz-filter: blur(15px);
+	-ms-filter: blur(15px);
+	filter: blur(15px);
+	opacity: 0.6;
+}
+
+.recent-post-item{
+	position: relative;
+	overflow: hidden;
+}
+
+.recent-post-info {
+	z-index: 1;
 }

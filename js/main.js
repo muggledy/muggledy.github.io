@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function () {
         document.documentElement.style.setProperty('--global-font-size', newValue + 'px')
         !document.getElementById('nav').classList.contains('hide-menu') && adjustMenu(true)
       } else {
-        if (fontSizeVal <= 10) return
+        if (fontSizeVal <= 13) return
         newValue = fontSizeVal - 1
         document.documentElement.style.setProperty('--global-font-size', newValue + 'px')
         document.getElementById('nav').classList.contains('hide-menu') && adjustMenu(true)
