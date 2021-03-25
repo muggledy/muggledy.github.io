@@ -726,7 +726,7 @@ div.timenode:hover .meta:after {
 }
 */
 
-/*post文章背景高斯模糊设置*/
+/*首页post文章背景高斯模糊设置*/
 .dyblurbg {
 	position: absolute;
 	width: 100%;
@@ -750,4 +750,37 @@ div.timenode:hover .meta:after {
 
 .recent-post-info {
 	z-index: 1;
+}
+
+/*修复哔哩哔哩banner和post文章顶图不适应暗夜模式的问题*/
+[data-theme="dark"] #winterBanner::before, [data-theme="dark"] #autumnBanner::before {
+	content:'';
+	display:block;
+	position:relative;
+	width:100%;
+	height:100%;
+	z-index:7;
+	background-color:#121212;
+	opacity:0.7;
+}
+
+[data-theme="dark"] #page-header.post-bg::before {
+	background-color:#121212;
+	opacity:0.7;
+}
+
+/*归档页面添加生肖图案*/
+svg.icon {
+  /* 这里定义svg.icon，避免和Butterfly自带的note标签冲突 */
+   width: 1.2em; height: 1em;
+   /* width和height定义图标的默认宽度和高度*/
+   vertical-align: -0.15em;
+   fill: currentColor;
+   overflow: hidden;
+   margin-left:10px;
+}
+
+[data-theme="dark"] svg.icon {
+	background-color: #b8b8b8;
+	border-radius: 3px;
 }
