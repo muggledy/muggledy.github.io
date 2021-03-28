@@ -18,11 +18,12 @@ window.addEventListener('load', () => {
     })
   }
 
+  //堪称有史以来最狗逼的地方，下面第5行原始代码为：setTimeout(() => { $searchDialog.style.cssText = "display: none; animation: ''" }, 500)，该延迟会导致搜索框在pjax过程结束后，新页面打开时仍有可能短暂地显示在界面中，十分难看
   const closeSearch = function () {
     document.body.style.cssText = "width: '';overflow: ''"
     const $searchDialog = document.querySelector('#local-search .search-dialog')
     $searchDialog.style.animation = 'search_close .5s'
-    setTimeout(() => { $searchDialog.style.cssText = "display: none; animation: ''" }, 500)
+    $searchDialog.style.cssText = "display: none; animation: ''"
     btf.fadeOut(document.getElementById('search-mask'), 0.5)
   }
 
