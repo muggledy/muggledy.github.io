@@ -422,6 +422,10 @@ p.top {
 	z-index: 5;
 }
 
+*{
+	-webkit-overflow-scrolling: auto;
+}
+
 /*修复post文章顶图不适应暗夜模式的问题*/
 [data-theme="dark"] #page-header.post-bg::before {
 	background-color:#121212;
