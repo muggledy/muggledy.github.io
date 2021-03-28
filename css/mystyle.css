@@ -419,12 +419,8 @@ p.top {
 }
 
 .recent-post-info {
-	position: relative;
-	z-index: 5;
-}
-
-*{
-	-webkit-overflow-scrolling: auto;
+	position: relative; /*修复iPad浏览器中文章标题仍被模糊层遮挡的问题，单纯的z-index不起效*/
+	z-index: 1;
 }
 
 /*修复post文章顶图不适应暗夜模式的问题*/
