@@ -419,6 +419,7 @@ p.top {
 }
 
 .recent-post-info {
+	position: absolute;
 	z-index: 5;
 }
 
