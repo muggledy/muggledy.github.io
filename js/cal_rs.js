@@ -17,7 +17,7 @@ var dyhiddenbutton=document.getElementById("hide-aside-btn");
 //var dyminusbutton=document.getElementById("font-minus");
 if (dyhiddenbutton) {
 	dyhiddenbutton.onclick=function(){
-		dydoresize(300); //时延是因为，这些按钮在改变容器大小时是有一个过程的
+		dydoresize(150); //时延是因为，这些按钮在改变容器大小时是有一个过程的
 	};
 }
 /*
