@@ -491,6 +491,7 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 	border-radius: 5px;
 }
 
+/*仿纸张样式*/
 .dyipage {
     line-height: 30px;
     margin: 0 auto;
@@ -529,6 +530,13 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
     font-size: 1.45rem!important;
     padding: 10px auto;
 }
+
+.dyiauthor {
+	position: relative;
+	font-size: 0.75rem!important;
+	text-align:center;
+}
+
 .dyizhengwen p {
     position: relative;
     line-height: 1.6rem!important;
@@ -580,14 +588,15 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 	margin: 0px !important;
     color: #333!important;
 }
+
 [data-theme="dark"] .dyipage {
     opacity: 0.5;
 }
-[data-theme="dark"] .dyititle {
+[data-theme="dark"] .dyititle, .dyiauthor {
 	color: #4c4948 !important;
 }
 
-/*小屏幕下(手机类)的样式*/
+/*纸张 小屏幕下(手机类)的样式*/
 @media only screen and (max-width: 600px) {
     .dyipage {
         padding: 15px 23px 29px;
