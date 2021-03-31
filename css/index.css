@@ -3600,6 +3600,11 @@ h2.f4.text-normal.mb-3 {
   padding-left: 20px;
   padding-right: 20px;
 }
+@media screen and (max-width: 650px) {
+  .contrib-number {
+    font-size: 15px;
+  }
+}
 .angle-wrapper {
   z-index: 9999;
   display: inline;
