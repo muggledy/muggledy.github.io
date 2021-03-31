@@ -1329,8 +1329,8 @@ canvas:not(#ribbon-canvas),
   --blockquote-bg: rgba(73,177,245,0.1);
   --reward-pop: #f5f5f5;
   --toc-link-color: #666261;
-  --card-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.38);
-  --card-hover-box-shadow: 0px 1px 15px -1.5px rgba(0,0,0,0.5);
+  --card-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.06);
+  --card-hover-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.15);
 }
 html {
   height: 100%;
@@ -3597,8 +3597,8 @@ h2.f4.text-normal.mb-3 {
 }
 .position-relative {
   width: 100%;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 20%;
+  padding-right: 20%;
 }
 @media screen and (max-width: 650px) {
   .contrib-column {

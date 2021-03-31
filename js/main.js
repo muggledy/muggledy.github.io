@@ -558,12 +558,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const fontSizeVal = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue('--global-font-size'))
       let newValue = ''
       if (plus) {
-        if (fontSizeVal >= 20) return
+        if (fontSizeVal >= 18) return
         newValue = fontSizeVal + 1
         document.documentElement.style.setProperty('--global-font-size', newValue + 'px')
         !document.getElementById('nav').classList.contains('hide-menu') && adjustMenu(true)
       } else {
-        if (fontSizeVal <= 13) return
+        if (fontSizeVal <= 14) return
         newValue = fontSizeVal - 1
         document.documentElement.style.setProperty('--global-font-size', newValue + 'px')
         document.getElementById('nav').classList.contains('hide-menu') && adjustMenu(true)

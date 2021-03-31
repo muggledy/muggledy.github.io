@@ -399,6 +399,12 @@ p.top {
 	line-height: 1.4 !important;
 }
 
+/*git calendar两边距设置（稍稍加大一点）*/
+#gitcalendar{
+	padding-left: 1.2% !important;
+    padding-right: 1.2% !important;
+}
+
 /*首页post文章背景高斯模糊设置*/
 .dyblurbg {
 	position: absolute;
