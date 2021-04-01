@@ -5,6 +5,27 @@ document.addEventListener('DOMContentLoaded', function () {
   let menusWidth = $menusEle && $menusEle.offsetWidth
   const $searchEle = document.querySelector('#search-button')
   let searchWidth = $searchEle && $searchEle.offsetWidth
+  
+  var article_double_css = "https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/butterfly/cardlistpost.min.css";
+  if (typeof(saveToLocal.get('local_article_double_status'))!="undefined"){ //此处的逻辑只会在F5刷新网站时执行一次，之后在网站中由于采用了pjax，这里不会再重复执行（当然了，即使未启用pjax，此处不断重复执行也不会出错）。目的是读取本地保存的（是否启用双栏文章）状态并应用，未定义则不管
+	  var if_exists_article_css = false; //含义：当前是否应用双栏样式，在此代码块中，执行到哪句都要时刻更新。此处是赋初值
+	  document.querySelectorAll('link[rel=stylesheet]').forEach(function (dom){
+		  if (dom.href==article_double_css){
+			    if_exists_article_css = true;
+			    if (saveToLocal.get('local_article_double_status')==false){
+					dom.remove();
+					if_exists_article_css = false;
+				}
+		  }
+	  })
+	  if (!if_exists_article_css && saveToLocal.get('local_article_double_status')==true){
+		  new_article_css_element=document.createElement("link");
+		  new_article_css_element.setAttribute("rel","stylesheet");
+		  new_article_css_element.setAttribute("type","text/css");
+		  new_article_css_element.setAttribute("href",article_double_css);
+		  document.body.appendChild(new_article_css_element);
+	  }
+  }
 
   const adjustMenu = (change = false) => {
     if (change) {
@@ -553,6 +574,26 @@ document.addEventListener('DOMContentLoaded', function () {
         : saveToLocal.set('aside-status', 'hide', 2)
       $htmlDom.toggle('hide-aside')
     },
+    toggleArticleDouble: () => { //由于文章双栏插件的实现是纯css的，因此关闭该功能只需要删除此css文件即可消除样式，再启用，就再引入即可，切换的方法确实很low，但是有效~
+        var dyallcsslinks = document.querySelectorAll('link[rel=stylesheet]');
+		var exists_article_double_css = false; //含义：toggle之前（即点击切换按钮之前）是否应用了双栏样式。此处仅是赋初值
+		
+        dyallcsslinks.forEach(function (dom) {
+            if (dom.href==article_double_css){
+				exists_article_double_css = true;
+				dom.remove();
+				saveToLocal.set('local_article_double_status', false, 2); //将（toggle之后的）当前状态保存到本地，刷新网站时读取该值，将会继承该状态
+			}
+        });
+        if (!exists_article_double_css){ //之前没有应用双栏样式，现在启用
+			dy_new_element=document.createElement("link");
+			dy_new_element.setAttribute("rel","stylesheet");
+			dy_new_element.setAttribute("type","text/css");
+			dy_new_element.setAttribute("href",article_double_css);
+			document.body.appendChild(dy_new_element);
+			saveToLocal.set('local_article_double_status', true, 2);
+		}
+    },
 
     adjustFontSize: (plus) => {
       const fontSizeVal = parseInt(window.getComputedStyle(document.documentElement).getPropertyValue('--global-font-size'))
@@ -591,6 +632,9 @@ document.addEventListener('DOMContentLoaded', function () {
         break
       case 'hide-aside-btn':
         rightSideFn.hideAsideBtn()
+        break
+      case 'list-article-double-btn':
+        rightSideFn.toggleArticleDouble()
         break
       case 'font-plus':
         rightSideFn.adjustFontSize(true)

@@ -4736,6 +4736,9 @@ _:future,
   #rightside #hide-aside-btn {
     display: none;
   }
+  #rightside #list-article-double-btn {
+    display: none;
+  }
 }
 #sidebar #menu-mask {
   position: fixed;
