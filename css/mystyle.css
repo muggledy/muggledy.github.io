@@ -42,9 +42,97 @@
     background-color: #030808;
 }
 
-/*相关文章 圆角*/
+/*相关文章样式（目前只应用于电脑端|根据屏幕宽度判断） 不喜欢则直接删除 表示使用原样式 */
+
+@media only screen and (max-width: 900px){
 .relatedPosts-list div {
-	border-radius: 1.4%;
+	border-radius: 1.3%;
+}
+}
+
+/* 只有当屏幕宽度大于900px时候采用该样式 */
+@media only screen and (min-width: 900px){
+	
+.relatedPosts > .relatedPosts-list div {
+	background: #f6f6f6;
+}
+[data-theme="dark"] .relatedPosts{
+	background: #121212 !important;
+}
+[data-theme="dark"] .relatedPosts > .relatedPosts-list div{
+	background: #121212 !important;
+}
+
+.relatedPosts > .relatedPosts-list .cover {
+	height: 80%;
+	opacity: 1;
+}
+
+.relatedPosts > .relatedPosts-list .content {
+	position: relative;
+}
+
+.relatedPosts > .relatedPosts-list .content .title, .date {
+	color: #888888 !important;
+	font-size: 0.875rem;
+}
+.relatedPosts > .relatedPosts-list .content .title {
+	color: #656261 !important;
+	height: 50px;
+	//overflow: scroll;
+	display: block; /*标题超出边界，显示省略号，也可以注释以下四行，并设置overflow值为scroll，表示使用滚动条*/
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+}
+
+.relatedPosts > .relatedPosts-list .content .title:hover {
+	color: red !important;
+}
+
+.relatedPosts {
+	background: #f6f6f6 !important;
+}
+
+.relatedPosts > .relatedPosts-list {
+	width: 94% !important;
+	margin: 0 auto;
+	height: 210px;
+	overflow: scroll;
+}
+
+.relatedPosts > .headline {
+    font-size: 1.1em;
+	margin-left: 3%;
+	padding-top: 13px;
+}
+[data-theme="dark"] .relatedPosts > .headline {
+    color: #b8b8b8;
+}
+
+::-webkit-scrollbar {
+	  width: 5px;
+}
+/* 以下四个分别是：滚动条的滑轨背景颜色、滑块颜色、滑轨两头的监听按钮颜色、横向滚动条和纵向滚动条相交处尖角的颜色
+::-webkit-scrollbar-track {
+	  background-color: #b46868;
+}
+
+::-webkit-scrollbar-thumb {
+	  background-color: #88a6cb; 
+}
+
+::-webkit-scrollbar-button {
+	  background-color: #7c2929;
+}
+*/
+::-webkit-scrollbar-corner {
+	  background-color: #f6f6f6;
+}
+[data-theme="dark"] ::-webkit-scrollbar-corner {
+	  background-color: #121212;
+}
+	
 }
 
 /*一些图标 颜色*/

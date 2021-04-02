@@ -6,7 +6,7 @@
   <link href="https://muggledy.github.io/atom.xml" rel="self"/>
   
   <link href="https://muggledy.github.io/"/>
-  <updated>2021-03-30T12:02:02.840Z</updated>
+  <updated>2021-04-02T12:45:19.551Z</updated>
   <id>https://muggledy.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>主题语法合集</title>
     <link href="https://muggledy.github.io/posts/63886/"/>
     <id>https://muggledy.github.io/posts/63886/</id>
-    <published>2021-03-28T05:04:56.273Z</published>
-    <updated>2021-03-30T12:02:02.840Z</updated>
+    <published>2021-04-02T10:03:03.447Z</published>
+    <updated>2021-04-02T12:45:19.551Z</updated>
     
     
     <summary type="html">适用于本主题的全部标签插件</summary>
@@ -40,7 +40,7 @@
     <link href="https://muggledy.github.io/posts/65257/"/>
     <id>https://muggledy.github.io/posts/65257/</id>
     <published>2021-03-24T16:00:00.000Z</published>
-    <updated>2021-03-30T11:58:33.829Z</updated>
+    <updated>2021-04-02T14:24:59.104Z</updated>
     
     
       
@@ -50,6 +50,214 @@
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://muggledy.github.io/posts/16108/"/>
+    <id>https://muggledy.github.io/posts/16108/</id>
+    <published>2021-03-24T05:19:25.957Z</published>
+    <updated>2021-04-02T13:48:27.749Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://muggledy.github.io/posts/16107/"/>
+    <id>https://muggledy.github.io/posts/16107/</id>
+    <published>2021-03-24T05:19:25.957Z</published>
+    <updated>2021-04-02T13:48:27.735Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://muggledy.github.io/posts/16109/"/>
+    <id>https://muggledy.github.io/posts/16109/</id>
+    <published>2021-03-24T05:19:25.918Z</published>
+    <updated>2021-04-02T13:48:27.791Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42639/"/>
+    <id>https://muggledy.github.io/posts/42639/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.671Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合多项式曲线拟合多项式曲线拟合多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42638/"/>
+    <id>https://muggledy.github.io/posts/42638/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T16:53:10.026Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42642/"/>
+    <id>https://muggledy.github.io/posts/42642/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.721Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42640/"/>
+    <id>https://muggledy.github.io/posts/42640/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.687Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合多项式曲线拟合多项式曲线拟合多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42641/"/>
+    <id>https://muggledy.github.io/posts/42641/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T16:51:57.948Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42644/"/>
+    <id>https://muggledy.github.io/posts/42644/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.780Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42643/"/>
+    <id>https://muggledy.github.io/posts/42643/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.765Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
     
     
     
