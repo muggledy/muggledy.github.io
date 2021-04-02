@@ -74,8 +74,7 @@
 
 .relatedPosts > .relatedPosts-list .content .title, .date {
 	color: #888888 !important;
-	font-size: 0.81rem;
-	line-height: 25px;
+	font-size: 0.82rem;
 }
 .relatedPosts > .relatedPosts-list .content .title {
 	color: #656261 !important;
@@ -98,7 +97,7 @@
 .relatedPosts > .relatedPosts-list {
 	width: 94% !important;
 	margin: 0 auto;
-	height: 212px;
+	height: 215px;
 	overflow: scroll;
 }
 
