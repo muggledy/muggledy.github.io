@@ -42,16 +42,16 @@
     background-color: #030808;
 }
 
-/*相关文章样式（目前只应用于电脑端|根据屏幕宽度判断） 不喜欢则直接删除 表示使用原样式 */
+/*相关文章样式（目前只应用于电脑端|根据屏幕宽度判断） 不喜欢则直接删除，使用主题原样式 */
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 1500px){
 .relatedPosts-list div {
 	border-radius: 1.05%;
 }
 }
 
-/* 只有当屏幕宽度大于900px时候采用该样式 */
-@media only screen and (min-width: 600px){
+/* 只有当屏幕宽度大于1000px时候采用该样式 */
+@media only screen and (min-width: 1500px){
 	
 .relatedPosts > .relatedPosts-list div {
 	background: #f6f6f6;
@@ -509,6 +509,13 @@ p.top {
 .recent-post-info {
 	position: relative; /*修复iPad浏览器中文章标题仍被模糊层遮挡的问题，单纯的z-index不起效，但是在iPad设备中背景模糊特效还是存在问题，时常会闪烁且残缺不全，在PC端、手机端各浏览器中都测试正常*/
 	z-index: 1;
+}
+
+/**/
+@media only screen and (max-width: 1500px){
+.dyblurbg {
+	display: none;
+}
 }
 
 /*修复post文章顶图不适应暗夜模式的问题*/
