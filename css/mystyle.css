@@ -44,14 +44,14 @@
 
 /*相关文章样式（目前只应用于电脑端|根据屏幕宽度判断） 不喜欢则直接删除 表示使用原样式 */
 
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 600px){
 .relatedPosts-list div {
 	border-radius: 1.05%;
 }
 }
 
 /* 只有当屏幕宽度大于900px时候采用该样式 */
-@media only screen and (min-width: 800px){
+@media only screen and (min-width: 600px){
 	
 .relatedPosts > .relatedPosts-list div {
 	background: #f6f6f6;
