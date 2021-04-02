@@ -46,7 +46,7 @@
 
 @media only screen and (max-width: 900px){
 .relatedPosts-list div {
-	border-radius: 1.15%;
+	border-radius: 1.05%;
 }
 }
 
@@ -64,12 +64,12 @@
 }
 
 .relatedPosts > .relatedPosts-list .cover {
-	height: 80%;
+	height: 68%;
 	opacity: 0.8;
 }
 
 .relatedPosts > .relatedPosts-list .content {
-	top: 83.5% !important;
+	top: 86% !important;
 }
 
 .relatedPosts > .relatedPosts-list .content .title, .date {
@@ -97,7 +97,7 @@
 .relatedPosts > .relatedPosts-list {
 	width: 94% !important;
 	margin: 0 auto;
-	height: 200px;
+	height: 205px;
 	overflow: scroll;
 }
 

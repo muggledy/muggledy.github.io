@@ -136,68 +136,11 @@
   </entry>
   
   <entry>
-    <title>多项式曲线拟合</title>
-    <link href="https://muggledy.github.io/posts/42639/"/>
-    <id>https://muggledy.github.io/posts/42639/</id>
-    <published>2020-02-22T16:00:00.000Z</published>
-    <updated>2021-04-02T13:48:27.671Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
-    
-    
-    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
-    
-  </entry>
-  
-  <entry>
     <title>多项式曲线拟合多项式曲线拟合多项式曲线拟合多项式曲线拟合</title>
     <link href="https://muggledy.github.io/posts/42638/"/>
     <id>https://muggledy.github.io/posts/42638/</id>
     <published>2020-02-22T16:00:00.000Z</published>
     <updated>2021-04-02T16:53:10.026Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
-    
-    
-    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多项式曲线拟合</title>
-    <link href="https://muggledy.github.io/posts/42642/"/>
-    <id>https://muggledy.github.io/posts/42642/</id>
-    <published>2020-02-22T16:00:00.000Z</published>
-    <updated>2021-04-02T13:48:27.721Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
-    
-    
-    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>多项式曲线拟合</title>
-    <link href="https://muggledy.github.io/posts/42640/"/>
-    <id>https://muggledy.github.io/posts/42640/</id>
-    <published>2020-02-22T16:00:00.000Z</published>
-    <updated>2021-04-02T13:48:27.687Z</updated>
     
     
     <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
@@ -232,10 +175,48 @@
   
   <entry>
     <title>多项式曲线拟合</title>
-    <link href="https://muggledy.github.io/posts/42644/"/>
-    <id>https://muggledy.github.io/posts/42644/</id>
+    <link href="https://muggledy.github.io/posts/42640/"/>
+    <id>https://muggledy.github.io/posts/42640/</id>
     <published>2020-02-22T16:00:00.000Z</published>
-    <updated>2021-04-02T13:48:27.780Z</updated>
+    <updated>2021-04-02T13:48:27.687Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42639/"/>
+    <id>https://muggledy.github.io/posts/42639/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.671Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42642/"/>
+    <id>https://muggledy.github.io/posts/42642/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.721Z</updated>
     
     
     <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
@@ -255,6 +236,25 @@
     <id>https://muggledy.github.io/posts/42643/</id>
     <published>2020-02-22T16:00:00.000Z</published>
     <updated>2021-04-02T13:48:27.765Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    
+    
+    <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>多项式曲线拟合</title>
+    <link href="https://muggledy.github.io/posts/42644/"/>
+    <id>https://muggledy.github.io/posts/42644/</id>
+    <published>2020-02-22T16:00:00.000Z</published>
+    <updated>2021-04-02T13:48:27.780Z</updated>
     
     
     <summary type="html">&lt;p&gt;最小二乘法多项式曲线拟合，根据给定的n个点，并不要求这条曲线精确地经过这些点，而是通过多项式曲线y=f(x)来近似地拟合这些数据点。&lt;/p&gt;</summary>
