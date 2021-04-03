@@ -706,3 +706,8 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
         padding: 0 0.9em;
     }
 }
+
+/*时间线 节点 小标题字体大小*/
+.timeline .timenode .meta p {
+	font-size: 0.64rem;
+}
