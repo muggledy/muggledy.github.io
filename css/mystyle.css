@@ -511,7 +511,7 @@ p.top {
 	z-index: 1;
 }
 
-/**/
+/*对于模糊背景在ios设备上存在的bug，既然解决不了，那就消灭问题源头好了，我直接将blur层置为none了 哈哈*/
 @media only screen and (max-width: 1500px){
 .dyblurbg {
 	display: none;
