@@ -711,3 +711,25 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 .timeline .timenode .meta p {
 	font-size: 0.6rem;
 }
+
+/*自行车转场动画 <div class="bike bikeAni"></div> */
+.bike{
+	width:130px;
+	height:130px;
+	background:url(https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210406032011.png);
+	position:relative;
+	//left: 42% !important;
+	left: 50% !important;
+	transform: translate(-50%) !important;
+	bottom:20px;
+}
+
+.bikeAni{
+	-webkit-animation:bikeAni 7s steps(99) infinite;
+	animation:bikeAni 7s steps(99) infinite;
+}
+
+@keyframes bikeAni{
+	0%{background-position:0 12870px}
+	99%{background-position:0 0}
+}
