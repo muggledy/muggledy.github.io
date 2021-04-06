@@ -8307,6 +8307,15 @@ div.timenode .meta:after {
   --hlscrollbar-bg: #1f1f1f;
   --hlexpand-bg: linear-gradient(180deg, rgba(23,23,23,0.6), rgba(23,23,23,0.9));
 }
+[data-theme='dark'] #card-newest-comments .thumbnail img {
+  border-radius: 50% !important;
+}
+[data-theme='dark'] .card-recent-post .thumbnail img {
+  border-radius: 8% !important;
+}
+[data-theme='dark'] .article-sort-item-img img {
+  border-radius: 8% !important;
+}
 [data-theme='dark'] #web_bg:before,
 [data-theme='dark'] #footer:before,
 [data-theme='dark'] #page-header:before {
@@ -8394,15 +8403,6 @@ div.timenode .meta:after {
 }
 [data-theme='dark'] #operare_artitalk .c2 {
   background: #121212;
-}
-[data-theme='dark'] #card-newest-comments .thumbnail img {
-  border-radius: 50% !important;
-}
-[data-theme='dark'] .card-recent-post .thumbnail img {
-  border-radius: 8% !important;
-}
-[data-theme='dark'] .article-sort-item-img img {
-  border-radius: 8% !important;
 }
 .read-mode {
   --font-color: #4c4948;
