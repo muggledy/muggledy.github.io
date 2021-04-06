@@ -8397,6 +8397,7 @@ div.timenode .meta:after {
   background: #121212;
 }
 [data-theme='dark'] .thumbnail {
+  overflow: hidden;
   border-radius: 50% !important;
 }
 .read-mode {
