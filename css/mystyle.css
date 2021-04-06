@@ -23,7 +23,6 @@
 	border-radius: 8%;
 }
 */
-/*在从明亮切换到暗黑时，圆角会先变成尖角，再从尖角变成圆角，为了解决该问题，我将设置放在了/css/index.styl的第一行*/
 
 /*搜索框 圆角*/
 #local-search .search-dialog {
