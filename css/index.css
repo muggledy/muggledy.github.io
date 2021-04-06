@@ -1,10 +1,10 @@
-[data-theme='dark'] #card-newest-comments .thumbnail {
+#card-newest-comments .thumbnail {
   border-radius: 50% !important;
 }
-[data-theme='dark'] .card-recent-post .thumbnail {
+.card-recent-post .thumbnail {
   border-radius: 8% !important;
 }
-[data-theme='dark'] .article-sort-item-img {
+.article-sort-item-img {
   border-radius: 8% !important;
 }
 @import url("https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css");
