@@ -4,17 +4,17 @@
 }
 
 /*最新评论 头像 圆角*/
-#card-newest-comments .thumbnail {
+#card-newest-comments .thumbnail img {
 	border-radius: 50%;
 }
 
 /*最近文章 缩略图 圆角*/
-.card-recent-post .thumbnail {
+.card-recent-post .thumbnail img {
 	border-radius: 8%;
 }
 
 /*时间轴上的文章 缩略图 圆角*/
-.article-sort-item-img {
+.article-sort-item-img img {
 	border-radius: 8%;
 }
 
