@@ -2869,7 +2869,7 @@ blockquote footer cite:before {
   overflow: hidden;
   width: 4.2em;
   height: 4.2em;
-  border-radius: 8% !important;
+  border-radius: 50% !important;
 }
 #aside-content .aside-list > .aside-list-item .thumbnail > img {
   width: 100%;
@@ -8395,6 +8395,9 @@ div.timenode .meta:after {
 }
 [data-theme='dark'] #operare_artitalk .c2 {
   background: #121212;
+}
+[data-theme='dark'] .thumbnail {
+  border-radius: 50% !important;
 }
 .read-mode {
   --font-color: #4c4948;
