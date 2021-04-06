@@ -246,6 +246,12 @@ const btf = {
     }
 
     return actualTop
+  },
+
+  decodeEntities: function (encodedString) {
+    var textArea = document.createElement('textarea');
+    textArea.innerHTML = encodedString;
+    return textArea.value;
   }
 
 }
