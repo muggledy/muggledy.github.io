@@ -1,21 +1,12 @@
 #card-newest-comments .thumbnail {
   border-radius: 50% !important;
+  overflow: hidden !important;
 }
 .card-recent-post .thumbnail {
   border-radius: 8% !important;
+  overflow: hidden !important;
 }
 .article-sort-item-img {
-  border-radius: 8% !important;
-}
-[data-theme='dark'] #card-newest-comments .thumbnail {
-  border-radius: 50% !important;
-  overflow: hidden !important;
-}
-[data-theme='dark'] .card-recent-post .thumbnail {
-  border-radius: 8% !important;
-  overflow: hidden !important;
-}
-[data-theme='dark'] .article-sort-item-img {
   border-radius: 8% !important;
   overflow: hidden !important;
 }
