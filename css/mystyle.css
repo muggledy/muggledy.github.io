@@ -8,13 +8,25 @@
 	border-radius: 50%;
 }
 
+[data-theme="dark"] #card-newest-comments .thumbnail {
+	border-radius: 50%;
+}
+
 /*最近文章 缩略图 圆角*/
 .card-recent-post .thumbnail {
 	border-radius: 8%;
 }
 
+[data-theme="dark"] .card-recent-post .thumbnail {
+	border-radius: 8%;
+}
+
 /*时间轴上的文章 缩略图 圆角*/
 .article-sort-item-img {
+	border-radius: 8%;
+}
+
+[data-theme="dark"] .article-sort-item-img {
 	border-radius: 8%;
 }
 
