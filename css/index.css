@@ -2869,7 +2869,7 @@ blockquote footer cite:before {
   overflow: hidden;
   width: 4.2em;
   height: 4.2em;
-  border-radius: 8%;
+  border-radius: 8% !important;
 }
 #aside-content .aside-list > .aside-list-item .thumbnail > img {
   width: 100%;
