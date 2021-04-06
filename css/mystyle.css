@@ -9,7 +9,7 @@
 }
 
 [data-theme="dark"] #card-newest-comments .thumbnail {
-	border-radius: 50%;
+	border-radius: 50% !important;
 }
 
 /*最近文章 缩略图 圆角*/
@@ -18,7 +18,7 @@
 }
 
 [data-theme="dark"] .card-recent-post .thumbnail {
-	border-radius: 8%;
+	border-radius: 8% !important;
 }
 
 /*时间轴上的文章 缩略图 圆角*/
@@ -27,7 +27,7 @@
 }
 
 [data-theme="dark"] .article-sort-item-img {
-	border-radius: 8%;
+	border-radius: 8% !important;
 }
 
 /*搜索框 圆角*/
