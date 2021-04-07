@@ -735,3 +735,17 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 	0%{background-position:0 12870px}
 	99%{background-position:0 0}
 }
+
+/*龙猫转场动画 <img src="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210407182620.gif" style="height:250px"> */
+
+/*mini便签 以及 相应的鼠标右键*/
+.dyminimenu,.dyminibox,.dyminimenu *,.dyminibox *{margin:0px;padding:0px;}
+/*menu S*/
+.dyminimenu{width:130px;background:#fff;position:fixed;z-index:12;display:none;text-align:left;}
+.dyminimenu ul li{border-bottom:1px solid #f3f3f3;list-style:none;line-height:36px;font-size:16px;padding-left:15px;}
+.dyminimenu ul li:hover{background:#647E7C;color:#fff;}
+/*box S*/
+.dyminibox{position:absolute;z-index:11;line-height:24px;}
+.dyminibox .b_list{width:294px;height:310px;position:absolute;}
+.dyminibox .b_list .b_content{width:256px;height:220px;position:absolute;top:60px;left:16px;outline:#0000FF dotted thin;font-size:20px;overflow-y:auto;}
+.dyminibox .mini_note_timer{position:absolute;bottom:10px;right:20px;font-size:14px;}
