@@ -749,3 +749,10 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 .dyminibox .b_list{width:294px;height:310px;position:absolute;}
 .dyminibox .b_list .b_content{width:256px;height:220px;position:absolute;top:60px;left:16px;outline:#0000FF dotted thin;font-size:20px;overflow-y:auto;}
 .dyminibox .mini_note_timer{position:absolute;bottom:10px;right:20px;font-size:14px;}
+
+[data-theme="dark"] .dyminimenu ul li {
+	color: black;
+}
+[data-theme="dark"] .dyminibox {
+	color: black;
+}
