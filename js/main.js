@@ -126,9 +126,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (isHighlightCopy) {
       highlightCopyEle = '<div class="copy-notice"></div><i class="fas fa-paste copy-button"></i>'
-      if (`${highlightShrinkClass}`=="closed") {
-          highlightCopyEle = '<div class="copy-notice"></div><i class="fas fa-paste copy-button closed"></i>'
-      }
     }
 
     const copy = (text, ctx) => {
@@ -170,7 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const highlightShrinkFn = (ele) => {
       const $nextEle = [...ele.parentNode.children].slice(1)
       ele.firstChild.classList.toggle('closed')
-      ele.lastChild.classList.toggle('closed')
       if (btf.isHidden($nextEle[$nextEle.length - 1])) {
         $nextEle.forEach(e => { e.style.display = 'block' })
       } else {
