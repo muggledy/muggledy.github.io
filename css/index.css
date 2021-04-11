@@ -1949,20 +1949,21 @@ blockquote footer cite:before {
   font-size: 1.72em;
 }
 .article-sort-title:hover:before {
-  border-color: #ff7242;
+  border-color: #eab14d;
 }
 .article-sort-title:before {
   position: absolute;
   top: calc(((100% - 1.8rem) / 2));
   left: -0.45rem;
   z-index: 1;
-  width: 0.5rem;
-  height: 0.5rem;
-  border: 0.25rem solid #49b1f5;
-  border-radius: 0.5rem;
-  background: var(--card-bg);
+  width: 1rem;
+  height: 1rem;
+  background: url("/img/clock_dark.png");
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
   content: '';
-  line-height: 0.5rem;
+  line-height: 1rem;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;
@@ -2001,7 +2002,7 @@ blockquote footer cite:before {
   transition: all 0.2s ease-in-out;
 }
 .article-sort-item:hover:before {
-  border-color: #ff7242;
+  border-color: #eab14d;
 }
 .article-sort-item:before {
   position: absolute;
@@ -2031,7 +2032,7 @@ blockquote footer cite:before {
   border-color: #49b1f5;
 }
 .article-sort-item.year:before {
-  border-color: #ff7242;
+  border-color: #eab14d;
 }
 .article-sort-item-time {
   color: #858585;

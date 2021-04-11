@@ -757,13 +757,6 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 	color: black;
 }
 
-/*cherry页面祈祷图片*/
-@media only screen and (max-width: 1000px){
-.fenxiangimg {
-	display: none;
-}
-}
-
 /*夜晚的程序员和猫 只在屏幕宽度大于650且暗黑模式下显示*/
 @media only screen and (min-width: 650px){
 
@@ -1330,4 +1323,32 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 /*当具有closed属性时候不显示copy按钮*/
 .highlight .copy-button.closed {
     display: none;
+}
+
+/*防止因为右键mini便签导致网站横轴产生滚动条*/
+html{
+    overflow-x:hidden;
+}
+
+/*配合source/css/_page/archives.styl一起修改排序文档的部分样式*/
+[data-theme="dark"] .article-sort-title:before {
+    background: url(/img/clock_dark.png);
+    background-size: 100% 100%;
+}
+
+.article-sort-title:after {
+    background: #c4f3ff;
+}
+
+.article-sort {
+    border-left: 2px solid #c4f3ff;
+}
+
+/*图片模糊特效<img class="mohu" src="xxxx">*/
+.mohu {
+    filter: blur(3px);
+}
+
+.mohu:hover {
+    filter: none;
 }
