@@ -741,13 +741,29 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 /*mini便签 以及 相应的鼠标右键*/
 .dyminimenu,.dyminibox,.dyminimenu *,.dyminibox *{margin:0px;padding:0px;}
 /*menu S*/
-.dyminimenu{width:130px;background:#fff;position:fixed;z-index:12;display:none;text-align:left;}
-.dyminimenu ul li{border-bottom:1px solid #f3f3f3;list-style:none;line-height:36px;font-size:16px;padding-left:15px;}
-.dyminimenu ul li:hover{background:#647E7C;color:#fff;}
+.dyminimenu{width:130px;background: #f2f2f2;position:fixed;z-index:12;display:none;text-align:left;border: 1px solid #ccc;}
+
+.dyminimenu ul {
+    list-style-type: none;
+}
+
+.dyminimenu ul li {
+    padding: 3px 0px;
+    font-size: 12px;
+}
+.dyminimenu ul li span{
+    margin-left: 16px;
+}
+
+.dyminimenu ul li:hover {
+    background: #e1dddd;
+    cursor:pointer;
+}
+
 /*box S*/
-.dyminibox{position:absolute;z-index:11;line-height:24px;}
+.dyminibox{position:absolute;z-index:11;line-height:20px;}
 .dyminibox .b_list{width:294px;height:310px;position:absolute;}
-.dyminibox .b_list .b_content{width:256px;height:220px;position:absolute;top:60px;left:16px;outline:#86817e dotted thin;font-size:20px;overflow-y:auto;}
+.dyminibox .b_list .b_content{width:256px;height:220px;position:absolute;top:60px;left:16px;outline:#86817e dotted thin;font-size:16px;overflow-y:auto;overflow-x:hidden;}
 .dyminibox .mini_note_timer{position:absolute;bottom:10px;right:20px;font-size:14px;}
 
 [data-theme="dark"] .dyminimenu ul li {
