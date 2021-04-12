@@ -1352,3 +1352,9 @@ html{
 .mohu:hover {
     filter: none;
 }
+
+/* 多个div并列一行布局 示例见/note */
+.onelineshow {
+    float: left;
+    //display:inline;
+}
