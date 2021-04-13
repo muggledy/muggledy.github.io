@@ -26,5 +26,5 @@ window.addEventListener('orientationchange',function(){
             if (document.getElementById("categories-chart") && typeof(categoriesChart)!="undefined") {
                 categoriesChart.resize();
             }
-        },500);
+        },1000);
 });
