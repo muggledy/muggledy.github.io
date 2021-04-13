@@ -19,12 +19,15 @@ window.addEventListener('orientationchange',function(){
             dywinwidth = window.innerWidth;
             if (document.getElementById("posts-chart") && typeof(postsChart)!="undefined") {
                 postsChart.resize();
+                alert("POSTS调整");
             }
             if (document.getElementById("tags-chart") && typeof(tagsChart)!="undefined") {
                 tagsChart.resize();
+                alert("TAGS调整");
             }
             if (document.getElementById("categories-chart") && typeof(categoriesChart)!="undefined") {
                 categoriesChart.resize();
+                alert("CATEGORIES调整");
             }
         },500);
 });
