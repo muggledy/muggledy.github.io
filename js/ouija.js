@@ -108,18 +108,19 @@ $(function() {
     initClickEvent();
 });
 }
-/*（占卜）页面F5刷新执行此句：window.onload=function(){btf...}，等待btf加载好 由于在右键便签部分也使用了相同的操作，所以会发生覆盖，因此改为追加型写法*/
-if(window.attachEvent){
-	window.attachEvent("onload",function() {
-		btf.isJqueryLoad(dyouija);
-	});
-}else{
-	window.addEventListener("load",function() {
-		btf.isJqueryLoad(dyouija);
-	},true);
-}
 
-/*从其他页面通过pjax到达（占卜）页面执行此句，此时btf存在*/
 if (typeof(btf)!="undefined"){
+    /*从其他页面通过pjax到达（占卜）页面执行此句，此时btf存在*/
 	btf.isJqueryLoad(dyouija);
+}else {
+    /*（占卜）页面F5刷新执行此句：window.onload=function(){btf...}，等待btf加载好 由于在右键便签部分也使用了相同的操作，所以会发生覆盖，因此改为追加型写法*/
+    if(window.attachEvent){
+        window.attachEvent("onload",function() {
+            btf.isJqueryLoad(dyouija);
+        });
+    }else{
+        window.addEventListener("load",function() {
+            btf.isJqueryLoad(dyouija);
+        },true);
+    }
 }
