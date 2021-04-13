@@ -5,12 +5,15 @@ window.addEventListener("resize", function() {
             dywinwidth = window.innerWidth;
             if (document.getElementById("posts-chart") && typeof(postsChart)!="undefined") {
                 postsChart.resize();
+                alert("普通POSTS调整");
             }
             if (document.getElementById("tags-chart") && typeof(tagsChart)!="undefined") {
                 tagsChart.resize();
+                alert("普通TAGS调整");
             }
             if (document.getElementById("categories-chart") && typeof(categoriesChart)!="undefined") {
                 categoriesChart.resize();
+                alert("普通CATEGORIES调整");
             }
         }
 });
@@ -19,15 +22,15 @@ window.addEventListener('orientationchange',function(){
             dywinwidth = window.innerWidth;
             if (document.getElementById("posts-chart") && typeof(postsChart)!="undefined") {
                 postsChart.resize();
-                alert("POSTS调整");
+                alert("旋转POSTS调整");
             }
             if (document.getElementById("tags-chart") && typeof(tagsChart)!="undefined") {
                 tagsChart.resize();
-                alert("TAGS调整");
+                alert("旋转TAGS调整");
             }
             if (document.getElementById("categories-chart") && typeof(categoriesChart)!="undefined") {
                 categoriesChart.resize();
-                alert("CATEGORIES调整");
+                alert("旋转CATEGORIES调整");
             }
         },500);
 });
