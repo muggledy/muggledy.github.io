@@ -14,5 +14,5 @@ window.addEventListener("resize", function() {
                 categoriesChart.resize();
             }
         }
-    },800);
+    },400);
 });
