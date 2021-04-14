@@ -6,30 +6,30 @@ window.addEventListener("resize", function() {
     var categories_chart = document.getElementById("categories-chart");
     if (window.innerWidth!=dywinwidth){
         if (posts_chart){
-            posts_chart.style.display="none";
+            posts_chart.style.visibility="hidden";
         }
         if (tags_chart){
-            tags_chart.style.display="none";
+            tags_chart.style.visibility="hidden";
         }
         if (categories_chart){
-            categories_chart.style.display="none";
+            categories_chart.style.visibility="hidden";
         }
     }
     setTimeout(function(){
         if (window.innerWidth!=dywinwidth){
             dywinwidth = window.innerWidth;
             if (posts_chart && typeof(postsChart)!="undefined") {
-                posts_chart.style.display="";
+                posts_chart.style.visibility="visible";
                 postsChart.resize();
             }
             if (tags_chart && typeof(tagsChart)!="undefined") {
-                tags_chart.style.display="";
+                tags_chart.style.visibility="visible";
                 tagsChart.resize();
             }
             if (categories_chart && typeof(categoriesChart)!="undefined") {
-                categories_chart.style.display="";
+                categories_chart.style.visibility="visible";
                 categoriesChart.resize();
             }
         }
-    },400);
+    },250);
 });
