@@ -14,19 +14,5 @@ window.addEventListener("resize", function() {
                 categoriesChart.resize();
             }
         }
-    },400);
-});
-window.addEventListener('orientationchange',function(){
-        setTimeout(function(){
-            dywinwidth = window.innerWidth;
-            if (document.getElementById("posts-chart") && typeof(postsChart)!="undefined") {
-                postsChart.resize();
-            }
-            if (document.getElementById("tags-chart") && typeof(tagsChart)!="undefined") {
-                tagsChart.resize();
-            }
-            if (document.getElementById("categories-chart") && typeof(categoriesChart)!="undefined") {
-                categoriesChart.resize();
-            }
-        },800); //800~1000
+    },800);
 });
