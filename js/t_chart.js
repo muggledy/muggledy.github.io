@@ -1,16 +1,31 @@
 //console.log("对屏幕resize进行(仅针对宽度变化)监听以重绘（那三个）图表"); //之所以放在这里仅仅是为了避免重复给同一事件绑定相同的注册函数。本脚本只在F5刷新页面时执行一次，pjax跳转不会执行
 var dywinwidth = window.innerWidth; //浏览器宽度记录（旧值）
 window.addEventListener("resize", function() {
+    var posts_chart = document.getElementById("posts-chart");
+    var tags_chart = document.getElementById("tags-chart");
+    var categories_chart = document.getElementById("categories-chart");
+    if (posts_chart){
+        posts_chart.style.display="none";
+    }
+    if (tags_chart){
+        tags_chart.style.display="none";
+    }
+    if (categories_chart){
+        categories_chart.style.display="none";
+    }
     setTimeout(function(){
         if (window.innerWidth!=dywinwidth){
             dywinwidth = window.innerWidth;
-            if (document.getElementById("posts-chart") && typeof(postsChart)!="undefined") {
+            if (posts_chart && typeof(postsChart)!="undefined") {
+                posts_chart.style.display="";
                 postsChart.resize();
             }
-            if (document.getElementById("tags-chart") && typeof(tagsChart)!="undefined") {
+            if (tags_chart && typeof(tagsChart)!="undefined") {
+                tags_chart.style.display="";
                 tagsChart.resize();
             }
-            if (document.getElementById("categories-chart") && typeof(categoriesChart)!="undefined") {
+            if (categories_chart && typeof(categoriesChart)!="undefined") {
+                categories_chart.style.display="";
                 categoriesChart.resize();
             }
         }
