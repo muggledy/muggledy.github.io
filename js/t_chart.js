@@ -4,14 +4,16 @@ window.addEventListener("resize", function() {
     var posts_chart = document.getElementById("posts-chart");
     var tags_chart = document.getElementById("tags-chart");
     var categories_chart = document.getElementById("categories-chart");
-    if (posts_chart){
-        posts_chart.style.display="none";
-    }
-    if (tags_chart){
-        tags_chart.style.display="none";
-    }
-    if (categories_chart){
-        categories_chart.style.display="none";
+    if (window.innerWidth!=dywinwidth){
+        if (posts_chart){
+            posts_chart.style.display="none";
+        }
+        if (tags_chart){
+            tags_chart.style.display="none";
+        }
+        if (categories_chart){
+            categories_chart.style.display="none";
+        }
     }
     setTimeout(function(){
         if (window.innerWidth!=dywinwidth){
