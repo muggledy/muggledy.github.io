@@ -31,5 +31,5 @@ window.addEventListener("resize", function() {
                 categoriesChart.resize();
             }
         }
-    },250);
+    },190);
 });
