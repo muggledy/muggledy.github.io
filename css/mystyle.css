@@ -819,3 +819,7 @@ html{
 #posts-chart, #tags-chart, #categories-chart{
     overflow:hidden !important;
 }
+
+#posts-chart > div, #tags-chart > div, #categories-chart > div{
+    z-index:1 !important;
+}
