@@ -814,3 +814,7 @@ html{
     float: left;
     //display:inline;
 }
+
+#posts-chart, #tags-chart, #categories-chart{
+    scroll:hidden;
+}
