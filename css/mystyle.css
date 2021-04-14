@@ -815,6 +815,7 @@ html{
     //display:inline;
 }
 
+/*禁止图表在resize时出现滚动条影响美观*/
 #posts-chart, #tags-chart, #categories-chart{
-    scroll:hidden;
+    overflow:hidden !important;
 }

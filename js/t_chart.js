@@ -2,16 +2,19 @@
 var dywinwidth = window.innerWidth; //浏览器宽度记录（旧值）
 window.addEventListener("resize", function() {
     for (var i=0;i<3;i++) {
-    setTimeout(function(){
+    setInterval(function(){
         if (window.innerWidth!=dywinwidth){
             dywinwidth = window.innerWidth;
             if (document.getElementById("posts-chart") && typeof(postsChart)!="undefined") {
+                console.log("POST调整");
                 postsChart.resize();
             }
             if (document.getElementById("tags-chart") && typeof(tagsChart)!="undefined") {
+                console.log("TAG调整");
                 tagsChart.resize();
             }
             if (document.getElementById("categories-chart") && typeof(categoriesChart)!="undefined") {
+                console.log("CATEGORY调整");
                 categoriesChart.resize();
             }
         }
