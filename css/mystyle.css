@@ -774,7 +774,7 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 }
 
 /*归档、分类、标签页面 文章 （小）头图大图预览*/
-#article-img-preview{position:absolute;background:#333;padding:5px;display:none;color:#fff;z-index:13;}
+#article-img-preview{position:absolute;background:#333;padding:4px;display:none;color:#fff;z-index:13;}
 
 /*当具有closed属性时候不显示copy按钮*/
 .highlight .copy-button.closed {
