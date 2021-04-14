@@ -819,7 +819,7 @@ html{
 #posts-chart, #tags-chart, #categories-chart{
     overflow:hidden !important;
 }
-
+/*echarts层级过高，会导致在手机端右侧菜单栏无法遮挡图表所弹出的部分文字框*/
 #posts-chart > div, #tags-chart > div, #categories-chart > div{
     z-index:1 !important;
 }

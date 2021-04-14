@@ -19,16 +19,19 @@ window.addEventListener("resize", function() {
         if (window.innerWidth!=dywinwidth){
             dywinwidth = window.innerWidth;
             if (posts_chart && typeof(postsChart)!="undefined") {
-                posts_chart.style.visibility="visible";
+                
                 postsChart.resize();
+                posts_chart.style.visibility="visible";
             }
             if (tags_chart && typeof(tagsChart)!="undefined") {
-                tags_chart.style.visibility="visible";
+                
                 tagsChart.resize();
+                tags_chart.style.visibility="visible";
             }
             if (categories_chart && typeof(categoriesChart)!="undefined") {
-                categories_chart.style.visibility="visible";
+                
                 categoriesChart.resize();
+                categories_chart.style.visibility="visible";
             }
         }
     },150);
