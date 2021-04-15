@@ -6,7 +6,7 @@
   <link href="https://muggledy.github.io/atom.xml" rel="self"/>
   
   <link href="https://muggledy.github.io/"/>
-  <updated>2021-04-11T12:33:01.880Z</updated>
+  <updated>2021-04-15T11:20:49.312Z</updated>
   <id>https://muggledy.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://muggledy.github.io/posts/65257/"/>
     <id>https://muggledy.github.io/posts/65257/</id>
     <published>2021-03-24T16:00:00.000Z</published>
-    <updated>2021-04-11T12:33:01.880Z</updated>
+    <updated>2021-04-15T11:20:49.312Z</updated>
     
     
       
@@ -34,7 +34,9 @@
     
     
     
-    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    <category term="环境配置" scheme="https://muggledy.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/"/>
     
     
     <category term="Butterfly" scheme="https://muggledy.github.io/tags/Butterfly/"/>
@@ -46,7 +48,7 @@
     <link href="https://muggledy.github.io/posts/17177/"/>
     <id>https://muggledy.github.io/posts/17177/</id>
     <published>2021-02-05T16:00:00.000Z</published>
-    <updated>2021-04-15T07:52:01.268Z</updated>
+    <updated>2021-04-15T11:14:28.179Z</updated>
     
     
     <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-quote-left&quot;&gt;&lt;/i&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;Hexo&lt;/a&gt; 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
@@ -54,7 +56,9 @@
     
     
     
-    <category term="Hexo" scheme="https://muggledy.github.io/categories/Hexo/"/>
+    <category term="环境配置" scheme="https://muggledy.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    <category term="Hexo" scheme="https://muggledy.github.io/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/"/>
     
     
   </entry>
