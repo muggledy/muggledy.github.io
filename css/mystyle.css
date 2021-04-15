@@ -1,7 +1,9 @@
+/*
 @font-face {
     font-family: 'sleek';
     src: url('https://cdn.jsdelivr.net/gh/lete114/CDN2/zaxiang/sleek.woff2');
 }
+*/
 
 /*最新评论 头像 圆角*/
 #card-newest-comments .thumbnail img {
@@ -816,10 +818,10 @@ html{
 }
 
 /*禁止图表在resize时出现滚动条影响美观*/
-#posts-chart, #tags-chart, #categories-chart{
+#new-posts-chart, #new-tags-chart, #new-categories-chart{
     overflow:hidden !important;
 }
 /*echarts层级过高，会导致在手机端右侧菜单栏无法遮挡图表所弹出的部分文字框*/
-#posts-chart > div, #tags-chart > div, #categories-chart > div{
+#new-posts-chart > div, #new-tags-chart > div, #new-categories-chart > div{
     z-index:1 !important;
 }

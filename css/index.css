@@ -1342,7 +1342,7 @@ body {
   background: var(--global-bg);
   color: var(--font-color);
   font-size: var(--global-font-size);
-  font-family: sleek;
+  font-family: Times New Roman;
   line-height: 2;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
@@ -1464,6 +1464,13 @@ a {
 }
 a:hover {
   color: #49b1f5;
+}
+#site-title,
+#site-subtitle,
+#site-name,
+#aside-content .author-info__name,
+#aside-content .author-info__description {
+  font-family: Times New Roman;
 }
 .is-center {
   text-align: center;
@@ -1689,7 +1696,7 @@ blockquote footer cite:before {
 #article-container pre,
 #article-container code {
   font-size: var(--global-font-size);
-  font-family: sleek !important;
+  font-family: Times New Roman !important;
 }
 #article-container code {
   padding: 0.1rem 0.2rem;
@@ -2644,6 +2651,7 @@ blockquote footer cite:before {
   padding: 0.5rem;
   text-align: center;
   font-size: 14px;
+  font-family: Times New Roman;
 }
 @media screen and (max-width: 768px) {
   #error-wrap .error-content .error-info {
@@ -7378,11 +7386,11 @@ p.p.subtitle:first-child {
 }
 span.p.logo,
 p.p.logo {
-  font-family: sleek;
+  font-family: Times New Roman;
 }
 span.p.code,
 p.p.code {
-  font-family: sleek;
+  font-family: Times New Roman;
 }
 span.p.left,
 p.p.left {
