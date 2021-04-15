@@ -790,9 +790,9 @@ canvas:not(#ribbon-canvas),
 }
 @-moz-keyframes to_show {
   0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
   100% {
     opacity: 1;
@@ -802,9 +802,9 @@ canvas:not(#ribbon-canvas),
 }
 @-webkit-keyframes to_show {
   0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
   100% {
     opacity: 1;
@@ -814,9 +814,9 @@ canvas:not(#ribbon-canvas),
 }
 @-o-keyframes to_show {
   0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
   100% {
     opacity: 1;
@@ -826,9 +826,9 @@ canvas:not(#ribbon-canvas),
 }
 @keyframes to_show {
   0% {
-    opacity: 0;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-    filter: alpha(opacity=0);
+    opacity: 1;
+    -ms-filter: none;
+    filter: none;
   }
   100% {
     opacity: 1;
