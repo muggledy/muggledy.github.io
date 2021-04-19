@@ -29,9 +29,11 @@ window.addEventListener('load', () => {
 
   // click function
   const searchClickFn = () => {
+    if (document.querySelector('#search-button > .search')!=null) {
     document.querySelector('#search-button > .search').addEventListener('click', openSearch)
     document.getElementById('search-mask').addEventListener('click', closeSearch)
     document.querySelector('#local-search .search-close-button').addEventListener('click', closeSearch)
+    }
   }
 
   searchClickFn()
