@@ -67,7 +67,7 @@ window.addEventListener('orientationchange', function(event){
     var dyjishuqi = 0;
     var dydingshiqi = setInterval(function(){
             dyjishuqi+=1;
-            if (dyjishuqi>11){
+            if (dyjishuqi>20){
                 clearInterval(dydingshiqi);
             }
             console.log("resize...");
