@@ -838,6 +838,7 @@ html{
 /*echarts（弹窗）标签层级过高，会导致在手机端右侧菜单栏无法遮挡图表所弹出的部分文字框，之前的解决方案突然失效了，在部分浏览器会变透明？| 暂时没有好的解决办法，只好将菜单栏的层级提升至最大，有点蠢蛤 https://zhuanlan.zhihu.com/p/66677661*/
 #sidebar #sidebar-menus {
     z-index: 2147483647;
+    pointer-events:none;
 }
 
 /*进度条样式 窄一点*/
