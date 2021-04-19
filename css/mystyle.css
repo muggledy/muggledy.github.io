@@ -835,7 +835,7 @@ html{
 #new-posts-chart, #new-tags-chart, #new-categories-chart{
     overflow:hidden !important;
 }
-/*echarts（弹窗）标签层级过高，会导致在手机端右侧菜单栏无法遮挡图表所弹出的部分文字框 暂时不会写，只好将菜单栏的层级提升至最大！https://zhuanlan.zhihu.com/p/66677661*/
+/*echarts（弹窗）标签层级过高，会导致在手机端右侧菜单栏无法遮挡图表所弹出的部分文字框，之前的解决方案突然失效了，在部分浏览器会变透明？| 暂时没有好的解决办法，只好将菜单栏的层级提升至最大，有点蠢蛤 https://zhuanlan.zhihu.com/p/66677661*/
 #sidebar #sidebar-menus {
     z-index: 2147483647;
 }
@@ -860,6 +860,7 @@ html{
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 20px;
 }
 
 .moleskine-notebook:hover .notebook-cover { transform: rotateY(-50deg); z-index: 99; box-shadow: 20px 10px 50px rgba(0,0,0,.2); } 
@@ -871,6 +872,7 @@ html{
 .moleskine-wrapper {
     max-width: calc(100% / 5);
     min-width: 12em;
+    justify-content: center;
 }
 
 .moleskine-notebook {
@@ -881,7 +883,7 @@ html{
     border-radius: 5px 15px 15px 5px;
     transform-origin: left center 0px;
     display: inline-block;
-    margin: 30px 0;
+    margin:18px 10px;
     perspective: 800px;
 }
 
@@ -971,7 +973,7 @@ html{
     background-size: 11px 11px;
 }
 
-/*首页card-author样式*/
+/*首页card-author样式 类似volantis 不过与主题整体感觉不合*/
 /*
 .card-widget.card-info {
     padding: 1rem 0rem !important;
@@ -1001,8 +1003,9 @@ html{
 }
 
 /*顶图(div)下边界虚化 譬如 #page-header:not(.not-top-img):not(.full_page):after 表示除无顶图或首页的页面都施加该特效 #page-header.post-bg:after 则表示仅post页面施加该特效*/
-[data-theme="light"] body:not(.read-mode) #page-header:not(.not-top-img):not(.full_page):after {
 /*[data-theme="light"] #page-header.post-bg:after {*/
+/*[data-theme="light"] body:not(.read-mode) #page-header:not(.not-top-img):not(.full_page):after {
+
     content: "";
     position: absolute;
     z-index: 3;
@@ -1013,11 +1016,12 @@ html{
     width: 100%;
     height: 100%;
 }
+*/
 
-/*page及post页面顶图高度和标题高度设置*/
+/*page及post页面顶图高度(稍稍变大)和标题高度设置（主要是电脑端）*/
 @media screen and (min-width: 768px) {
 #page-header.not-home-page, #page-header.post-bg {
-    height: 25rem;
+    height: 23rem;
 }
 
 #page-header #page-site-info{
@@ -1025,6 +1029,6 @@ html{
 }
 
 #page-header #post-info {
-    bottom: 6.5rem;
+    bottom: 6rem;
 }
 }
