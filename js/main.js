@@ -47,16 +47,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // 初始化header
   const initAdjust = () => {
-    if (document.getElementById('nav')!=null) {
     adjustMenu()
     document.getElementById('nav').classList.add('show')
-    }
   }
 
   // sidebar menus
   const sidebarFn = () => {
     const $toggleMenu = document.getElementById('toggle-menu')
-    if ($toggleMenu!=null) {
     const $mobileSidebarMenus = document.getElementById('sidebar-menus')
     const $menuMask = document.getElementById('menu-mask')
     const $body = document.body
@@ -88,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
         if ($mobileSidebarMenus.classList.contains('open')) closeMobileSidebar()
       }
     })
-    }
   }
 
   /**
@@ -356,7 +352,6 @@ document.addEventListener('DOMContentLoaded', function () {
  */
   const scrollFn = function () {
     const $rightside = document.getElementById('rightside')
-    if ($rightside!=null) {
     const innerHeight = window.innerHeight + 56
 
     // 當滾動條小于 56 的時候
@@ -408,7 +403,6 @@ document.addEventListener('DOMContentLoaded', function () {
       const result = currentTop > initTop // true is down & false is up
       initTop = currentTop
       return result
-    }
     }
   }
 
@@ -625,7 +619,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  if (document.getElementById('rightside')!=null) {
   document.getElementById('rightside').addEventListener('click', function (e) {
     const $target = e.target.id || e.target.parentNode.id
     switch ($target) {
@@ -657,7 +650,6 @@ document.addEventListener('DOMContentLoaded', function () {
         break
     }
   })
-  }
 
   /**
  * menu
