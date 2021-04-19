@@ -10,7 +10,7 @@
 <meta property="article:modified_time" content="2021-04-18T12:32:08.706Z">
 <meta property="article:author" content="Muggledy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210202134748.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210207091812.png"><link rel="canonical" href="https://muggledy.github.io/categories/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210202134748.jpg"><link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210207091812.png"><link rel="canonical" href="https://muggledy.github.io/categories/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.7/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
   root: '/',
   algolia: undefined,
   localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
@@ -181,7 +181,192 @@
       <div class="notebook-page dotted"></div>
     </div>
   </div>
-</div></div><div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 By Muggledy</div><div class="footer_custom_text"><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/"><img src="https://img.shields.io/badge/Frame-Hexo-blue"/></a>&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-brightgreen"/></a>&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pages.github.com/"><img src="https://img.shields.io/badge/Hosted-Github-red"/></a>&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsdelivr-blueviolet"/></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.7/js/utils.js"></script><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.7/js/main.js"></script><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.2/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.3/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
+</div></div><div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/">环境配置</a><span class="category-list-count">2</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/">Hexo</a><span class="category-list-count">2</span></li></ul></li></ul></div><div id="new-categories-chart" style="width: 100%;height:300px;"></div><script>var newCategoriesChart = echarts.init(document.getElementById('new-categories-chart'));
+/* calculate newCategoriesOption data. */
+var categoryArr = [];
+var categoryName = '环境配置,Hexo';
+var categoryNameArr = categoryName.split(",");
+var categoryLength = '2,2';
+var categoryLengthArr = categoryLength.split(",");
+var categoryLengthArr = categoryLengthArr.map(Number);
+var categoryParent = 'undefined,ckno291kr0004wovoe1hsbkhy';
+var categoryParentArr = categoryParent.split(",");
+var categoryId = 'ckno291kr0004wovoe1hsbkhy,ckno291kz000dwovo1aweanf3';
+var categoryIdArr = categoryId.split(",");
+
+for (var i = 0; i < categoryNameArr.length; i++) {
+  categoryArr.push({name: categoryNameArr[i], value: categoryLengthArr[i], id: categoryIdArr[i], parent: categoryParentArr[i]});
+}
+
+var childMap = new Map();
+var parentArr = [];
+
+/* 分开子母分类 */
+for (var i = 0; i < categoryArr.length; i++) {
+  if (categoryArr[i]['parent'] != 'undefined') {
+    if (childMap.has(categoryArr[i]['parent'])) {
+      child = childMap.get(categoryArr[i]['parent']);
+      child.push({name: categoryNameArr[i], value: categoryLengthArr[i]});
+    } else {
+      childMap.set(categoryArr[i]['parent'], [{name: categoryNameArr[i], value: categoryLengthArr[i]}]);
+    }
+  } else {
+    parentArr.push({name: categoryNameArr[i], value: categoryLengthArr[i], id: categoryIdArr[i]});
+  }
+}
+
+for (var i = 0; i < parentArr.length; i++) {
+  if (childMap.has(parentArr[i]['id'])) {
+    child = childMap.get(parentArr[i]['id']);
+    parentArr[i]['children'] = child;
+  }
+}
+
+/*sunburst: https://blog.csdn.net/sinat_36301420/article/details/80474645*/
+/*new graph: https://blog.csdn.net/advant211/article/details/78234929*/
+if (IsPC()) {
+var newCategoriesOption = {
+                title: {
+                        text: '文章分类统计图',
+                        textStyle: {
+                        fontFamily: 'Arial, Verdana, sans...',
+                        fontSize: 12,
+                        fontStyle: 'normal',
+                        fontWeight: 'normal',
+                    },
+                    x: 'center',
+                    y: 'bottom'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b}: {c} ({d}%)"
+                },
+                //legend: {
+                //    orient: 'horizontal',
+                //    x: 'center',
+                //    y: 'bottom',
+                //    data:[]
+                //},
+                series: [
+                    {
+                        name:'一级分类',
+                        type:'pie',
+                        selectedMode: 'single',
+                        radius: [0, '34%'],
+                        center: ['50%', '38.5%'],
+                        label: {
+                            normal: {
+                                //color: 'white',
+                                position: 'inner'
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data:[]
+                    },
+                    {
+                        name:'二级分类',
+                        type:'pie',
+                        radius: ['40%', '66%'],
+                        center: ['50%', '38.5%'],
+                        label: {
+                            normal: {
+                                formatter: '{a|{a}}{abg|}\n{hr|}\n  {b|{b}：}{c}  {per|{d}%}  ',
+                                backgroundColor: '#eee',
+                                borderColor: '#aaa',
+                                borderWidth: 1,
+                                borderRadius: 4,
+                                rich: {
+                                    a: {
+                                        color: '#999',
+                                        lineHeight: 22,
+                                        align: 'center'
+                                    },
+                                    hr: {
+                                        borderColor: '#aaa',
+                                        width: '100%',
+                                        borderWidth: 0.5,
+                                        height: 0
+                                    },
+                                    b: {
+                                        fontSize: 16,
+                                        lineHeight: 33
+                                    },
+                                    per: {
+                                        color: '#eee',
+                                        backgroundColor: '#334455',
+                                        padding: [2, 4],
+                                        borderRadius: 2
+                                    }
+                                }
+                            }
+                        },
+                        data:[]
+                    }
+                ]
+};
+/*所有一级分类都必须具有子类，否则出错，暂时无法解决，且不够美观*/
+for (var i = 0; i < parentArr.length; i++) {
+    for (var j = 0; j < parentArr[i].children.length; j++) {
+        //newCategoriesOption.legend.data.push(parentArr[i].children[j].name);
+        newCategoriesOption.series[1].data.push({name:parentArr[i].children[j].name, value:parentArr[i].children[j].value});
+    }
+    newCategoriesOption.series[0].data.push({name:parentArr[i].name, value:parentArr[i].value});
+}
+} else {
+
+var newCategoriesOption = {
+  title: {
+      text: '文章分类统计图',
+      textStyle: {
+        fontFamily: 'Arial, Verdana, sans...',
+        fontSize: 12,
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+      },
+      x: 'center',
+      y: 'bottom'
+  },
+  tooltip: {
+          trigger: 'item',
+          formatter: "categories <br/>{b} : {c}"
+      },
+  series: [
+      {
+          type: 'sunburst',
+          highlightPolicy: 'ancestor',
+          data: parentArr,
+          radius: [0, '62%'],
+          center: ['50%', '43%'],
+          sort: null,
+          levels: [{}, {
+                r0: '15%',
+                r: '40%',
+                itemStyle: {
+                    borderWidth: 2
+                },
+                label: {
+                    color: 'white',
+                    rotate: 'tangential'
+                }
+          }, {
+                r0: '40%',
+                r: '80%',
+                label: {
+                    color: 'white',
+                    align: 'center'
+                }
+          }]
+      }
+  ],
+  color: ['#37a2da', '#67e0e3', '#9fe6b8', '#ffdb5c','#ff9f7f', '#ca8622', '#9d96f5','#8378ea', '#96bfff']
+};
+
+}
+newCategoriesChart.setOption(newCategoriesOption);</script></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2021 By Muggledy</div><div class="footer_custom_text"><p><a target="_blank" rel="noopener external nofollow noreferrer" href="https://hexo.io/zh-cn/"><img src="https://img.shields.io/badge/Frame-Hexo-blue"/></a>&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-brightgreen"/></a>&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://pages.github.com/"><img src="https://img.shields.io/badge/Hosted-Github-red"/></a>&nbsp;<a target="_blank" rel="noopener external nofollow noreferrer" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsdelivr-blueviolet"/></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.7/js/utils.js"></script><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.7/js/main.js"></script><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.2/js/tw_cn.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/gh/muggledy/muggledy.github.io@v0.3/js/search/local-search.js"></script><div class="js-pjax"><script>if (document.getElementsByClassName('mermaid').length) {
   if (window.mermaidJsLoad) mermaid.init()
   else {
     getScript('https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js').then(() => {

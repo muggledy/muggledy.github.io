@@ -985,11 +985,3 @@ html{
     transform: none !important;
 }
 */
-
-/*修改顶部导航栏阴影 同时配合source/css/_global/index.styl修改卡片阴影*/
-#page-header.nav-fixed #nav {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
-}
-#page-header.not-top-img #nav {
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
-}
