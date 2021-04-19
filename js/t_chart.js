@@ -67,11 +67,11 @@ window.addEventListener('orientationchange', function(event){
     var dyjishuqi = 0;
     var dydingshiqi = setInterval(function(){
             dyjishuqi+=1;
-            if (dyjishuqi>20){
+            if (dyjishuqi>6){
                 clearInterval(dydingshiqi);
             }
             console.log("resize...");
             dyasidebtn=true;
             dydoresize(0);
-    },25);
+    },40);
 });
