@@ -1032,3 +1032,7 @@ html{
     bottom: 6rem;
 }
 }
+
+body{
+    overflow: auto !important;
+}
