@@ -273,7 +273,7 @@ p.top {
     border-top-color: var(--Color);
 }
 
-/* 渐变色背景 */
+/* 渐变色背景 控制逻辑见layout/includes/layout.pug*/
 #web_bg.dy-show-cbg {
   background: -webkit-linear-gradient(
     0deg,
@@ -1000,15 +1000,31 @@ html{
     padding-bottom: 2%;
 }
 
-/*顶图(div)下边界虚化*/
-[data-theme="light"] #page-header:not(.not-top-img):not(.full_page):after {
+/*顶图(div)下边界虚化 譬如 #page-header:not(.not-top-img):not(.full_page):after 表示除无顶图或首页的页面都施加该特效 #page-header.post-bg:after 则表示仅post页面施加该特效*/
+[data-theme="light"] body:not(.read-mode) #page-header:not(.not-top-img):not(.full_page):after {
+/*[data-theme="light"] #page-header.post-bg:after {*/
     content: "";
     position: absolute;
     z-index: 3;
     top: 0px;
     right: 0;
     pointer-events: none;
-    background-image: linear-gradient(to bottom, rgba(244,246,248,0),rgba(244,246,248, 0) 15%, rgba(244,246,248, 0) 85%,rgba(244,246,248, 1) 100%); /*第一个设为1 上下边界虚化*/
+    background-image: linear-gradient(to bottom, rgba(244,246,248,0),rgba(244,246,248, 0) 15%, rgba(244,246,248, 0) 85%,rgba(244,246,248, 1) 100%);
     width: 100%;
     height: 100%;
+}
+
+/*page及post页面顶图高度和标题高度设置*/
+@media screen and (min-width: 768px) {
+#page-header.not-home-page, #page-header.post-bg {
+    height: 25rem;
+}
+
+#page-header #page-site-info{
+    top: 11.5rem;
+}
+
+#page-header #post-info {
+    bottom: 6.5rem;
+}
 }
