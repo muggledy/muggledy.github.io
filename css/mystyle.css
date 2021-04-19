@@ -836,8 +836,13 @@ html{
     overflow:hidden !important;
 }
 /*echarts层级过高，会导致在手机端右侧菜单栏无法遮挡图表所弹出的部分文字框*/
+/*
 #new-posts-chart > div, #new-tags-chart > div, #new-categories-chart > div{
     z-index:2 !important;
+}
+*/
+#sidebar #sidebar-menus {
+    z-index: 2147483647;
 }
 
 /*进度条样式 窄一点*/
