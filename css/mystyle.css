@@ -1019,6 +1019,7 @@ html{
 */
 
 /*page及post页面顶图高度(稍稍变大)和标题高度设置（主要是电脑端）*/
+/*
 @media screen and (min-width: 768px) {
 #page-header.not-home-page, #page-header.post-bg {
     height: 23rem;
@@ -1032,6 +1033,7 @@ html{
     bottom: 6rem;
 }
 }
+*/
 
 /*阅读模式暗黑样式修改*/
 [data-theme="dark"] .read-mode #canvas {
