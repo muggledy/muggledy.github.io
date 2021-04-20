@@ -72,11 +72,11 @@ window.addEventListener('orientationchange', function(event){
     var dyjishuqi = 0;
     var dydingshiqi = setInterval(function(){
             dyjishuqi+=1;
-            if (dyjishuqi>=20){ //连续执行的总次数
+            if (dyjishuqi>=28){ //连续执行的总次数
                 clearInterval(dydingshiqi);
             }
             console.log("resize...");
             dyasidebtn=true;
             dydoresize(0);
-    },40); //时间间隔ms
+    },30); //时间间隔ms
 });
