@@ -12,7 +12,7 @@ function dydoresize(delay){
             },delay);
 };
 
-//全局变量（见cal_rs.js）
+//全局变量（另见cal_rs.js）
 var dywinwidth = window.innerWidth; //浏览器宽度记录（旧值）
 var dyasidebtn = false; //是否因为按下aside隐藏/显示按钮触发的resize
 window.addEventListener("resize", function() {
@@ -20,10 +20,9 @@ window.addEventListener("resize", function() {
     var new_tags_chart = document.getElementById("new-tags-chart");
     var new_categories_chart = document.getElementById("new-categories-chart");
     if (new_posts_chart || new_tags_chart || new_categories_chart) {
-        console.log(dyasidebtn);
         if (window.innerWidth!=dywinwidth || dyasidebtn){
-            //var timedelay = 0;
-            //if (dyasidebtn) {timedelay = 0;}
+            var timedelay = 250; //应付因按下F12导致的剧烈变化（且是window.innerWidth!=dywinwidth产生的resize）
+            if (dyasidebtn) {timedelay = 0;}
             dywinwidth = window.innerWidth;
             dyasidebtn = false;
             /*现在改变策略，当旋转屏幕或者按下aside按钮，就连续多次不断触发resize事件，使得图表的resize显得更加平滑美观
@@ -37,23 +36,23 @@ window.addEventListener("resize", function() {
                 new_categories_chart.style.visibility="hidden";
             }
             */
-            //setTimeout(function(){
+            setTimeout(function(){
                 if (new_posts_chart && typeof(newPostsChart)!="undefined") {
-                    console.log("newPostsChart Resize");
+                    //console.log("newPostsChart Resize");
                     newPostsChart.resize();
                     //new_posts_chart.style.visibility="visible";
                 }
                 if (new_tags_chart && typeof(newTagsChart)!="undefined") {
-                    console.log("newTagsChart Resize");
+                    //console.log("newTagsChart Resize");
                     newTagsChart.resize();
                     //new_tags_chart.style.visibility="visible";
                 }
                 if (new_categories_chart && typeof(newCategoriesChart)!="undefined") {
-                    console.log("newCategoriesChart Resize");
+                    //console.log("newCategoriesChart Resize");
                     newCategoriesChart.resize();
                     //new_categories_chart.style.visibility="visible";
                 }
-            //},timedelay);
+            },timedelay);
         }
     } else { //即使不存在图表，也应实时更新当前浏览器宽度
         //if (window.innerWidth!=dywinwidth){
@@ -65,9 +64,9 @@ window.addEventListener("resize", function() {
 
 window.addEventListener('orientationchange', function(event){
     //if( window.orientation == 90 || window.orientation == -90 ) {
-    //横屏翻转处理事件
+    //手机端横屏翻转处理事件
     //}else{
-	//竖屏处理事件
+	//手机端竖屏处理事件
     //}
     var dyjishuqi = 0;
     var dydingshiqi = setInterval(function(){
@@ -75,7 +74,6 @@ window.addEventListener('orientationchange', function(event){
             if (dyjishuqi>=28){ //连续执行的总次数
                 clearInterval(dydingshiqi);
             }
-            console.log("resize...");
             dyasidebtn=true;
             dydoresize(0);
     },30); //时间间隔ms

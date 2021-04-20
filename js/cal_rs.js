@@ -12,12 +12,10 @@ if (dyhiddenbutton) {
                 if (dyjishuqi>=22){
                     clearInterval(dydingshiqi);
                 }
-                console.log("#################################");
                 dyasidebtn=true;
                 dydoresize(0);
             },20);
         }else{
-            console.log("------------------------------");
             dydoresize(0);
         }
     };
