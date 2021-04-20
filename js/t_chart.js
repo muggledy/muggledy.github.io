@@ -12,21 +12,21 @@ function dydoresize(delay){
             },delay);
 };
 
+//全局变量（见cal_rs.js）
 var dywinwidth = window.innerWidth; //浏览器宽度记录（旧值）
 var dyasidebtn = false; //是否因为按下aside隐藏/显示按钮触发的resize
 window.addEventListener("resize", function() {
-    console.log("监听resize");
     var new_posts_chart = document.getElementById("new-posts-chart");
     var new_tags_chart = document.getElementById("new-tags-chart");
     var new_categories_chart = document.getElementById("new-categories-chart");
     if (new_posts_chart || new_tags_chart || new_categories_chart) {
         console.log(dyasidebtn);
         if (window.innerWidth!=dywinwidth || dyasidebtn){
-            var timedelay = 0;
-            if (dyasidebtn) {timedelay = 0;}
+            //var timedelay = 0;
+            //if (dyasidebtn) {timedelay = 0;}
             dywinwidth = window.innerWidth;
             dyasidebtn = false;
-            /*
+            /*现在改变策略，当旋转屏幕或者按下aside按钮，就连续多次不断触发resize事件，使得图表的resize显得更加平滑美观
             if (new_posts_chart){
                 new_posts_chart.style.visibility="hidden";
             }
@@ -37,7 +37,7 @@ window.addEventListener("resize", function() {
                 new_categories_chart.style.visibility="hidden";
             }
             */
-            setTimeout(function(){
+            //setTimeout(function(){
                 if (new_posts_chart && typeof(newPostsChart)!="undefined") {
                     console.log("newPostsChart Resize");
                     newPostsChart.resize();
@@ -53,8 +53,13 @@ window.addEventListener("resize", function() {
                     newCategoriesChart.resize();
                     //new_categories_chart.style.visibility="visible";
                 }
-            },timedelay);
+            //},timedelay);
         }
+    } else { //即使不存在图表，也应实时更新当前浏览器宽度
+        //if (window.innerWidth!=dywinwidth){
+            dywinwidth = window.innerWidth;
+        //}
+        dyasidebtn = false;
     }
 });
 
@@ -67,11 +72,11 @@ window.addEventListener('orientationchange', function(event){
     var dyjishuqi = 0;
     var dydingshiqi = setInterval(function(){
             dyjishuqi+=1;
-            if (dyjishuqi>6){
+            if (dyjishuqi>=20){ //连续执行的总次数
                 clearInterval(dydingshiqi);
             }
             console.log("resize...");
             dyasidebtn=true;
             dydoresize(0);
-    },40);
+    },40); //时间间隔ms
 });
