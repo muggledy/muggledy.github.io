@@ -5,9 +5,9 @@ if (dyhiddenbutton) {
 	dyhiddenbutton.onclick=function(){
         if (document.getElementById("new-posts-chart")||document.getElementById("new-tags-chart")||document.getElementById("new-categories-chart")){
             dyasidebtn = true; //服务于t_chart.js
-            dydoresize(0); //目前为了用于dyasidebtn，特地将时延置为了0 因为改为了连续触发
+            dydoresize(0); //目前为了用于dyasidebtn，特地将时延置为了0 因为改为了连续resize
         }else{
-            dydoresize(0); //这是为了首页的历史calendar服务的
+            dydoresize(0); //这是为了首页的history_calendar服务的
         }
     };
 }

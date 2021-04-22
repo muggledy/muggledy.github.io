@@ -24,7 +24,7 @@ window.addEventListener("resize", function() {
         if (window.innerWidth!=dywinwidth || dyasidebtn || dyxuanzhuan){
             var dyallnum = 25;
             var dytjiange = 20;
-            if (dyxuanzhuan) {dyallnum = 20;dytjiange = 50;}
+            if (dyxuanzhuan) {dyallnum = 15;dytjiange = 100;}
             dywinwidth = window.innerWidth;
             dyasidebtn = false;
             dyxuanzhuan = false;
@@ -47,17 +47,17 @@ window.addEventListener("resize", function() {
                 }
                 
                 if (new_posts_chart && typeof(newPostsChart)!="undefined") {
-                    console.log("newPostsChart Resize");
+                    //console.log("newPostsChart Resize");
                     newPostsChart.resize();
                     //new_posts_chart.style.visibility="visible";
                 }
                 if (new_tags_chart && typeof(newTagsChart)!="undefined") {
-                    console.log("newTagsChart Resize");
+                    //console.log("newTagsChart Resize");
                     newTagsChart.resize();
                     //new_tags_chart.style.visibility="visible";
                 }
                 if (new_categories_chart && typeof(newCategoriesChart)!="undefined") {
-                    console.log("newCategoriesChart Resize");
+                    //console.log("newCategoriesChart Resize");
                     newCategoriesChart.resize();
                     //new_categories_chart.style.visibility="visible";
                 }
