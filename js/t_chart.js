@@ -24,7 +24,7 @@ window.addEventListener("resize", function() {
         if (window.innerWidth!=dywinwidth || dyasidebtn || dyxuanzhuan){
             var dyallnum = 25;
             var dytjiange = 20;
-            if (dyxuanzhuan) {dyallnum = 10;dytjiange = 70;}
+            if (dyxuanzhuan) {dyallnum = 1;dytjiange = 0;}
             dywinwidth = window.innerWidth;
             dyasidebtn = false;
             dyxuanzhuan = false;
@@ -80,6 +80,6 @@ window.addEventListener('orientationchange', function(event){
     //}
     if (document.getElementById("new-posts-chart")||document.getElementById("new-tags-chart")||document.getElementById("new-categories-chart")){
         dyxuanzhuan = true;
-        dydoresize(0);
+        dydoresize(350);
     }
 });
