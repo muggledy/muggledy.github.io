@@ -21,8 +21,6 @@ window.addEventListener("resize", function() {
     var new_categories_chart = document.getElementById("new-categories-chart");
     if (new_posts_chart || new_tags_chart || new_categories_chart) {
         if (window.innerWidth!=dywinwidth || dyasidebtn){
-            var timedelay = 250; //折衷，兼应付因按下F12导致的剧烈变化（且是window.innerWidth!=dywinwidth产生的resize）
-            if (dyasidebtn) {timedelay = 0;}
             dywinwidth = window.innerWidth;
             dyasidebtn = false;
             /*现在改变策略，当旋转屏幕或者按下aside按钮，就连续多次不断触发resize事件，使得图表的resize显得更加平滑美观
@@ -36,13 +34,13 @@ window.addEventListener("resize", function() {
                 new_categories_chart.style.visibility="hidden";
             }
             */
-            var dyjishuqi = 0;
-            var dydingshiqi = setInterval(function(){
-                dyjishuqi+=1;
-                if (dyjishuqi>=30){ //连续执行的总次数
-                    clearInterval(dydingshiqi);
+            var dychartjishuqi = 0;
+            var dychartdingshiqi = setInterval(function(){
+                dychartjishuqi+=1;
+                if (dychartjishuqi>=25){ //连续执行的总次数
+                    clearInterval(dychartdingshiqi);
                 }
-
+                
                 if (new_posts_chart && typeof(newPostsChart)!="undefined") {
                     console.log("newPostsChart Resize");
                     newPostsChart.resize();
@@ -58,7 +56,7 @@ window.addEventListener("resize", function() {
                     newCategoriesChart.resize();
                     //new_categories_chart.style.visibility="visible";
                 }
-            },20);
+            },12);
         }
     } else { //即使不存在图表，也应实时更新当前浏览器宽度
         //if (window.innerWidth!=dywinwidth){
@@ -74,6 +72,8 @@ window.addEventListener('orientationchange', function(event){
     //}else{
 	//手机端竖屏处理事件
     //}
-    dyasidebtn = true;
-    dydoresize(0);
+    if (document.getElementById("new-posts-chart")||document.getElementById("new-tags-chart")||document.getElementById("new-categories-chart")){
+        dyasidebtn = true;
+        dydoresize(0);
+    }
 });

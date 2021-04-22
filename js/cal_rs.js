@@ -3,7 +3,11 @@ var dyhiddenbutton=document.getElementById("hide-aside-btn");
 
 if (dyhiddenbutton) {
 	dyhiddenbutton.onclick=function(){
-        dyasidebtn = true;
-        dydoresize(0);
+        if (document.getElementById("new-posts-chart")||document.getElementById("new-tags-chart")||document.getElementById("new-categories-chart")){
+            dyasidebtn = true; //服务于t_chart.js
+            dydoresize(0); //目前为了用于dyasidebtn，特地将时延置为了0 因为改为了连续触发
+        }else{
+            dydoresize(0);
+        }
     };
 }
