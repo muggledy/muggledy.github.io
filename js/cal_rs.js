@@ -7,7 +7,7 @@ if (dyhiddenbutton) {
             dyasidebtn = true; //服务于t_chart.js
             dydoresize(0); //目前为了用于dyasidebtn，特地将时延置为了0 因为改为了连续触发
         }else{
-            dydoresize(0);
+            dydoresize(0); //这是为了首页的历史calendar服务的
         }
     };
 }
