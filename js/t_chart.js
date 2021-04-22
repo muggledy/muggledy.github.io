@@ -24,7 +24,7 @@ window.addEventListener("resize", function() {
         if (window.innerWidth!=dywinwidth || dyasidebtn || dyxuanzhuan){
             var dyallnum = 25;
             var dytjiange = 20;
-            if (dyxuanzhuan) {dyallnum = 10;dytjiange = 50;}
+            if (dyxuanzhuan) {dyallnum = 10;dytjiange = 70;}
             dywinwidth = window.innerWidth;
             dyasidebtn = false;
             dyxuanzhuan = false;
