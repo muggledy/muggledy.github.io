@@ -80,6 +80,6 @@ window.addEventListener('orientationchange', function(event){
     //}
     if (document.getElementById("new-posts-chart")||document.getElementById("new-tags-chart")||document.getElementById("new-categories-chart")){
         dyxuanzhuan = true;
-        dydoresize(800);
+        dydoresize(1000);
     }
 });
