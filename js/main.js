@@ -908,6 +908,124 @@ document.addEventListener('DOMContentLoaded', function () {
     tabsFn.backToTop()
     switchComments()
   }
+  
+  //tocFn_forEncrypt和refreshFn_forEncrypt为加密页面提供支持（主要处理三大问题：标签插件、评论toggle、手机端toc）
+  const tocFn_forEncrypt = function () {
+    const $cardTocLayout = document.getElementById('card-toc')
+    const $cardToc = $cardTocLayout.getElementsByClassName('toc-content')[0]
+    const $tocLink = $cardToc.querySelectorAll('.toc-link')
+    const $article = document.getElementById('article-container')
+
+    // main of scroll
+    window.addEventListener('scroll', btf.throttle(function (e) {
+      const currentTop = window.scrollY || document.documentElement.scrollTop
+      scrollPercent(currentTop)
+      findHeadPosition(currentTop)
+    }, 100))
+
+    const scrollPercent = function (currentTop) {
+      const docHeight = $article.clientHeight
+      const winHeight = document.documentElement.clientHeight
+      const headerHeight = $article.offsetTop
+      const contentMath = (docHeight > winHeight) ? (docHeight - winHeight) : (document.documentElement.scrollHeight - winHeight)
+      const scrollPercent = (currentTop - headerHeight) / (contentMath)
+      const scrollPercentRounded = Math.round(scrollPercent * 100)
+      const percentage = (scrollPercentRounded > 100) ? 100 : (scrollPercentRounded <= 0) ? 0 : scrollPercentRounded
+      $cardToc.setAttribute('progress-percentage', percentage)
+    }
+
+    // anchor
+    const isAnchor = GLOBAL_CONFIG.isanchor
+    const updateAnchor = function (anchor) {
+      if (window.history.replaceState && anchor !== window.location.hash) {
+        if (!anchor) anchor = location.pathname
+        window.history.replaceState({}, '', anchor)
+      }
+    }
+
+    const autoScrollToc = function (item) {
+      const activePosition = item.getBoundingClientRect().top
+      const sidebarScrollTop = $cardToc.scrollTop
+      if (activePosition > (document.documentElement.clientHeight - 100)) {
+        $cardToc.scrollTop = sidebarScrollTop + 150
+      }
+      if (activePosition < 100) {
+        $cardToc.scrollTop = sidebarScrollTop - 150
+      }
+    }
+
+    // find head position & add active class
+    const list = $article.querySelectorAll('h1,h2,h3,h4,h5,h6')
+    let detectItem = ''
+    const findHeadPosition = function (top) {
+      if ($tocLink.length === 0 || top === 0) {
+        return false
+      }
+
+      let currentId = ''
+      let currentIndex = ''
+
+      list.forEach(function (ele, index) {
+        if (top > btf.getEleTop(ele) - 80) {
+          currentId = '#' + encodeURI(ele.getAttribute('id'))
+          currentIndex = index
+        }
+      })
+
+      if (detectItem === currentIndex) return
+
+      if (isAnchor) updateAnchor(currentId)
+
+      if (currentId === '') {
+        $cardToc.querySelectorAll('.active').forEach(i => { i.classList.remove('active') })
+        detectItem = currentIndex
+        return
+      }
+
+      detectItem = currentIndex
+
+      $cardToc.querySelectorAll('.active').forEach(item => { item.classList.remove('active') })
+      const currentActive = $tocLink[currentIndex]
+      currentActive.classList.add('active')
+
+      setTimeout(() => {
+        autoScrollToc(currentActive)
+      }, 0)
+
+      let parent = currentActive.parentNode
+
+      for (; !parent.matches('.toc'); parent = parent.parentNode) {
+        if (parent.matches('li')) parent.classList.add('active')
+      }
+    }
+  }
+  
+  window.refreshFn_forEncrypt = function () {
+    initAdjust()
+
+    if (GLOBAL_CONFIG_SITE.isPost) {
+      GLOBAL_CONFIG_SITE.isToc && tocFn_forEncrypt()
+      GLOBAL_CONFIG.noticeOutdate !== undefined && addPostOutdateNotice()
+      GLOBAL_CONFIG.relativeDate.post && relativeDate(document.querySelectorAll('#post-meta time'))
+    } else {
+      GLOBAL_CONFIG.relativeDate.homepage && relativeDate(document.querySelectorAll('#recent-posts time'))
+      GLOBAL_CONFIG.runtime && addRuntime()
+      addLastPushDate()
+      toggleCardCategory()
+    }
+
+    sidebarFn()
+    GLOBAL_CONFIG_SITE.isHome && scrollDownInIndex()
+    addHighlightTool()
+    GLOBAL_CONFIG.isPhotoFigcaption && addPhotoFigcaption()
+    jqLoadAndRun()
+    GLOBAL_CONFIG.lightbox === 'mediumZoom' && addMediumZoom()
+    scrollFn()
+    addTableWrap()
+    clickFnOfTagHide()
+    tabsFn.clickFnOfTabs()
+    tabsFn.backToTop()
+  }
 
   refreshFn()
   unRefreshFn()
