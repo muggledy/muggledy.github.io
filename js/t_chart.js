@@ -56,7 +56,7 @@ window.addEventListener("resize", function() {
                     newCategoriesChart.resize();
                     //new_categories_chart.style.visibility="visible";
                 }
-            },12);
+            },20);
         }
     } else { //即使不存在图表，也应实时更新当前浏览器宽度
         //if (window.innerWidth!=dywinwidth){
