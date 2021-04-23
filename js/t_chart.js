@@ -22,8 +22,8 @@ window.addEventListener("resize", function() {
     var new_categories_chart = document.getElementById("new-categories-chart");
     if (new_posts_chart || new_tags_chart || new_categories_chart) {
         if (window.innerWidth!=dywinwidth || dyasidebtn || dyxuanzhuan){
-            var dyallnum = 30;
-            var dytjiange = 12;
+            var dyallnum = 40;
+            var dytjiange = 10;
             if (dyxuanzhuan) {dyallnum = 18;dytjiange = 100;}
             dywinwidth = window.innerWidth;
             dyasidebtn = false;
