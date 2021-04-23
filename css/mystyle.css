@@ -798,9 +798,11 @@ h1:before, h2:before, h3:before, h4:before, h5:before, h6:before {
 }
 
 /*防止因为右键mini便签导致网站横轴产生滚动条*/
+/* 这会产生一个副作用，就是当点击图片（全屏预览时），会导致右侧菜单TOC的置顶效果消失，虽然退出预览后能恢复正常，但是就很别扭
 html{
     overflow-x:hidden;
 }
+*/
 
 /*配合source/css/_page/archives.styl一起修改排序文档的部分样式*/
 [data-theme="dark"] .article-sort-title:before {
