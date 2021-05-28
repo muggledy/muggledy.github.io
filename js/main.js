@@ -105,6 +105,7 @@ document.addEventListener('DOMContentLoaded', function () {
  * 代碼
  * 只適用於Hexo默認的代碼渲染
  */
+  window.ifExe_addHighlightTool=true; //锁
   const addHighlightTool = function () {
     const highLight = GLOBAL_CONFIG.highlight
     if (!highLight) return
@@ -117,6 +118,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const $figureHighlight = highLight.plugin === 'highlighjs' ? document.querySelectorAll('figure.highlight') : document.querySelectorAll('pre[class*="language-"]')
 
     if (!((isShowTool || highlightHeightLimit) && $figureHighlight.length)) return
+    
+    if (window.ifExe_addHighlightTool) {
+        window.ifExe_addHighlightTool=false;
+    } else { //如果本函数体已执行过一次，ifExe_addHighlightTool将置为false，下次再执行到此处发现为false，则立即return，不再执行下面的内容
+        return
+    }
 
     const isPrismjs = highLight.plugin === 'prismjs'
 
@@ -747,9 +754,11 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
  * tag-hide
  */
+  window.ifExe_clickFnOfTagHide=true; //锁
   const clickFnOfTagHide = function () {
     const $hideInline = document.querySelectorAll('#article-container .hide-button')
-    if ($hideInline.length) {
+    if ($hideInline.length && window.ifExe_clickFnOfTagHide) {
+      window.ifExe_clickFnOfTagHide=false;
       $hideInline.forEach(function (item) {
         item.addEventListener('click', function (e) {
           const $this = this
@@ -1016,7 +1025,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sidebarFn()
     GLOBAL_CONFIG_SITE.isHome && scrollDownInIndex()
-    addHighlightTool()
+    addHighlightTool() //目前发现在使用encrypt加密情况下，由于需要在页面底部执行一次refreshFn_forEncrypt()，可能会导致addHighlightTool()执行两次，之前第一次一般不会执行addHighlightTool的真实函数体，因为不满足条件函数直接return了，但是发现偶尔居然也能满足条件（这种随机性我不知道是怎么出现的），总之需要加锁，使addHighlightTool函数体执行且仅执行一次，同样，clickFnOfTagHide()也存在该问题
     GLOBAL_CONFIG.isPhotoFigcaption && addPhotoFigcaption()
     jqLoadAndRun()
     GLOBAL_CONFIG.lightbox === 'mediumZoom' && addMediumZoom()
