@@ -742,9 +742,11 @@ document.addEventListener('DOMContentLoaded', function () {
   /**
  * table overflow
  */
+  window.ifExe_addTableWrap=true; //锁
   const addTableWrap = function () {
     const $table = document.querySelectorAll('#article-container :not(.highlight) > table, #article-container > table')
-    if ($table.length) {
+    if ($table.length && window.ifExe_addTableWrap) {
+      window.ifExe_addTableWrap=false;
       $table.forEach(item => {
         btf.wrap(item, 'div', '', 'table-wrap')
       })
@@ -1025,7 +1027,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     sidebarFn()
     GLOBAL_CONFIG_SITE.isHome && scrollDownInIndex()
-    addHighlightTool() //目前发现在使用encrypt加密情况下，由于需要在页面底部执行一次refreshFn_forEncrypt()，可能会导致addHighlightTool()执行两次，之前第一次一般不会执行addHighlightTool的真实函数体，因为不满足条件函数直接return了，但是发现偶尔居然也能满足条件（这种随机性我不知道是怎么出现的），总之需要加锁，使addHighlightTool函数体执行且仅执行一次，同样，clickFnOfTagHide()也存在该问题
+    addHighlightTool() //目前发现在使用encrypt加密情况下，由于需要在页面底部执行一次refreshFn_forEncrypt()，可能会导致addHighlightTool()执行两次，之前第一次一般不会执行addHighlightTool的真实函数体，因为不满足条件函数直接return了，但是发现偶尔居然也能满足条件（这种随机性我不知道是怎么出现的），总之需要加锁，使addHighlightTool函数体执行且仅执行一次，同样，clickFnOfTagHide()和addTableWrap()也存在该问题
     GLOBAL_CONFIG.isPhotoFigcaption && addPhotoFigcaption()
     jqLoadAndRun()
     GLOBAL_CONFIG.lightbox === 'mediumZoom' && addMediumZoom()
