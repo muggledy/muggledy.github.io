@@ -259,8 +259,12 @@ document.addEventListener('DOMContentLoaded', function () {
  * PhotoFigcaption
  * butterfly主题的inlineimage本身就存在问题，图片是可以出现在行内，但是只能出现在行尾，图片后的文本还是会换行，这是因为img图像在被解析（即此处js代码）的时候总是加上<div class="img-alt is-center">alt文本</div>，而div又非行内元素，是块级元素，所以会换行，此处我加上一个if (ele.textContent!="")的判断，当alt无值的时候，显然不应再添加<div class="img-alt is-center">块，另外，当图像作为行内元素时也不需要alt（当然也不能有），因此此处的修改是合理的
  */
+  window.ifExe_addPhotoFigcaption=true; //锁
   function addPhotoFigcaption () {
-    document.querySelectorAll('#article-container img').forEach(function (item) {
+    var dy_article_container_imgs = document.querySelectorAll('#article-container img');
+    if (dy_article_container_imgs.length>0 && window.ifExe_addPhotoFigcaption) {
+    window.ifExe_addPhotoFigcaption=false;
+    dy_article_container_imgs.forEach(function (item) {
       const parentEle = item.parentNode
       if (!parentEle.parentNode.classList.contains('justified-gallery')) {
         const ele = document.createElement('div')
@@ -271,6 +275,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
       }
     })
+    }
   }
 
   /**
