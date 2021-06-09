@@ -1693,6 +1693,12 @@ document.addEventListener('pjax:complete', function () {
   if (typeof window.ifExe_addPhotoFigcaption != 'undefined'){
       window.ifExe_addPhotoFigcaption = true;
   }
+  if (typeof window.ifExe_jqLoadAndRun_jg != 'undefined'){
+      window.ifExe_jqLoadAndRun_jg = true;
+  }
+  if (typeof window.ifExe_jqLoadAndRun_fb != 'undefined'){
+      window.ifExe_jqLoadAndRun_fb = true;
+  }
   window.refreshFn()
 
   document.querySelectorAll('script[data-pjax]').forEach(item => {

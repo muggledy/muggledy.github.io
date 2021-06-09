@@ -347,6 +347,8 @@ document.addEventListener('DOMContentLoaded', function () {
     })
   }
 
+  window.ifExe_jqLoadAndRun_jg=true; //锁1
+  window.ifExe_jqLoadAndRun_fb=true; //锁2
   const jqLoadAndRun = () => {
     const $fancyboxEle = GLOBAL_CONFIG.lightbox === 'fancybox'
       ? document.querySelectorAll('#article-container :not(a):not(.gallery-group) > img, #article-container > img')
@@ -355,10 +357,22 @@ document.addEventListener('DOMContentLoaded', function () {
     const $jgEle = document.querySelectorAll('#article-container .justified-gallery')
     const jgLengthNoZero = $jgEle.length > 0
 
-    if (jgLengthNoZero || fbLengthNoZero) {
+    if ((jgLengthNoZero && window.ifExe_jqLoadAndRun_jg) && (fbLengthNoZero && window.ifExe_jqLoadAndRun_fb)) {
+      window.ifExe_jqLoadAndRun_jg=false;
+      window.ifExe_jqLoadAndRun_fb=false;
       btf.isJqueryLoad(() => {
-        jgLengthNoZero && runJustifiedGallery($jgEle)
-        fbLengthNoZero && addFancybox($fancyboxEle)
+        runJustifiedGallery($jgEle)
+        addFancybox($fancyboxEle)
+      })
+    } else if ((jgLengthNoZero && window.ifExe_jqLoadAndRun_jg) && !(fbLengthNoZero && window.ifExe_jqLoadAndRun_fb)){
+      window.ifExe_jqLoadAndRun_jg=false;
+      btf.isJqueryLoad(() => {
+        runJustifiedGallery($jgEle)
+      })
+    } else if (!(jgLengthNoZero && window.ifExe_jqLoadAndRun_jg) && (fbLengthNoZero && window.ifExe_jqLoadAndRun_fb)) {
+      window.ifExe_jqLoadAndRun_fb=false;
+      btf.isJqueryLoad(() => {
+        addFancybox($fancyboxEle)
       })
     }
   }
