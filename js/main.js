@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const $searchEle = document.querySelector('#search-button')
   let searchWidth = $searchEle && $searchEle.offsetWidth
   
-  var article_double_css = "https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/data/butterfly/cardlistpost.min.css";
+  var article_double_css = "https://cdn.jsdelivr.net/gh/celestezj/ImageHosting@v2.5/data/butterfly/cardlistpost.min.css";
   if (typeof(saveToLocal.get('local_article_double_status'))!="undefined"){ //此处的逻辑只会在F5刷新网站时执行一次，之后在网站中由于采用了pjax，这里不会再重复执行（当然了，即使未启用pjax，此处不断重复执行也不会出错）。目的是读取本地保存的（是否启用双栏文章）状态并应用，未定义则不管
 	  var if_exists_article_css = false; //含义：当前是否应用双栏样式，在此代码块中，执行到哪句都要时刻更新。此处是赋初值
 	  document.querySelectorAll('link[rel=stylesheet]').forEach(function (dom){
