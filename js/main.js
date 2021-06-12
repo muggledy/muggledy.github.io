@@ -1059,6 +1059,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
   refreshFn()
   unRefreshFn()
-  
-  console.log(`嗨！欢迎来到我的博客😃！本站新增了一个垃圾的功能😅，请执行get_mini_note_status()获取相关提示（仅限电脑端）...`);
 })
