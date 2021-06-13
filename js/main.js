@@ -1059,4 +1059,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   refreshFn()
   unRefreshFn()
+  
+  console.log(" _______                     __           __        ");
+  console.log("|   |   |.——.——.——-——.——-——.|  |.——-——.——|  |.——.——.");
+  console.log("|       ||  |  |  _  |  _  ||  ||  -__|  _  ||  |  |");
+  console.log("|__|_|__||_____|___  |___  ||__||_____|_____||___  |");
+  console.log("               |_____|_____|                 |_____|");
 })
