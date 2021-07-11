@@ -1060,7 +1060,15 @@ document.addEventListener('DOMContentLoaded', function () {
   refreshFn()
   unRefreshFn()
   
-  console.log(" _______                     __           __        \n|   |   |.——.——.——-——.——-——.|  |.——-——.——|  |.——.——.\n|       ||  |  |  _  |  _  ||  ||  -__|  _  ||  |  |\n|__|_|__||_____|___  |___  ||__||_____|_____||___  |\n               |_____|_____|                 |_____|");
+  console.log("\
+ _____             _       _     \n\
+|     |_ _ ___ ___| |___ _| |_ _ \n\
+| | | | | | . | . | | -_| . | | |\n\
+|_|_|_|___|_  |_  |_|___|___|_  |  -patorjk.com-\n\
+          |___|___|         |___|\n");
+  //console.log(" _______                     __           __        \n|   |   |.——.——.——-——.——-——.|  |.——-——.——|  |.——.——.\n|       ||  |  |  _  |  _  ||  ||  -__|  _  ||  |  |\n|__|_|__||_____|___  |___  ||__||_____|_____||___  |\n               |_____|_____|                 |_____|");
+  var blog_version="1.9.0";
+  console.log(`\n%cMuggledy's Blog%cv${blog_version}%c\n`, "padding: 5px; background: #5c5c5c; font-weight: bold; color: white;border-top-left-radius:5px;border-bottom-left-radius:5px;", "padding: 5px; background: #4ec820; color: #eee;border-top-right-radius:5px;border-bottom-right-radius:5px", ''); //https://zhangshuqiao.org/
   if (0){ //Math.floor(Math.random()+0.5)
     console.log("\
   _______________________———————————————————￣￣￣￣￣￣￣￣￣￣￣￣`\\\n\
@@ -1097,25 +1105,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
       return relUrl;
   }
-  if(GetUrlRelativePath()=="/cherry/"){ //只有在首次进入或非pjax进入/cherry/页面时才会出现小熊
-  console.log("          ___________\n\
-   _.--^^^           ^^^--._\n\
-   \\`--...___________...--'/\n\
-   /                       \\_    _\n\
-  /                        (_`,_' )\n\
- /                          )    `\\\n\
-/_____                   _ /    '. |\n\
-|     ^^^^-----------^^^^  |       `,\n\
-|                           \\,_  `-/\n\
-|          我是一只         ,&&&&&V\n\
-|        爱幻想的小熊      ,&&&&&&&&:\n\
-|           ≧ω≦         ,&&&&&&&&&&;\n\
-|                         |  |&&&&&&&|\\\n\
-|_____                   _|  |       |_)_\n\
- \\    ^^^^-----------^^^^ |  |       ;_/ |  -Felix Lee-\n\
-  \\                       '--'   `,.--.  |\n\
-   `---...___________...---' \\_    |  |--'\n\
-                               `-._\\__/\n");
-  console.log("好吧，我这是暴露了呀😎！");
+  if(GetUrlRelativePath()=="/xxx/"){ //只有在首次进入或非pjax进入/xxx/页面时才会执行
+    //do something
   }
 })
