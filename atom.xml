@@ -6,7 +6,7 @@
   <link href="https://muggledy.github.io/atom.xml" rel="self"/>
   
   <link href="https://muggledy.github.io/"/>
-  <updated>2021-07-12T16:48:12.693Z</updated>
+  <updated>2021-07-16T10:32:00.327Z</updated>
   <id>https://muggledy.github.io/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://muggledy.github.io/posts/35908/"/>
     <id>https://muggledy.github.io/posts/35908/</id>
     <published>2021-06-08T01:39:12.000Z</published>
-    <updated>2021-07-12T16:48:12.693Z</updated>
+    <updated>2021-07-16T10:32:00.327Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
+    <summary type="html">首先简要介绍了反向传播的原理，然后以线性回归模型、Softmax多分类模型以及MLP多层感知机模型为例从头搭建网络并训练，相应地还给出了代码的简洁写法...</summary>
     
     
     
@@ -75,7 +69,7 @@
     <link href="https://muggledy.github.io/posts/17177/"/>
     <id>https://muggledy.github.io/posts/17177/</id>
     <published>2021-02-05T16:00:00.000Z</published>
-    <updated>2021-06-18T12:38:58.160Z</updated>
+    <updated>2021-07-13T06:52:27.027Z</updated>
     
     
     <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-quote-left&quot;&gt;&lt;/i&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;Hexo&lt;/a&gt; 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
