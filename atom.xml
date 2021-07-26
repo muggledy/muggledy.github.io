@@ -6,7 +6,7 @@
   <link href="https://muggledy.github.io/atom.xml" rel="self"/>
   
   <link href="https://muggledy.github.io/"/>
-  <updated>2021-07-24T18:12:32.406Z</updated>
+  <updated>2021-07-19T05:42:24.065Z</updated>
   <id>https://muggledy.github.io/</id>
   
   <author>
@@ -15,21 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>打飞字(Z-Type)</title>
-    <link href="https://muggledy.github.io/posts/42584/"/>
-    <id>https://muggledy.github.io/posts/42584/</id>
-    <published>2021-07-19T06:42:45.000Z</published>
-    <updated>2021-07-24T18:12:32.406Z</updated>
-    
-    
-    <summary type="html">游戏目标是击落所有将要撞向你的敌方飞船，要击毁一艘飞船，只需在键盘中输入跟随飞船移动的英文单词，该游戏旨在习得更快且精准的打字技能，百般无聊中写了个垃圾辅助脚本...</summary>
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>Pytorch入门教程</title>
