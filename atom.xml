@@ -6,7 +6,7 @@
   <link href="https://muggledy.github.io/atom.xml" rel="self"/>
   
   <link href="https://muggledy.github.io/"/>
-  <updated>2021-07-19T05:42:24.065Z</updated>
+  <updated>2021-07-26T18:26:14.792Z</updated>
   <id>https://muggledy.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://muggledy.github.io/posts/35908/"/>
     <id>https://muggledy.github.io/posts/35908/</id>
     <published>2021-06-08T01:39:12.000Z</published>
-    <updated>2021-07-19T05:42:24.065Z</updated>
+    <updated>2021-07-26T18:26:14.792Z</updated>
     
     
     <summary type="html">首先简要介绍了反向传播的原理，然后以线性回归模型、Softmax多分类模型以及MLP多层感知机模型为例从头搭建网络并训练，相应地还给出了代码的简洁写法...</summary>
@@ -42,7 +42,7 @@
     <link href="https://muggledy.github.io/posts/65257/"/>
     <id>https://muggledy.github.io/posts/65257/</id>
     <published>2021-03-24T16:00:00.000Z</published>
-    <updated>2021-06-18T11:49:35.972Z</updated>
+    <updated>2021-07-28T07:56:47.766Z</updated>
     
     
       
