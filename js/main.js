@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	  }
   }
 
+  window.dyjingshowed=false;
+
   const adjustMenu = (change = false) => {
     if (change) {
       blogNameWidth = $blogName && $blogName.offsetWidth
@@ -1094,19 +1096,5 @@ document.addEventListener('DOMContentLoaded', function () {
    \\===/___________________——————————————————————————￣￣￣￣￣￣￣￣￣￣¯")
   }else{
     console.log("\"𝓘𝒻 𝒷𝓎 𝓁𝒾𝒻𝓮 𝓎𝓸𝓊 𝓌𝓮𝓇𝓮 𝒹𝓮𝒸𝓮𝒾𝓋𝓮𝒹\n𝒟𝓸𝓃'𝓉 𝒷𝓮 𝒹𝒾𝓈𝓂𝒶𝓁 ,𝒹𝓸𝓃'𝓉 𝒷𝓮 𝓌𝒾𝓁𝒹\n𝓘𝓃 𝓉𝒽𝓮 𝒹𝒶𝓎 𝓸𝒻 𝓰𝓇𝒾𝓮𝒻 ,𝒷𝓮 𝓂𝒾𝓁𝒹\n𝓜𝓮𝓇𝓇𝓎 𝒹𝒶𝓎𝓈 𝓌𝒾𝓁𝓁 𝒸𝓸𝓂𝓮, 𝒷𝓮𝓁𝒾𝓮𝓋𝓮\n\n𝓗𝓮𝒶𝓇𝓉 𝒾𝓈 𝓁𝒾𝓋𝒾𝓃𝓰 𝒾𝓃 𝓉𝓸𝓂𝓸𝓇𝓇𝓸𝓌\n𝒫𝓇𝓮𝓈𝓮𝓃𝓉 𝒾𝓈 𝒹𝓮𝒿𝓮𝒸𝓉𝓮𝒹 𝒽𝓮𝓇𝓮\n𝓘𝓃 𝒶 𝓂𝓸𝓂𝓮𝓃𝓉 ,𝓅𝒶𝓈𝓈𝓮𝓈 𝓈𝓸𝓇𝓇𝓸𝓌\n𝒯𝒽𝒶𝓉 𝓌𝒽𝒾𝒸𝒽 𝓅𝒶𝓈𝓈𝓮𝓈 𝓌𝒾𝓁𝓁 𝒷𝓮 𝒹𝓮𝒶𝓇.\"  -Pushkin-");
-  }
-  
-  const GetUrlRelativePath = () => { //http://www.liangshunet.com/ca/201306/453800003.htm
-      var url = document.location.toString();
-      var arrUrl = url.split("//");
-      var start = arrUrl[1].indexOf("/");
-      var relUrl = arrUrl[1].substring(start); //stop省略，截取从start开始到结尾的所有字符
-      if(relUrl.indexOf("?") != -1){
-          relUrl = relUrl.split("?")[0];
-      }
-      return relUrl;
-  }
-  if(GetUrlRelativePath()=="/xxx/"){ //只有在首次进入或非pjax进入/xxx/页面时才会执行
-    //do something
   }
 })
