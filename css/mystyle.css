@@ -6,8 +6,10 @@
 */
 
 /*修复部分手机端（已知小米）浏览器页面滑动存在抖动的情况 看起来没一点效果啊*/
-*{
-  -webkit-overflow-scrolling: touch;
+html,body{ overflow:scroll; min-height:101%;}
+html{ overflow:-moz-scrollbars-vertical;}
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /*顶图背景色 原始为蓝色，当背景图未加载完成时，蓝色太过刺眼，很不美观*/
