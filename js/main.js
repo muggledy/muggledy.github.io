@@ -92,6 +92,21 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     }
   }
+  
+  window.closeMobileSidebarBackup = function () {
+    const $toggleMenu = document.getElementById('toggle-menu')
+    if ($toggleMenu!=null) {
+      const $mobileSidebarMenus = document.getElementById('sidebar-menus')
+      const $menuMask = document.getElementById('menu-mask')
+      const $body = document.body
+      if ($mobileSidebarMenus.classList.contains('open')) {
+        $body.style.overflow = ''
+        $body.style.paddingRight = ''
+        btf.fadeOut($menuMask, 0.5)
+        $mobileSidebarMenus.classList.remove('open')
+      }
+    }
+  }
 
   /**
  * 首頁top_img底下的箭頭
