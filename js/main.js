@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function () {
       if ($mobileSidebarMenus.classList.contains('open')) {
         $body.style.overflow = ''
         $body.style.paddingRight = ''
-        btf.fadeOut($menuMask, 0.5)
+        btf.fadeOut($menuMask, 0.25)
         $mobileSidebarMenus.classList.remove('open')
       }
     }
