@@ -1,13 +1,14 @@
-*{
-  -webkit-overflow-scrolling: touch;
-}
-
 /*
 @font-face {
     font-family: 'sleek';
     src: url('https://cdn.jsdelivr.net/gh/lete114/CDN2/zaxiang/sleek.woff2');
 }
 */
+
+/*修复部分手机端（已知小米）浏览器页面滑动存在抖动的情况 看起来有一点效果*/
+*{
+  -webkit-overflow-scrolling: touch;
+}
 
 /*顶图背景色 原始为蓝色，当背景图未加载完成时，蓝色太过刺眼，很不美观*/
 #page-header {
@@ -1664,4 +1665,16 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-playlist {
     -webkit-animation-name: dyBorderShineGreen;
     -webkit-animation-duration: 3s;
     -webkit-animation-iteration-count: infinite;
+}
+
+/*油管iframe嵌入视频*/
+iframe.youtubevideo{
+    width:95%;
+    height:315px;
+}
+@media only screen and (max-width: 500px){
+    iframe.youtubevideo{
+        width:100%;
+        height:auto;
+    }
 }

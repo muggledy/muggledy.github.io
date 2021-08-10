@@ -493,6 +493,7 @@ var pjax = new Pjax({
 })
 
 document.addEventListener('pjax:complete', function () {
+  document.getElementById('sidebar-menus').classList.remove('open')
   if (typeof window.ifExe_addHighlightTool != 'undefined'){
       window.ifExe_addHighlightTool = true;
   }
