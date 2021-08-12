@@ -5,6 +5,11 @@
 }
 */
 
+/*尝试修复部分手机端（已知就小米自带浏览器）浏览器页面滑动存在抖动的情况 目前看起来没一点效果啊，我又在layout.pug中加了一句document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false)，似乎也没起什么效，先就这样吧*/
+*{
+  -webkit-overflow-scrolling: touch;
+}
+
 /*顶图背景色 原始为蓝色，当背景图未加载完成时，蓝色太过刺眼，很不美观*/
 #page-header {
     background-color: rgba(255,255,255,0) !important;
@@ -1565,7 +1570,7 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-playlist {
 /*行内span边框*/
 .spanborderred{
     border:1px solid black;
-    border-radius:2px;
+    border-radius:4px;
 }
 .spanborderred:hover{
     border:1px solid red;
@@ -1574,7 +1579,7 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-playlist {
 }
 .spanbordergreen{
     border:1px solid black;
-    border-radius:2px;
+    border-radius:4px;
 }
 .spanbordergreen:hover{
     border:1px solid #00c4b6;
@@ -1583,7 +1588,7 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-playlist {
 }
 .spanborderblue{
     border:1px solid black;
-    border-radius:2px;
+    border-radius:4px;
 }
 .spanborderblue:hover{
     border:1px solid #4fb3f5;
@@ -1625,4 +1630,67 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-playlist {
 /*代码块 纵轴禁止出现无效滚动条（目前仅发现在微信浏览器中存在该问题，莫名其妙）*/
 #article-container figure.highlight *{
     overflow-y: hidden !important;
+}
+
+/*闪耀边框 https://blog.csdn.net/zk437092645/article/details/8641486 */
+@-webkit-keyframes dyBorderShineRed {
+    from { -webkit-box-shadow: 0 0 5px #bbb; }
+    50% { -webkit-box-shadow: 0 0 10px red; }
+    to { -webkit-box-shadow: 0 0 5px #bbb; }
+}
+@-webkit-keyframes dyBorderShineBlue {
+    from { -webkit-box-shadow: 0 0 9px #333; }
+    50% { -webkit-box-shadow: 0 0 18px blue; }
+    to { -webkit-box-shadow: 0 0 9px #333; }
+}
+@-webkit-keyframes dyBorderShineGreen {
+    from { -webkit-box-shadow: 0 0 9px #00c4b6; }
+    50% { -webkit-box-shadow: 0 0 18px lightgreen; }
+    to { -webkit-box-shadow: 0 0 9px #00c4b6; }
+}
+.dy_border_shine_red, .dy_border_shine_blue, .dy_border_shine_green{
+    border:1px solid #dcdce0;
+}
+.dy_border_shine_red:hover{
+    -webkit-animation-name: dyBorderShineRed;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+.dy_border_shine_blue:hover{
+    -webkit-animation-name: dyBorderShineBlue;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+.dy_border_shine_green:hover{
+    -webkit-animation-name: dyBorderShineGreen;
+    -webkit-animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+/*油管iframe嵌入视频*/
+iframe.youtubevideo{
+    width:95%;
+    height:315px;
+}
+@media only screen and (max-width: 500px){
+    iframe.youtubevideo{
+        width:100%;
+        height:auto;
+    }
+}
+
+/*页脚蝴蝶动画*/
+.copyright svg{
+  animation:akilarButterfly 1s linear infinite alternate;
+  margin-bottom: -4.75px;
+  margin-right: 5px;
+  margin-left: 4px;
+}
+@keyframes akilarButterfly {
+  from {
+    transform:rotateY(70deg);
+  }
+  to {
+    transform:rotateY(0deg);
+  }
 }

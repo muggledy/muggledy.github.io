@@ -5744,6 +5744,126 @@ div.btns.rounded a > i:first-child {
 #article-container .btn-beautify.outline.green.button--animated:before {
   background: #5cb85c;
 }
+.carousel {
+  touch-action: none;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  background: transparent;
+  height: fit-content;
+  min-height: 600px;
+  -webkit-perspective: 1000px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -ms-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.drag-container,
+.spin-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  margin: auto;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: rotateX(-10deg);
+  -webkit-transform: rotateX(-10deg);
+  -moz-transform: rotateX(-10deg);
+  -o-transform: rotateX(-10deg);
+  -ms-transform: rotateX(-10deg);
+  transform: rotateX(-10deg);
+}
+.drag-container img,
+.drag-container video {
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  line-height: 200px;
+  font-size: 50px;
+  text-align: center;
+  -webkit-box-shadow: 0 0 8px #fff;
+  -webkit-box-shadow: 0 0 8px #fff;
+  box-shadow: 0 0 8px #fff;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0,0,0,0.333));
+}
+.drag-container .img-alt.is-center {
+  display: none;
+}
+.drag-container br {
+  display: none;
+}
+.drag-container p {
+  font-family: Serif;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+  -moz-transform: translate(-50%, -50%) rotateX(90deg);
+  -o-transform: translate(-50%, -50%) rotateX(90deg);
+  -ms-transform: translate(-50%, -50%) rotateX(90deg);
+  transform: translate(-50%, -50%) rotateX(90deg);
+  color: #fff;
+}
+.drag-container img:hover,
+.drag-container video:hover {
+  -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.867);
+  -webkit-box-shadow: 0 0 15px rgba(255,255,255,0.867);
+  box-shadow: 0 0 15px rgba(255,255,255,0.867);
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0,0,0,0.467));
+}
+.carousel-ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+  -webkit-transform: translate(-50%, -50%) rotateX(90deg);
+  -moz-transform: translate(-50%, -50%) rotateX(90deg);
+  -o-transform: translate(-50%, -50%) rotateX(90deg);
+  -ms-transform: translate(-50%, -50%) rotateX(90deg);
+  transform: translate(-50%, -50%) rotateX(90deg);
+  background: -webkit--webkit-radial-gradient(center center, farthest-side, rgba(153,153,153,0.2), transparent);
+  background: -webkit--moz-radial-gradient(center center, farthest-side, rgba(153,153,153,0.2), transparent);
+  background: -webkit--o-radial-gradient(center center, farthest-side, rgba(153,153,153,0.2), transparent);
+  background: -webkit--ms-radial-gradient(center center, farthest-side, rgba(153,153,153,0.2), transparent);
+  background: -webkit-radial-gradient(center center, farthest-side, rgba(153,153,153,0.2), transparent);
+}
+img.medium-zoom-image.entered.loaded.medium-zoom-image--opened {
+  width: auto !important;
+}
 .checkbox {
   display: -webkit-box;
   display: -moz-box;
@@ -6770,6 +6890,39 @@ div.videos[col='4'] iframe {
 [data-theme="dark"] audio,
 [data-theme="dark"] video {
   filter: brightness(0.7);
+}
+.nota {
+  color: #99a9bf;
+  text-decoration: none;
+  word-wrap: break-word;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  -ms-transition: all 0.2s;
+  transition: all 0.2s;
+  overflow-wrap: break-word;
+}
+.nota:hover {
+  color: #49b1f5;
+}
+span.nota:hover:before {
+  position: fixed;
+  width: fit-content;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 10%;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 100;
+  content: attr(data-nota);
+  font-size: 15.5px;
+  color: #fff;
+  padding: 10px;
+  background-color: rgba(73,177,245,0.9);
+}
+[data-theme=dark] span.nota:hover:before {
+  background-color: rgba(18,18,18,0.8);
 }
 .note {
   position: relative;
