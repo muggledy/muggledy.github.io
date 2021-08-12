@@ -9,13 +9,13 @@ window.addEventListener('load', () => {
       search(GLOBAL_CONFIG.localSearch.path)
       loadFlag = true
     }
-    // shortcut: ESC
-    document.addEventListener('keydown', function f (event) {
+    // shortcut: ESC // conflict with live2d-widget(keydown with ESC to exist the plane game provided by WebsiteAsteroids)
+    /*document.addEventListener('keydown', function f (event) {
       if (event.code === 'Escape') {
         closeSearch()
         document.removeEventListener('keydown', f)
       }
-    })
+    })*/
   }
 
   //堪称有史以来最狗逼的地方，下面第5行原始代码为：setTimeout(() => { $searchDialog.style.cssText = "display: none; animation: ''" }, 500)，该延迟会导致搜索框在pjax过程结束后，新页面打开时仍有可能短暂地显示在界面中，十分难看

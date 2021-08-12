@@ -177,8 +177,9 @@
 	color:#0fc313;
 }
 
-.hexo-douban-active, .hexo-douban-button {
-	border-radius: 10%;
+/*豆瓣、哔哩哔哩番剧页面按钮样式*/
+.hexo-douban-tabs .hexo-douban-tab, .hexo-douban-button, .bangumi-tabs .bangumi-tab, .bangumi-button{
+	border-radius: 4px;
 }
 
 /* 新增的标签插件 富文本按钮 等和原主题样式可能存在部分冲突，导致当鼠标悬停在这些按钮上时会出现下划线，此处强制禁止 */
@@ -1504,4 +1505,124 @@ c-player .cp-drop-down-menu.cp-drop-down-menu-playlist {
 
 #article-container ul.cp-playlist>li:not(.tab):before{
     content: none !important;
+}
+
+/*暗黑模式下显示blur层时，修复日期等颜色不协调的问题*/
+@media only screen and (min-width: 1500px){
+[data-theme="dark"].hide-aside #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap {
+	color: #d1cfce;
+}
+[data-theme="dark"].hide-aside #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap a{
+    color: #d1cfce;
+}
+[data-theme="dark"].hide-aside #recent-posts>.recent-post-item>.recent-post-info>.article-meta-wrap a:hover{
+    color: #49b1f5;
+}
+}
+
+/*阅读模式下隐藏看板娘*/
+.read-mode #live2d{
+    display:none;
+}
+
+/*希望图片在手机端以指定的百分比显示*/
+@media only screen and (max-width: 500px){
+    img.showonphone100{
+        width: 100% !important;
+    }
+    img.showonphone95{
+        width: 95% !important;
+    }
+    img.showonphone90{
+        width: 90% !important;
+    }
+    img.showonphone85{
+        width: 85% !important;
+    }
+    img.showonphone80{
+        width: 80% !important;
+    }
+    img.showonphone75{
+        width: 75% !important;
+    }
+    img.showonphone70{
+        width: 70% !important;
+    }
+    img.showonphone65{
+        width: 65% !important;
+    }
+    img.showonphone60{
+        width: 60% !important;
+    }
+    img.showonphone55{
+        width: 55% !important;
+    }
+    img.showonphone50{
+        width: 50% !important;
+    }
+}
+
+/*行内span边框*/
+.spanborderred{
+    border:1px solid black;
+    border-radius:2px;
+}
+.spanborderred:hover{
+    border:1px solid red;
+    cursor:pointer;
+    color:red;
+}
+.spanbordergreen{
+    border:1px solid black;
+    border-radius:2px;
+}
+.spanbordergreen:hover{
+    border:1px solid #00c4b6;
+    cursor:pointer;
+    color:#00c4b6;
+}
+.spanborderblue{
+    border:1px solid black;
+    border-radius:2px;
+}
+.spanborderblue:hover{
+    border:1px solid #4fb3f5;
+    cursor:pointer;
+    color:#4fb3f5;
+}
+
+/*新款avator（侧边栏）部件（且隐藏follow me按钮）*/
+#aside-content .card-info .card-info-data > .card-info-data-item {
+    display: inline-block;
+    background-color: #edf0f7;
+    border-radius: 8px;
+    margin: 0 2%;
+    padding: 6px 5px 1px !important;
+    width: 29%;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+[data-theme="dark"] #aside-content .card-info .card-info-data > .card-info-data-item {
+    background-color: #0d0d0d;
+}
+#aside-content .card-info .card-info-data > .card-info-data-item:hover {
+    background-color: #49B1F5;
+}
+[data-theme="dark"] #aside-content .card-info .card-info-data > .card-info-data-item:hover {
+    background-color: #383838;
+}
+#aside-content .card-info .card-info-data > .card-info-data-item:hover a .headline,
+#aside-content .card-info .card-info-data > .card-info-data-item:hover a .length-num {
+	color: #f5f5f5;
+}
+#aside-content .card-info #card-info-btn{
+    display: none !important;
+}
+
+/*代码块 纵轴禁止出现无效滚动条（目前仅发现在微信浏览器中存在该问题，莫名其妙）*/
+#article-container figure.highlight *{
+    overflow-y: hidden !important;
 }
