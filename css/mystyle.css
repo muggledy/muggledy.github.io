@@ -1694,3 +1694,8 @@ iframe.youtubevideo{
     transform:rotateY(0deg);
   }
 }
+@media only screen and (max-width: 1500px){
+    .copyright svg{
+        display: none;
+    }
+}
