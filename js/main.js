@@ -1066,7 +1066,7 @@ document.addEventListener('DOMContentLoaded', function () {
       new_font_css_element=document.createElement("link");
       new_font_css_element.setAttribute("rel","stylesheet");
       new_font_css_element.setAttribute("type","text/css");
-      new_font_css_element.setAttribute("href","https://cdn.jsdelivr.net/gh/celestezj/Mirror1ImageHosting/data/mactype/mactype.css");
+      new_font_css_element.setAttribute("href","https://cdn.jsdelivr.net/gh/celestezj/Mirror1ImageHosting@v0.6/data/mactype/mactype.css");
       document.body.appendChild(new_font_css_element);
   }
   
@@ -1078,7 +1078,7 @@ document.addEventListener('DOMContentLoaded', function () {
 |_|_|_|___|_  |_  |_|___|___|_  |  -patorjk.com-\n\
           |___|___|         |___|\n");
   //console.log(" _______                     __           __        \n|   |   |.——.——.——-——.——-——.|  |.——-——.——|  |.——.——.\n|       ||  |  |  _  |  _  ||  ||  -__|  _  ||  |  |\n|__|_|__||_____|___  |___  ||__||_____|_____||___  |\n               |_____|_____|                 |_____|");
-  var blog_version="1.9.0";
+  var blog_version="2.0.0";
   console.log(`\n%cMuggledy's Blog%cv${blog_version}%c\n`, "padding: 5px; background: #5c5c5c; font-weight: bold; color: white;border-top-left-radius:5px;border-bottom-left-radius:5px;", "padding: 5px; background: #4ec820; color: #eee;border-top-right-radius:5px;border-bottom-right-radius:5px", ''); //https://zhangshuqiao.org/
   if (0){ //Math.floor(Math.random()+0.5)
     console.log("\
