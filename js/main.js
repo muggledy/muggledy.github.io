@@ -1062,12 +1062,37 @@ document.addEventListener('DOMContentLoaded', function () {
   refreshFn()
   unRefreshFn()
   
-  if (IsPC()){ //字体增强，不喜则关。和其他根据屏幕宽度判断是否是电脑端的样式相比，这种可能更合理、正确
-      new_font_css_element=document.createElement("link");
-      new_font_css_element.setAttribute("rel","stylesheet");
-      new_font_css_element.setAttribute("type","text/css");
-      new_font_css_element.setAttribute("href","https://cdn.jsdelivr.net/gh/celestezj/Mirror1ImageHosting@v0.6/data/mactype/mactype.css");
-      document.body.appendChild(new_font_css_element);
+  mactype_css_link = "https://cdn.jsdelivr.net/gh/celestezj/Mirror1ImageHosting@v0.6/data/mactype/mactype.css";
+  window.open_mactype = function(){ //字体增强(可在搜索栏输入mactype开启或关闭)。和其他根据屏幕宽度判断是否是电脑端的样式相比，这种可能更合理、正确
+      var dyallcsslinks = document.querySelectorAll('link[rel=stylesheet]');
+      var exists_mactype_css = false;
+      dyallcsslinks.forEach(function (dom) {
+          if (dom.href==mactype_css_link){
+              exists_mactype_css = true;
+          }
+      });
+      if (!exists_mactype_css){
+          var new_font_css_element=document.createElement("link");
+          new_font_css_element.setAttribute("rel","stylesheet");
+          new_font_css_element.setAttribute("type","text/css");
+          new_font_css_element.setAttribute("href",mactype_css_link);
+          document.body.appendChild(new_font_css_element);
+      }
+      saveToLocal.set('local_mactype_status', true, 2);
+  }
+  window.close_mactype = function(){
+      var dyallcsslinks = document.querySelectorAll('link[rel=stylesheet]');
+      dyallcsslinks.forEach(function (dom) {
+          if (dom.href==mactype_css_link){
+              dom.remove();
+          }
+      });
+      saveToLocal.set('local_mactype_status', false, 2);
+  }
+  if (typeof(saveToLocal.get('local_mactype_status'))!="undefined"){
+      if (saveToLocal.get('local_mactype_status')==true){
+          window.open_mactype();
+      }
   }
   
   console.log('提示：要正确访问本站，您可能需要一把梯子~');
