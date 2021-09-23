@@ -1063,7 +1063,7 @@ document.addEventListener('DOMContentLoaded', function () {
   unRefreshFn()
   
   mactype_css_link = "https://cdn.jsdelivr.net/gh/celestezj/Mirror1ImageHosting@v0.6/data/mactype/mactype.css";
-  window.open_mactype = function(){ //字体增强(可在搜索栏输入mactype开启或关闭)。和其他根据屏幕宽度判断是否是电脑端的样式相比，这种可能更合理、正确
+  window.open_mactype = function(){ //字体增强(可在搜索栏输入mactype开启或关闭)。和其他根据屏幕宽度判断是否是电脑端的样式相比，这种可能更合理、正确。在iPad上字体增强的css不起作用，所以仅在电脑端体验(见local-search.js)
       var dyallcsslinks = document.querySelectorAll('link[rel=stylesheet]');
       var exists_mactype_css = false;
       dyallcsslinks.forEach(function (dom) {
