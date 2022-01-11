@@ -1,0 +1,1 @@
+"use strict";var checkExist;window.location.hash&&(checkExist=setInterval(function(){$(window.location.hash).length&&($("html, body").animate({scrollTop:$(window.location.hash).offset().top-90},1e3),clearInterval(checkExist))},100));
