@@ -4,7 +4,7 @@
   <url>
     <loc>https://muggledy.top/gallery/index.html</loc>
     
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -13,7 +13,7 @@
   <url>
     <loc>https://muggledy.top/link/index.html</loc>
     
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,7 +22,7 @@
   <url>
     <loc>https://muggledy.top/note/index.html</loc>
     
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -31,7 +31,7 @@
   <url>
     <loc>https://muggledy.top/tags/index.html</loc>
     
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -40,7 +40,7 @@
   <url>
     <loc>https://muggledy.top/gallery/avatar/index.html</loc>
     
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +49,7 @@
   <url>
     <loc>https://muggledy.top/gallery/wallpaper/index.html</loc>
     
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,34 +58,7 @@
   <url>
     <loc>https://muggledy.top/link/posts/index.html</loc>
     
-    <lastmod>2022-02-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://muggledy.top/categories/index.html</loc>
-    
-    <lastmod>2022-02-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://muggledy.top/anime/index.html</loc>
-    
-    <lastmod>2022-02-15</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://muggledy.top/about/index.html</loc>
-    
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -94,7 +67,34 @@
   <url>
     <loc>https://muggledy.top/posts/65257/</loc>
     
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://muggledy.top/categories/index.html</loc>
+    
+    <lastmod>2022-02-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://muggledy.top/anime/index.html</loc>
+    
+    <lastmod>2022-02-19</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://muggledy.top/about/index.html</loc>
+    
+    <lastmod>2022-02-19</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -148,7 +148,7 @@
 
   <url>
     <loc>https://muggledy.top/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -156,21 +156,21 @@
   
   <url>
     <loc>https://muggledy.top/tags/Butterfly/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://muggledy.top/tags/Python/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://muggledy.top/tags/Pytorch/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -179,42 +179,42 @@
   
   <url>
     <loc>https://muggledy.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://muggledy.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://muggledy.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://muggledy.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://muggledy.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://muggledy.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/DL%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2022-02-15</lastmod>
+    <lastmod>2022-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
