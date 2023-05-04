@@ -105,7 +105,7 @@
     <link href="https://muggledy.top/posts/65257/"/>
     <id>https://muggledy.top/posts/65257/</id>
     <published>2021-03-25T07:53:40.000Z</published>
-    <updated>2023-04-08T19:13:54.651Z</updated>
+    <updated>2023-05-04T14:19:29.406Z</updated>
     
     
     <summary type="html">在原主题基础上参考小冰、Akilar、乐特等人的魔改对主题样式及细节进行修改和完善，对其中部分改动进行记录以供后续参考...</summary>
@@ -118,26 +118,6 @@
     
     
     <category term="Butterfly" scheme="https://muggledy.top/tags/Butterfly/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客简易配置</title>
-    <link href="https://muggledy.top/posts/17177/"/>
-    <id>https://muggledy.top/posts/17177/</id>
-    <published>2021-02-06T04:23:55.000Z</published>
-    <updated>2021-02-08T00:11:26.000Z</updated>
-    
-    
-    <summary type="html">&lt;div class=&quot;note blue icon flat&quot;&gt;&lt;i class=&quot;note-icon fas fa-quote-left&quot;&gt;&lt;/i&gt;&lt;p&gt;&lt;a href=&quot;https://hexo.io/zh-cn/docs/&quot;&gt;Hexo&lt;/a&gt; 是一个快速、简洁且高效的博客框架。Hexo 使用 &lt;a href=&quot;https://daringfireball.net/projects/markdown/&quot;&gt;Markdown&lt;/a&gt;（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。&lt;/p&gt;
-&lt;/div&gt;</summary>
-    
-    
-    
-    <category term="环境配置" scheme="https://muggledy.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
-    
-    <category term="Hexo" scheme="https://muggledy.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/Hexo/"/>
-    
     
   </entry>
   
