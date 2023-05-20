@@ -150,17 +150,18 @@
 console.log("(first)loading page...");
 if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loading_percentage_timer === 0) {
   window.is_loading_percentage_timer = 1;
-  console.log("start loadingPercentageTimer");
+  console.log("start loadingPercentageTimer0");
   window.loadingPercentageTimer = setInterval(function() {
     var progressBar = document.querySelector(".pace-progress");
     if (!progressBar) return
     var currentValue = progressBar.getAttribute("data-progress-text");
+    console.log(window.is_loading_percentage_timer);
     if (currentValue !== loadingPercentage.textContent) {
       loadingPercentage.textContent = currentValue;
       if (currentValue === "100%") {
         clearInterval(window.loadingPercentageTimer);
         window.is_loading_percentage_timer = 0;
-        console.log("clear loadingPercentageTimer")
+        console.log("clear loadingPercentageTimer0")
       }
     }
   }, 100);
