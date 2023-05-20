@@ -146,7 +146,7 @@
     })(window)</script><link rel="stylesheet" href="/css/mystyle.css"><link rel="stylesheet" href="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/font_awesome/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/button/buttons.min.css" media="defer" onload="this.media='all'"><script src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.9/data/img_preview/article_img_preview.min.js"></script><script src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.9/data/bubble/bubble.min.js"></script><script src="https://cdn.staticfile.org/moment.js/2.24.0/moment.min.js"></script><script src="https://unpkg.com/echarts@5.1.2/dist/echarts.min.js"></script><script src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.9/data/is_pc/is-pc-etc.min.js"></script><link rel="stylesheet" href="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.1/data/hint/hint.min.css" media="defer" onload="this.media='all'"><script>if (IsPC()){
   loadJS("/live2d-widget/autoload.js",function(){})
 }</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Muggledy's Blog" type="application/atom+xml">
-</head><!--.dyminibox--><body><div id="loading-box" onclick="window.is_loading_percentage_timer = 0;clearInterval(window.loadingPercentageTimer);document.body.style.overflow = &quot;auto&quot;;document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;);document.body.style.paddingRight = &quot;&quot;;document.getElementById(&quot;menu-mask&quot;).setAttribute(&quot;style&quot;, &quot;display:none&quot;);"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>var loadingPercentage = document.getElementById("loading-percentage");
+</head><!--.dyminibox--><body><div id="loading-box" onclick="window.is_loading_percentage_timer = 0;clearInterval(window.loadingPercentageTimer);document.body.style.overflow = &quot;auto&quot;;document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;);document.body.style.paddingRight = &quot;&quot;;document.getElementById(&quot;menu-mask&quot;).setAttribute(&quot;style&quot;, &quot;display:none&quot;);document.getElementById(&quot;loading-percentage&quot;).textContent = &quot;0%&quot;;"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>var loadingPercentage = document.getElementById("loading-percentage");
 console.log("(first)loading page...");
 if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loading_percentage_timer === 0) {
   window.is_loading_percentage_timer = 1;
@@ -166,6 +166,7 @@ if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loadi
         document.body.style.paddingRight = '';
         document.getElementById('menu-mask').setAttribute('style', 'display:none');
         console.log("clear loadingPercentageTimer0")
+        loadingPercentage.textContent = '0%';
       }
     }
   }, 100);
@@ -1015,6 +1016,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script defer s
       document.body.style.paddingRight = '';
       document.getElementById('menu-mask').setAttribute('style', 'display:none');
       console.log("clear loadingPercentageTimer")
+      loadingPercentage.textContent = '0%';
     }
   },
   initLoading: () => {
@@ -1040,6 +1042,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script defer s
             document.body.style.paddingRight = '';
             document.getElementById('menu-mask').setAttribute('style', 'display:none');
             console.log("clear loadingPercentageTimer")
+            loadingPercentage.textContent = '0%';
           }
         }
       }, 100);
