@@ -147,10 +147,10 @@
   loadJS("/live2d-widget/autoload.js",function(){})
 }</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Muggledy's Blog" type="application/atom+xml">
 </head><!--.dyminibox--><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>var loadingPercentage = document.getElementById("loading-percentage");
-//console.log("(first)loading page...");
+console.log("(first)loading page...");
 if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loading_percentage_timer === 0) {
   window.is_loading_percentage_timer = 1;
-  //console.log("start loadingPercentageTimer");
+  console.log("start loadingPercentageTimer");
   window.loadingPercentageTimer = setInterval(function() {
     var progressBar = document.querySelector(".pace-progress");
     if (!progressBar) return
@@ -160,7 +160,7 @@ if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loadi
       if (currentValue === "100%") {
         clearInterval(window.loadingPercentageTimer);
         window.is_loading_percentage_timer = 0;
-        //console.log("clear loadingPercentageTimer")
+        console.log("clear loadingPercentageTimer")
       }
     }
   }, 100);
@@ -1003,26 +1003,26 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script defer s
   endLoading: () => {
     if ((typeof window.is_loading_percentage_timer !== 'undefined') && (window.is_loading_percentage_timer === 1)) {
       window.is_loading_percentage_timer = 0;
-      //console.log("(pjax)page is loaded");
+      console.log("(pjax)page is loaded");
       document.body.style.overflow = 'auto';
       document.getElementById('loading-box').classList.add("loaded");
       document.body.style.paddingRight = '';
       document.getElementById('menu-mask').setAttribute('style', 'display:none');
-      //console.log("clear loadingPercentageTimer")
+      console.log("clear loadingPercentageTimer")
       clearInterval(window.loadingPercentageTimer);
     }
   },
   initLoading: () => {
     if ((typeof window.is_loading_percentage_timer === 'undefined') || (window.is_loading_percentage_timer === 0)) {
       window.is_loading_percentage_timer = 1;
-      //console.log("(pjax)loading page...");
+      console.log("(pjax)loading page...");
       document.body.style.overflow = '';
       document.getElementById('sidebar-menus').classList.remove('open');
       var loadingPercentage = document.getElementById("loading-percentage");
-      //console.log('start loadingPercentageTimer');
+      console.log('start loadingPercentageTimer');
       window.loadingPercentageTimer = setInterval(function() {
         var progressBar = document.querySelector(".pace-progress");
-        //console.log(progressBar)
+        console.log(progressBar)
         if (!progressBar) return
         var currentValue = progressBar.getAttribute("data-progress-text");
         if (currentValue !== loadingPercentage.textContent) {
@@ -1030,7 +1030,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script defer s
           if (currentValue === "100%") {
             clearInterval(window.loadingPercentageTimer);
             window.is_loading_percentage_timer = 0;
-            //console.log("clear loadingPercentageTimer")
+            console.log("clear loadingPercentageTimer")
           }
         }
       }, 100);
