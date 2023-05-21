@@ -147,13 +147,13 @@
   loadJS("/live2d-widget/autoload.js",function(){})
 }</script><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Zfour/Butterfly-card-history/baiduhistory/css/main.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="Muggledy's Blog" type="application/atom+xml">
 </head><!--.dyminibox--><body><div id="loading-box" onclick="window.is_loading_percentage_timer = 0;clearInterval(window.loadingPercentageTimer);document.body.style.overflow = &quot;auto&quot;;document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;);if ((typeof window.clear_sidebar_for_preloading_percentage !== &quot;undefined&quot;) &amp;&amp; (window.clear_sidebar_for_preloading_percentage === 1)) {document.getElementById(&quot;sidebar-menus&quot;).classList.remove(&quot;open&quot;);document.getElementById(&quot;sidebar-menus&quot;).style.visibility=&quot;visible&quot;;document.body.style.paddingRight = &quot;&quot;;document.getElementById(&quot;menu-mask&quot;).setAttribute(&quot;style&quot;, &quot;display:none&quot;);window.clear_sidebar_for_preloading_percentage = 0;}"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div><div id="loading-percentage">0%</div></div></div><script>var loadingPercentage = document.getElementById("loading-percentage");
-console.log("(first)loading page...");
+//console.log("(first)loading page...");
 if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loading_percentage_timer === 0) {
   window.is_loading_percentage_timer = 1;
-  console.log("start loadingPercentageTimer0");
+  //console.log("start loadingPercentageTimer0");
   window.loadingPercentageTimer = setInterval(function() {
     var progressBar = document.querySelector(".pace-progress");
-    console.log(progressBar)
+    //console.log(progressBar)
     if (!progressBar) return
     var currentValue = progressBar.getAttribute("data-progress-text");
     if (currentValue !== loadingPercentage.textContent) {
@@ -167,7 +167,7 @@ if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loadi
         //document.getElementById('sidebar-menus').style.visibility='visible';
         //document.body.style.paddingRight = '';
         //document.getElementById('menu-mask').setAttribute('style', 'display:none');
-        console.log("clear loadingPercentageTimer0")
+        //console.log("clear loadingPercentageTimer0")
       }
     }
   }, 100);
@@ -1008,7 +1008,7 @@ function panguInit () {
 
 document.addEventListener('DOMContentLoaded', panguInit)</script><script defer src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v6.1/js/search/local-search.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script><script async="async">var preloader = {
   endLoading: () => {
-    console.log("(pjax)page is loaded");
+    //console.log("(pjax)page is loaded");
     if ((typeof window.is_loading_percentage_timer !== 'undefined') && (window.is_loading_percentage_timer === 1)) {
       window.is_loading_percentage_timer = 0;
       clearInterval(window.loadingPercentageTimer);
@@ -1022,20 +1022,20 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script defer s
         document.getElementById('menu-mask').setAttribute('style', 'display:none');
         window.clear_sidebar_for_preloading_percentage = 0;
       }
-      console.log("clear loadingPercentageTimer")
+      //console.log("clear loadingPercentageTimer")
     }
   },
   initLoading: () => {
-    console.log("(pjax)loading page...");
+    //console.log("(pjax)loading page...");
     if ((typeof window.is_loading_percentage_timer === 'undefined') || (window.is_loading_percentage_timer === 0)) {
       window.is_loading_percentage_timer = 1;
       document.body.style.overflow = '';
       var loadingPercentage = document.getElementById("loading-percentage");
       loadingPercentage.textContent = '0%';
-      console.log('start loadingPercentageTimer');
+      //console.log('start loadingPercentageTimer');
       window.loadingPercentageTimer = setInterval(function() {
         var progressBar = document.querySelector(".pace-progress");
-        console.log(progressBar)
+        //console.log(progressBar)
         if (!progressBar) return
         if ((typeof window.clear_sidebar_for_preloading_percentage === 'undefined') || (window.clear_sidebar_for_preloading_percentage === 0)) {
           document.getElementById('loading-box').classList.remove("loaded");
@@ -1058,7 +1058,7 @@ document.addEventListener('DOMContentLoaded', panguInit)</script><script defer s
             document.body.style.paddingRight = '';
             document.getElementById('menu-mask').setAttribute('style', 'display:none');
             window.clear_sidebar_for_preloading_percentage = 0;
-            console.log("clear loadingPercentageTimer")
+            //console.log("clear loadingPercentageTimer")
           }
         }
       }, 100);
@@ -1274,11 +1274,11 @@ if ('Valine' === 'Gitalk' || !false) {
 
   newestCommentInit()
   document.addEventListener('pjax:complete', newestCommentInit)
-})</script><script src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/t_chart.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.9/data/funny_title/funny-title-js.min.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/font_animal/font_animal.js"></script><script data-pjax src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/cal_rs.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/visitors_map/vis_m.js"></script><script async src="https://at.alicdn.com/t/font_2494703_el3qb7r0dxv.js"></script><script async src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v6.4/js/go_cs.js"></script><script async src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v6.9/js/grayscale.js"></script><script src="https://unpkg.com/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+})</script><script src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/t_chart.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.9/data/funny_title/funny-title-js.min.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/font_animal/font_animal.js"></script><script data-pjax src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/cal_rs.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/visitors_map/vis_m.js"></script><script async src="https://at.alicdn.com/t/font_2494703_el3qb7r0dxv.js"></script><script async src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v6.4/js/go_cs.js"></script><script async src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v6.9/js/grayscale.js"></script><div class="aplayer no-destroy" data-id="6609974608" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true"></div><script src="https://unpkg.com/butterfly-extsrc@1/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = false;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);
-</script><script src="https://unpkg.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/gh/metowolf/MetingJS@1.2/dist/Meting.min.js"></script><script src="https://unpkg.com/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
   'title',
   '#web_bg',
   '#config-diff',
