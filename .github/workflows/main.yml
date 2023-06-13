@@ -1,0 +1,43 @@
+name: NPM AUTO PUBLISH CI/CD
+
+on:
+  watch:
+    types: started
+
+env:
+  TZ: Asia/Shanghai
+
+jobs:
+  npm-auto-publish-cicd:
+    name: update version of npm package muggledy-blog-html
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+
+    steps:
+    - name: checkout codes
+      uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+    - name: setup node
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+
+    - name: update npm package version
+      run: |
+        npm install node-fetch@2
+        node ./updatever.js
+
+    - name: npm publish
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM }}
+
+    - name: update github repository
+      run: |
+        git config --global user.email "zgjsycfndy2015@163.com"
+        git config --global user.name "muggledy"
+        git add -A
+        git commit -m "update npm package version by github action"
+        git push origin master
