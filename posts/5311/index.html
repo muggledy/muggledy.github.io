@@ -28,6 +28,8 @@
         }
       })
       .catch(err => console.error(`MuggledyBlogHelperError:${err}`))
+  } else {
+      console.log("当前浏览器不支持serviceWorker!!!")
   }
 })();</script><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Python基础 - 类型和对象 | Muggledy's Blog</title><meta name="keywords" content="Python"><meta name="author" content="Muggledy"><meta name="copyright" content="Muggledy"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Python程序中保存的所有数据都是围绕对象这一概念来构建的，对象包括一些基本的数据类型，如数字、字符串、列表和字典，也可以通过类的形式创建用户自定义的对象...">
 <meta property="og:type" content="article">
@@ -66,7 +68,7 @@
     day: '天前',
     month: '个月前'
   },
-  copyright: {"limitCount":50,"languages":{"author":"作者: Muggledy","link":"链接: ","source":"来源: Muggledy's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  copyright: {"limitCount":200,"languages":{"author":"作者: Muggledy","link":"链接: ","source":"来源: Muggledy's Blog","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
   lightbox: 'fancybox',
   Snackbar: undefined,
   source: {
@@ -235,7 +237,7 @@ if (typeof window.is_loading_percentage_timer === 'undefined' || window.is_loadi
 <li><code>object</code>是最顶层基类，一切类（除了<code>object</code>自身）追本溯源都继承自<code>object</code></li>
 </ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">object</span>)) <span class="comment">#&lt;class &#x27;type&#x27;&gt; #基类object作为对象，它的类型是type</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">type</span>)) <span class="comment">#&lt;class &#x27;type&#x27;&gt; #type的类型是其自身</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">object</span>.__base__) <span class="comment">#None #object无父类</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>.__base__) <span class="comment">#&lt;class &#x27;object&#x27;&gt; #type作为类，直接继承自object</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>.__base__) <span class="comment">#&lt;class &#x27;object&#x27;&gt; #list、tuple、dict等以及自定义类都继承自object，类型为type</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">list</span>)) <span class="comment">#&lt;class &#x27;type&#x27;&gt;</span></span><br></pre></td></tr></table></figure>
-<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/img/20210425185857.png" alt="图1.&nbsp;object类和type类：图中虚线是实例关系、实线是继承关系[3]"/></div></div>
+<div class="img-wrap"><div class="img-bg"><img class="img" src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/img/20210425185857.png" alt="图1.&nbsp;object类和type类：图中虚线是实例关系、实线是继承关系[3]" onerror="this.onerror=null,this.src='https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/img/20210328224519.jpg'" /></div></div>
 <div class="hide-toggle" ><div class="hide-button toggle-title " style=""><i class="fas fa-caret-right fa-fw"></i><span><code>isinstance()</code>类型判断</span></div>
     <div class="hide-content"><p>早先在书上偶然看到一行代码<code>isinstance(A,object) #返回True</code>，其中<code>A</code>是一个自定义类，突然很不理解，没回过味来，还在<a target="_blank" rel="noopener external nofollow noreferrer" href="https://segmentfault.com/q/1010000019754936">SegmentFault</a>上提问，好蠢/(ㄒoㄒ)/~~</p>
 <p>根据帮助文档（<code>help(isinstance)</code>）可知：<code>isinstance(obj, class_or_tuple)</code>判断对象<code>obj</code>是否是<code>class_or_tuple</code>中某个类的实例或者其子类的实例。假设<code>A</code>继承自<code>B</code>，<code>a=A()</code>，那么显然<code>isinstance(a,A)</code>返回<code>True</code>，由于<code>B</code>是<code>A</code>的父类，所以<code>B</code>是<code>a</code>所属的更大的类的范畴，所以<code>isinstance(a,B)</code>也返回<code>True</code>，即<code>a</code>是<code>B</code>的实例。根据上面<code>object</code>类和<code>type</code>类之间的关系很容易推知：一切类（包括<code>object</code>和<code>type</code>）都是<code>object</code>的实例</p>
@@ -988,7 +990,7 @@ Python提供一个集合的不可变版本<code>frozenset</code>，创建的方�
 </li>
 </ul><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div><button type="button" class="tab-to-top" aria-label="scroll to top"><i class="fas fa-arrow-up"></i></button></div></div></div>
 <br>
-<link rel="stylesheet" href="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.6/data/donate/donate.css">
+<link rel="stylesheet" href="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v4.3/data/donate/donate.min.css">
 <div id="dy-coffee-donate" style="position:relative;width:317px;height:98px;left:calc(50% - 159px);z-index: 1">
     <a id="donategithub" href="https://github.com/Kaiyuan/sponsor-page" rel="external nofollow noreferrer" target="_blank" title="Github" style="position:absolute"></a>
     <div id="DonateText" class="donatetr3"><span title="请勿轻信，仅作示范使用">Sponsor</span></div>
@@ -1001,7 +1003,7 @@ Python提供一个集合的不可变版本<code>frozenset</code>，创建的方�
     <div id="QRBox" class="donate-pos-f donate-left-100">
     <div id="DonateMainBox"></div></div>
 </div>
-<script src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.6/data/donate/donate.js"></script>
+<script src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.6/data/donate/donate.min.js"></script>
 <div class="tip fas fa-quote-left"><p>[1] <a href="https://pan.baidu.com/s/17r__wNMxIXTMWhglf3wyuw" rel="external nofollow noreferrer" title="密码：1y2r" target="_blank"><span style="color:red">Python参考手册</span> 第4版 修订版 [美] 大卫·M.比兹利（David M.Beazley）著，谢俊，杨越，高伟 译</a><br>
 [2] <a href="https://blog.csdn.net/sunxb10/article/details/81036693" rel="external nofollow noreferrer" target="_blank">Formatted string literals 详解</a><br>
 [3] <a href="https://www.zhihu.com/question/38791962" rel="external nofollow noreferrer" target="_blank">知乎 Python的type和object之间是什么关系？</a><br>
@@ -1290,7 +1292,7 @@ if ('Valine' === 'Gitalk' || !false) {
 
   newestCommentInit()
   document.addEventListener('pjax:complete', newestCommentInit)
-})</script><script src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/t_chart.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.9/data/funny_title/funny-title-js.min.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/font_animal/font_animal.js"></script><script data-pjax src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/cal_rs.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/visitors_map/vis_m.js"></script><script async src="https://at.alicdn.com/t/font_2494703_el3qb7r0dxv.js"></script><script defer data-pjax src="/js/go_cs.js"></script><script async src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v7.4/js/grayscale.js"></script><div class="aplayer no-destroy" data-id="6609974608" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-volume="0.2"></div><script async src="/js/welcome.js"></script><script src="https://cdn.staticaly.com/gh/celestezj/butterfly-plugins/main/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
+})</script><script src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/t_chart.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.9/data/funny_title/funny-title-js.min.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/font_animal/font_animal.js"></script><script data-pjax src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v1.2/js/cal_rs.js"></script><script async src="https://cdn.staticaly.com/gh/celestezj/ImageHosting/master/data/visitors_map/vis_m.js"></script><script async src="https://at.alicdn.com/t/font_2494703_el3qb7r0dxv.js"></script><script defer data-pjax src="/js/go_cs.js"></script><script async src="https://cdn.staticaly.com/gh/muggledy/muggledy.github.io/v7.4/js/grayscale.js"></script><div class="aplayer no-destroy" data-id="6609974608" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="false" data-volume="0.2"></div><script async src="/js/welcome.js"></script><script defer src="/js/issues.js"></script><script src="https://cdn.staticaly.com/gh/celestezj/butterfly-plugins/main/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = true;
 POWERMODE.shake = false;
 POWERMODE.mobile = false;
 document.body.addEventListener('input', POWERMODE);

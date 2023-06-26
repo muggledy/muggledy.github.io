@@ -67,6 +67,9 @@ function fetch_v2(input, init) {
     xhr.send(typeof request._bodyInit === 'undefined' ? null : request._bodyInit)
   })
 }
+function reshowhideblock(ele){
+    ele.parentNode.previousElementSibling.classList.remove("open");
+}
 document.addEventListener('DOMContentLoaded', function () {
   const $blogName = document.getElementById('site-name')
   let blogNameWidth = $blogName && $blogName.offsetWidth
@@ -1172,9 +1175,11 @@ document.addEventListener('DOMContentLoaded', function () {
 |_|_|_|___|_  |_  |_|___|___|_  |  -patorjk.com-\n\
           |___|___|         |___|\n");
   //console.log(" _______                     __           __        \n|   |   |.——.——.——-——.——-——.|  |.——-——.——|  |.——.——.\n|       ||  |  |  _  |  _  ||  ||  -__|  _  ||  |  |\n|__|_|__||_____|___  |___  ||__||_____|_____||___  |\n               |_____|_____|                 |_____|");
-  var blog_version="2.0.0";
+  var blog_version="2.3.0";
   console.log(`\n%cMuggledy's Blog%cv${blog_version}%c\n`, "padding: 5px; background: #5c5c5c; font-weight: bold; color: white;border-top-left-radius:5px;border-bottom-left-radius:5px;", "padding: 5px; background: #4ec820; color: #eee;border-top-right-radius:5px;border-bottom-right-radius:5px", ''); //https://zhangshuqiao.org/
-  console.log("本站(https://muggledy.top)由service worker提供加速支持(see https://blog.cyfan.top/p/d3c51290.html)")
+  if ('serviceWorker' in navigator) {
+    console.log("2023.6更新：本站 (https://muggledy.top) 由service worker提供加速支持 (see https://blog.cyfan.top/p/d3c51290.html)")
+  }
   if (0){ //Math.floor(Math.random()+0.5)
     console.log("\
   _______________________———————————————————￣￣￣￣￣￣￣￣￣￣￣￣`\\\n\
