@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const $searchEle = document.querySelector('#search-button')
   let searchWidth = $searchEle && $searchEle.offsetWidth
   
-  var article_double_css = "https://cdn.staticaly.com/gh/celestezj/ImageHosting/v3.5/data/butterfly/cardlistpost.min.css";
+  var article_double_css = "https://cdn.statically.io/gh/celestezj/ImageHosting/v4.5/data/butterfly/cardlistpost.min.css";
   if (typeof(saveToLocal.get('local_article_double_status'))!="undefined"){ //此处的逻辑只会在F5刷新网站时执行一次，之后在网站中由于采用了pjax，这里不会再重复执行（当然了，即使未启用pjax，此处不断重复执行也不会出错）。目的是读取本地保存的（是否启用双栏文章）状态并应用，未定义则不管
 	  var if_exists_article_css = false; //含义：当前是否应用双栏样式，在此代码块中，执行到哪句都要时刻更新。此处是赋初值
 	  document.querySelectorAll('link[rel=stylesheet]').forEach(function (dom){
@@ -1134,7 +1134,7 @@ document.addEventListener('DOMContentLoaded', function () {
   refreshFn()
   unRefreshFn()
   
-  mactype_css_link = "https://cdn.staticaly.com/gh/celestezj/Mirror1ImageHosting/v0.6/data/mactype/mactype.css";
+  mactype_css_link = "https://cdn.statically.io/gh/celestezj/Mirror1ImageHosting/v0.6/data/mactype/mactype.min.css";
   window.open_mactype = function(){ //字体增强(可在搜索栏输入mactype开启或关闭)。和其他根据屏幕宽度判断是否是电脑端的样式相比，这种可能更合理、正确。在iPad上字体增强的css不起作用，所以仅在电脑端体验(见local-search.js)
       var dyallcsslinks = document.querySelectorAll('link[rel=stylesheet]');
       var exists_mactype_css = false;
@@ -1206,4 +1206,5 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log("\"𝓘𝒻 𝒷𝓎 𝓁𝒾𝒻𝓮 𝓎𝓸𝓊 𝓌𝓮𝓇𝓮 𝒹𝓮𝒸𝓮𝒾𝓋𝓮𝒹\n𝒟𝓸𝓃'𝓉 𝒷𝓮 𝒹𝒾𝓈𝓂𝒶𝓁 ,𝒹𝓸𝓃'𝓉 𝒷𝓮 𝓌𝒾𝓁𝒹\n𝓘𝓃 𝓉𝒽𝓮 𝒹𝒶𝓎 𝓸𝒻 𝓰𝓇𝒾𝓮𝒻 ,𝒷𝓮 𝓂𝒾𝓁𝒹\n𝓜𝓮𝓇𝓇𝓎 𝒹𝒶𝓎𝓈 𝓌𝒾𝓁𝓁 𝒸𝓸𝓂𝓮, 𝒷𝓮𝓁𝒾𝓮𝓋𝓮\n\n𝓗𝓮𝒶𝓇𝓉 𝒾𝓈 𝓁𝒾𝓋𝒾𝓃𝓰 𝒾𝓃 𝓉𝓸𝓂𝓸𝓇𝓇𝓸𝓌\n𝒫𝓇𝓮𝓈𝓮𝓃𝓉 𝒾𝓈 𝒹𝓮𝒿𝓮𝒸𝓉𝓮𝒹 𝒽𝓮𝓇𝓮\n𝓘𝓃 𝒶 𝓂𝓸𝓂𝓮𝓃𝓉 ,𝓅𝒶𝓈𝓈𝓮𝓈 𝓈𝓸𝓇𝓇𝓸𝓌\n𝒯𝒽𝒶𝓉 𝓌𝒽𝒾𝒸𝒽 𝓅𝒶𝓈𝓈𝓮𝓈 𝓌𝒾𝓁𝓁 𝒷𝓮 𝒹𝓮𝒶𝓇.\"  -Pushkin-");
   }
   //setTimeout(console.log.bind(console, "%c WELCOME %c 我一定能消灭bug！▄︻┻┳═一…… ☆（>○<）BUG", "color:white; background-color:#23c682", ""));
+  console.log('The author of the 女の子 イラスト on the homepage background is Hiten (https://twitter.com/HitenKei)'); //https://www.pixiv.net/artworks/62258773
 })
