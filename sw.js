@@ -1,1 +1,594 @@
-"use strict";function _slicedToArray(e,t){return _arrayWithHoles(e)||_iterableToArrayLimit(e,t)||_unsupportedIterableToArray(e,t)||_nonIterableRest()}function _nonIterableRest(){throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")}function _unsupportedIterableToArray(e,t){if(e){if("string"==typeof e)return _arrayLikeToArray(e,t);var n=Object.prototype.toString.call(e).slice(8,-1);return"Map"===(n="Object"===n&&e.constructor?e.constructor.name:n)||"Set"===n?Array.from(e):"Arguments"===n||/^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)?_arrayLikeToArray(e,t):void 0}}function _arrayLikeToArray(e,t){(null==t||t>e.length)&&(t=e.length);for(var n=0,r=new Array(t);n<t;n++)r[n]=e[n];return r}function _iterableToArrayLimit(e,t){var n=e&&("undefined"!=typeof Symbol&&e[Symbol.iterator]||e["@@iterator"]);if(null!=n){var r,a,c=[],o=!0,s=!1;try{for(n=n.call(e);!(o=(r=n.next()).done)&&(c.push(r.value),!t||c.length!==t);o=!0);}catch(e){s=!0,a=e}finally{try{o||null==n.return||n.return()}finally{if(s)throw a}}return c}}function _arrayWithHoles(e){if(Array.isArray(e))return e}function _typeof(e){return(_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e})(e)}function asyncGeneratorStep(e,t,n,r,a,c,o){try{var s=e[c](o),i=s.value}catch(e){return void n(e)}s.done?t(i):Promise.resolve(i).then(r,a)}function _asyncToGenerator(s){return function(){var e=this,o=arguments;return new Promise(function(t,n){var r=s.apply(e,o);function a(e){asyncGeneratorStep(r,t,n,a,c,"next",e)}function c(e){asyncGeneratorStep(r,t,n,a,c,"throw",e)}a(void 0)})}}var CACHE_NAME="MuggledyBlogCacheHelper",cachelist=["/404.html"],blog_default_version="1.0.20";self.cons={s:function(e){console.log("%c[SUCCESS]%c ".concat(e),"color:white;background:green;","")},w:function(e){console.log("%c[WARNING]%c ".concat(e),"color:brown;background:yellow;","")},i:function(e){console.log("%c[INFO]%c ".concat(e),"color:white;background:blue;","")},e:function(e){console.log("%c[ERROR]%c ".concat(e),"color:white;background:red;","")},d:function(e){console.log("%c[DEBUG]%c ".concat(e),"color:white;background:black;","")}},self.db={read:function(n,e){return new Promise(function(t,e){caches.open(CACHE_NAME).then(function(e){e.match(new Request("https://LOCALCACHE/".concat(encodeURIComponent(n)))).then(function(e){e||t(null),e.text().then(function(e){return t(e)})}).catch(function(){t(null)})})})},write:function(n,r){return new Promise(function(t,e){caches.open(CACHE_NAME).then(function(e){e.put(new Request("https://LOCALCACHE/".concat(encodeURIComponent(n))),new Response(r)),t()}).catch(function(){e()})})}};var generate_uuid=function(){return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(e){var t=16*Math.random()|0;return("x"==e?t:3&t|8).toString(16)})};self.addEventListener("activate",function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:self.clients.claim();case 1:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()),self.addEventListener("install",function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:self.skipWaiting(),t.waitUntil(caches.open(CACHE_NAME).then(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,db.read("uuid");case 2:if(e.sent){e.next=5;break}return e.next=5,db.write("uuid",generate_uuid());case 5:return e.abrupt("return",t.addAll(cachelist));case 6:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()));case 2:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}());var handleerr=function(){var n=_asyncToGenerator(regeneratorRuntime.mark(function e(t,n){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",new Response("<h1>MuggledyBlogCacheHelper Error</h1>\n    <b>".concat(n,"</b>"),{headers:{"content-type":"text/html; charset=utf-8"}}));case 1:case"end":return e.stop()}},e)}));return function(e,t){return n.apply(this,arguments)}}(),cdn={gh:{statically:{url:"https://cdn.statically.io/gh"},jsdelivr:{url:"https://cdn.jsdelivr.net/gh"},githack:{url:"https://rawcdn.githack.com"}},combine:{jsdelivr:{url:"https://cdn.jsdelivr.net/combine"}},unpkg_version:{unpkg:{url:"https://unpkg.com"},jsdelivr:{url:"https://cdn.jsdelivr.net/npm"},eleme:{url:"https://npm.elemecdn.com"},jjz:{url:"https://jsd.onmicrosoft.cn/npm"},sourceg:{url:"https://npm.sourcegcdn.com"},cloudflare:{url:"https://cdnjs.cloudflare.com/ajax/libs"},bootcss:{url:"https://cdn.bootcss.com"}},npm:{eleme:{url:"https://npm.elemecdn.com"},jsdelivr:{url:"https://cdn.jsdelivr.net/npm"},jjz:{url:"https://jsd.onmicrosoft.cn/npm"},jjz_unpkg:{url:"https://npkg.onmicrosoft.cn"},sourceg:{url:"https://npm.sourcegcdn.com"},GNT:{url:"https://cdn.bilicdn.tk/npm"}}},handle=function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(o){var s,t,i,n,r,u,a,c,p,l,f,h,m,g,d,b,v,x;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.t0=set_blog_config,e.next=3,db.read("blog_version");case 3:if(e.t1=e.sent,e.t1){e.next=6;break}e.t1=blog_default_version;case 6:return e.t2=e.t1,(0,e.t0)(e.t2),e.next=10,o.clone();case 10:return e.sent,s=o.url,t=new URL(s),e.next=15,db.read("uuid");case 15:if(e.sent,i=t.href.substr(t.origin.length),n=s.split("/")[2],i.match(/\/sw\.js/g))return e.abrupt("return",fetch(o));e.next=20;break;case 20:return r=function(e){return t.searchParams.get(e)},u=[],l=p=c=a=null,e.t4=JSON,e.next=29,db.read("msg");case 29:if(e.t5=e.sent,e.t3=e.t4.parse.call(e.t4,e.t5),e.t3){e.next=33;break}e.t3=_asyncToGenerator(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,db.write("msg","[]");case 2:return e.abrupt("return","[]");case 3:case"end":return e.stop()}},e)}))();case 33:if(f=e.t3,h=s.split("?")[0],m=new Request(h),g=function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,caches.open(CACHE_NAME);case 2:return n=e.sent,e.next=5,n.delete(t);case 5:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}(),"true"==r("nosw"))return e.abrupt("return",fetch(o));e.next=39;break;case 39:if("true"==r("delete"))return g(m),f.push({name:"文件已删除",time:new Date,info:"已删除".concat(h)}),e.next=44,db.write("msg",JSON.stringify(f));e.next=45;break;case 44:return e.abrupt("return",new Response(JSON.stringify({ok:1})));case 45:if("true"==r("forceupdate"))return f.push({name:"文件已强制更新",time:new Date,info:"已更新".concat(h)}),e.next=49,db.write("msg",JSON.stringify(f));e.next=52;break;case 49:return e.next=51,fetch(o).then(function(t){return caches.open(CACHE_NAME).then(function(e){return g(m),e.put(o,t.clone()),t})});case 51:return e.abrupt("return",new Response(JSON.stringify({ok:1})));case 52:e.t6=regeneratorRuntime.keys(cdn);case 53:if((e.t7=e.t6()).done){e.next=104;break}d=e.t7.value,e.t8=regeneratorRuntime.keys(cdn[d]);case 56:if((e.t9=e.t8()).done){e.next=102;break}if(b=e.t9.value,n!=cdn[d][b].url.split("https://")[1].split("/")[0]||!s.match(cdn[d][b].url)){e.next=100;break}u=[],e.t10=regeneratorRuntime.keys(cdn[d]);case 61:if((e.t11=e.t10()).done){e.next=95;break}if(v=e.t11.value,a=s.replace(cdn[d][b].url,cdn[d][v].url),"gh"!==d){e.next=68;break}a.match("https://cdn.jsdelivr.net/gh")&&!s.match("https://cdn.jsdelivr.net/gh")?null===(c=a.split("https://")[1].split("/"))[3].match("@")&&(a=a.replace("".concat(c[2],"/").concat(c[3],"/"),"".concat(c[2],"/").concat(c[3],"@"))):a.match("https://cdn.statically.io/gh")&&s.match("https://cdn.jsdelivr.net/gh")?a=null!==(p=a.split("https://")[1].split("/"))[3].match("@")?a.replace("".concat(p[2],"/").concat(p[3],"/"),"".concat(p[2],"/").concat(p[3].split("@").join("/"),"/")):a.replace("".concat(p[2],"/").concat(p[3],"/"),"".concat(p[2],"/").concat(p[3],"/master/")):a.match("https://rawcdn.githack.com")&&!s.match("https://rawcdn.githack.com")&&(p=a.split("https://")[1].split("/"),s.match("https://cdn.jsdelivr.net/gh")&&(a=null!==p[2].match("@")?a.replace("".concat(p[1],"/").concat(p[2],"/"),"".concat(p[1],"/").concat(p[2].split("@").join("/"),"/")):a.replace("".concat(p[1],"/").concat(p[2],"/"),"".concat(p[1],"/").concat(p[2],"/master/"))),!p[p.length-1].endsWith(".min.js")&&!p[p.length-1].endsWith(".min.css")||"celestezj"===p[1]&&/\b(swiper.min.css|swiper.min.js|swiper_init.min.js|APlayer.min.js|APlayer.min.css|all.min.css|font-awesome-animation.min.css|buttons.min.css|Valine.min.js|activate-power-mode.min.js)\b/.test(p[p.length-1])||(a=a.replace(/(.*).min.(js|css)/,"$1.$2"))),e.next=92;break;case 68:if("unpkg_version"!==d){e.next=92;break}if(!a.match("https://cdnjs.cloudflare.com/ajax/libs")||s.match("https://cdnjs.cloudflare.com/ajax/libs")||s.match("https://cdn.bootcss.com")){e.next=80;break}if((p=a.split("https://")[1].split("/"))[3].startsWith("@")&&(a=a.replace("".concat(p[3],"/"),""),p=a.split("https://")[1].split("/")),null===p[3].match("@")){e.next=77;break}a=(l=a.replace("".concat(p[2],"/").concat(p[3],"/").concat("typed.js"===p[3].split("@")[0]?"lib":"dist","/"),"".concat(p[2],"/").concat(p[3].split("@").join("/"),"/")))===a?a.replace("".concat(p[2],"/").concat(p[3],"/"),"".concat(p[2],"/").concat(p[3].split("@").join("/"),"/")):l,e.next=78;break;case 77:return e.abrupt("continue",61);case 78:e.next=92;break;case 80:if(!a.match("https://cdn.bootcss.com")||s.match("https://cdnjs.cloudflare.com/ajax/libs")||s.match("https://cdn.bootcss.com")){e.next=91;break}if((p=a.split("https://")[1].split("/"))[1].startsWith("@")&&(a=a.replace("".concat(p[1],"/"),""),p=a.split("https://")[1].split("/")),null===p[1].match("@")){e.next=88;break}a=(l=a.replace("".concat(p[0],"/").concat(p[1],"/").concat("typed.js"===p[1].split("@")[0]?"lib":"dist","/"),"".concat(p[0],"/").concat(p[1].split("@").join("/"),"/")))===a?a.replace("".concat(p[0],"/").concat(p[1],"/"),"".concat(p[0],"/").concat(p[1].split("@").join("/"),"/")):l,e.next=89;break;case 88:return e.abrupt("continue",61);case 89:e.next=92;break;case 91:a.match("https://cdnjs.cloudflare.com/ajax/libs")||a.match("https://cdn.bootcss.com")||!s.match("https://cdnjs.cloudflare.com/ajax/libs")&&!s.match("https://cdn.bootcss.com")||(c=a.split("https://")[1].split("/"),a=a.match("https://cdn.jsdelivr.net/npm")||a.match("https://jsd.onmicrosoft.cn/npm")?a.replace("".concat(c[2],"/").concat(c[3],"/"),"".concat(c[2].toLowerCase(),"@").concat(c[3],"/").concat("typed.js"===c[2]?"lib":"dist","/")):a.replace("".concat(c[1],"/").concat(c[2],"/"),"".concat(c[1].toLowerCase(),"@").concat(c[2],"/").concat("typed.js"===c[1]?"lib":"dist","/")));case 92:u.push(a),e.next=61;break;case 95:return e.next=97,privconf.read("cache");case 97:if(e.sent){e.next=99;break}return e.abrupt("return",lfetch(u,s));case 99:return e.abrupt("return",caches.match(o).then(function(e){return e||lfetch(u,s).then(function(t){return caches.open(CACHE_NAME).then(function(e){return e.put(o,t.clone()),t})})}));case 100:e.next=56;break;case 102:e.next=53;break;case 104:e.t12=regeneratorRuntime.keys(blog.origin);case 105:if((e.t13=e.t12()).done){e.next=113;break}if(x=e.t13.value,n.split(":")[0]!=blog.origin[x].split(":")[0]){e.next=111;break}if("object"===_typeof(x=function(){if(blog.local)return{v:fetch(o)};for(var e in setTimeout(_asyncToGenerator(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,set_newest_blogver();case 2:case"end":return e.stop()}},e)})),3e4),u=[],blog.plus)u.push("https://".concat(blog.plus[e])+fullpath(i));for(var t in blog.npmmirror)u.push(blog.npmmirror[t]+fullpath(i));var c=function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.t0=Response,e.next=3,t.arrayBuffer();case 3:return e.t1=e.sent,e.t2={headers:{"Content-Type":"text/html;charset=utf-8"},status:t.status,statusText:t.statusText},e.abrupt("return",new e.t0(e.t1,e.t2));case 6:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}();return{v:new Promise(function(a,e){setTimeout(function(){caches.match(o).then(function(e){e?(cons.s("Cache Hited! | Origin:".concat(s)),setTimeout(function(){a(e)},200),setTimeout(function(){lfetch(u,s).then(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(r){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",caches.open(CACHE_NAME).then(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:if(t.delete(o),cons.s("Cache Updated! | Origin:".concat(s)),fullpath(i).match(/\.html$/g))return e.next=5,c(r);e.next=10;break;case 5:n=e.sent,t.put(o,n.clone()),a(n),e.next=12;break;case 10:t.put(o,r.clone()),a(r);case 12:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()));case 1:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}())},0)):(cons.w("Cache Missed! | Origin:".concat(s)),setTimeout(function(){lfetch(u,s).then(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(r){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",caches.open(CACHE_NAME).then(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:if(fullpath(i).match(/\.html$/g))return e.next=3,c(r);e.next=8;break;case 3:n=e.sent,t.put(o,n.clone()),a(n),e.next=10;break;case 8:t.put(o,r.clone()),a(r);case 10:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()));case 1:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()).catch(function(e){a(caches.match(new Request("/404.html")))})},0),setTimeout(function(){a(caches.match(new Request("/404.html")))},5e3))})},0)})}}()))return e.abrupt("return",x.v);e.next=111;break;case 111:e.next=105;break;case 113:return e.abrupt("return",fetch(o));case 114:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}(),lfetch=function(){var n=_asyncToGenerator(regeneratorRuntime.mark(function e(t,o){var s,i,r,n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return cons.i("LFetch Handled! | Mirrors Count:".concat(t.length," | Origin: ").concat(o)),console.log(t),s=(new Date).getTime(),e.next=5,db.read("uuid");case 5:return e.sent,e.next=8,privconf.read("mirror");case 8:if(e.sent){e.next=10;break}return e.abrupt("return",fetch(o));case 10:return Promise.any||(Promise.any=function(e){return new Promise(function(t,n){var r=(e=Array.isArray(e)?e:[]).length,a=[];if(0===r)return n(new AggregateError("All promises were rejected"));e.forEach(function(e){e.then(function(e){t(e)},function(e){r--,a.push(e),0===r&&n(new AggregateError(a))})})})}),i=new AbortController,r=function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.t0=Response,e.next=3,t.arrayBuffer();case 3:return e.t1=e.sent,e.t2={status:t.status,headers:t.headers},e.abrupt("return",new e.t0(e.t1,e.t2));case 6:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}(),n=Promise.any(t.map(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(c){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.abrupt("return",new Promise(function(){var n=_asyncToGenerator(regeneratorRuntime.mark(function e(n,a){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:fetch(c,{signal:i.signal}).then(r).then(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(r){var t;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:200==(t=r.clone()).status?(setTimeout(_asyncToGenerator(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.t0=db,e.next=4,_asyncToGenerator(regeneratorRuntime.mark(function e(){var t,n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,_asyncToGenerator(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.t1=JSON,e.next=4,db.read("HIT_HOT");case 4:if(e.t2=e.sent,e.t0=e.t1.parse.call(e.t1,e.t2),e.t0){e.next=8;break}e.t0={site:{},static:{}};case 8:return e.abrupt("return",e.t0);case 11:return e.prev=11,e.t3=e.catch(0),e.abrupt("return",{site:{},static:{}});case 14:case"end":return e.stop()}},e,null,[[0,11]])}))();case 2:return t=e.sent,n=c.split("/")[2],t[n]=t[n]?t[n]+1:1,-1<blog.plus.indexOf(n)?t.site[n]=t.site[n]?t.site[n]+1:1:t.static[n]=t.static[n]?t.static[n]+1:1,e.abrupt("return",JSON.stringify(t));case 7:case"end":return e.stop()}},e)}))();case 4:return e.t1=e.sent,e.t0.write.call(e.t0,"HIT_HOT",e.t1),e.t2=db,e.next=9,_asyncToGenerator(regeneratorRuntime.mark(function e(){var t,n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,_asyncToGenerator(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.t1=JSON,e.next=4,db.read("HIT_HOT_SIZE");case 4:if(e.t2=e.sent,e.t0=e.t1.parse.call(e.t1,e.t2),e.t0){e.next=8;break}e.t0={site:{},static:{}};case 8:return e.abrupt("return",e.t0);case 11:return e.prev=11,e.t3=e.catch(0),e.abrupt("return",{site:{},static:{}});case 14:case"end":return e.stop()}},e,null,[[0,11]])}))();case 2:return t=e.sent,n=c.split("/")[2],t[n]=t[n]?t[n]+Number(r.headers.get("Content-Length")):Number(r.headers.get("Content-Length")),-1<blog.plus.indexOf(n)?t.site[n]=t.site[n]?t.site[n]+Number(r.headers.get("Content-Length")):Number(r.headers.get("Content-Length")):t.static[n]=t.static[n]?t.static[n]+Number(r.headers.get("Content-Length")):Number(r.headers.get("Content-Length")),e.abrupt("return",JSON.stringify(t));case 7:case"end":return e.stop()}},e)}))();case 9:e.t3=e.sent,e.t2.write.call(e.t2,"HIT_HOT_SIZE",e.t3),e.next=15;break;case 13:e.prev=13,e.t4=e.catch(0);case 15:case"end":return e.stop()}},e,null,[[0,13]])})),0),i.abort(),cons.s("LFetch Success! | Time: ".concat((new Date).getTime()-s,"ms | Origin: ").concat(o," ")),n(t)):a(null);case 2:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()).catch(function(e){String(e).match("The user aborted a request")||String(e).match("Failed to fetch")||(String(e).match("been blocked by CORS policy")?cons.e("LFetch Blocked by CORS policy! | Origin: ".concat(o)):cons.e("LFetch Error! | Origin: ".concat(o," | Resean: ").concat(e))),a(null)});case 1:case"end":return e.stop()}},e)}));return function(e,t){return n.apply(this,arguments)}}()));case 1:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}())).then(function(e){return e}).catch(function(){return null}),e.abrupt("return",n);case 15:case"end":return e.stop()}},e)}));return function(e,t){return n.apply(this,arguments)}}(),privconf={read:function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.prev=0,e.t0=JSON,e.next=4,db.read("priv_config");case 4:if(e.t1=e.sent,e.t1){e.next=7;break}e.t1="{}";case 7:return e.t2=e.t1,n=e.t0.parse.call(e.t0,e.t2),e.abrupt("return","boolean"==typeof n[t]?n[t]:"globalcompute"!=t);case 12:return e.prev=12,e.t3=e.catch(0),e.abrupt("return",!0);case 15:case"end":return e.stop()}},e,null,[[0,12]])}));return function(e){return t.apply(this,arguments)}}(),change:function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.t0=JSON,e.next=3,db.read("priv_config");case 3:if(e.t1=e.sent,e.t1){e.next=6;break}e.t1="{}";case 6:return e.t2=e.t1,"boolean"!=typeof(n=e.t0.parse.call(e.t0,e.t2))[t]&&(n[t]=!0),n[t]=!n[t],e.next=12,db.write("priv_config",JSON.stringify(n));case 12:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()},fullpath=function(e){return(e=e.split("?")[0].split("#")[0]).match(/\/$/)&&(e+="index"),e.match(/\.[a-zA-Z]+$/)||(e+=".html"),e},set_blog_config=function(e){self.packagename="muggledy-blog-html",self.blogversion=e,self.blog={local:0,origin:["muggledy.top","muggledy.github.io","localhost:4000","127.0.0.1:4000"],plus:["vercel.muggledy.top"],npmmirror:["https://unpkg.com/".concat(packagename,"@").concat(blogversion),"https://npm.elemecdn.com/".concat(packagename,"@").concat(blogversion),"https://cdn.jsdelivr.net/npm/".concat(packagename,"@").concat(blogversion),"https://cdn-jsd.pigax.cn/npm/".concat(packagename,"@").concat(blogversion),"https://fastly.jsdelivr.net/npm/".concat(packagename,"@").concat(blogversion),"https://testingcf.jsdelivr.net/npm/".concat(packagename,"@").concat(blogversion),"https://originfastly.jsdelivr.net/npm/".concat(packagename,"@").concat(blogversion),"https://gcore.jsdelivr.net/npm/".concat(packagename,"@").concat(blogversion),"https://quantil.jsdelivr.net/npm/".concat(packagename,"@").concat(blogversion)]}},set_newest_blogver=function(){var e=_asyncToGenerator(regeneratorRuntime.mark(function e(){var t;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return self.packagename="muggledy-blog-html",t=["https://registry.npmmirror.com/".concat(packagename,"/latest"),"https://registry.npmjs.org/".concat(packagename,"/latest"),"https://mirrors.cloud.tencent.com/npm/".concat(packagename,"/latest")],e.abrupt("return",lfetch(t,t[0]).then(function(e){return e.json()}).then(function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){var n;return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:if(t.version){e.next=2;break}throw"No Version Found!";case 2:return e.t0=choose_the_newest_version,e.t1=t.version,e.next=6,db.read("blog_version");case 6:if(e.t2=e.sent,e.t2){e.next=9;break}e.t2=blog_default_version;case 9:return e.t3=e.t2,n=(0,e.t0)(e.t1,e.t3),e.t4=cons,e.t5="Newest Version: ".concat(t.version," ; Local Version: "),e.next=15,db.read("blog_version");case 15:return e.t6=e.sent,e.t7=e.t5.concat.call(e.t5,e.t6," | Update answer: ").concat(n),e.t4.d.call(e.t4,e.t7),e.next=20,db.write("blog_version",n);case 20:set_blog_config(n);case 21:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}()).catch(function(e){cons.e("Get Blog Newest Version Erorr!Reseon:".concat(e)),set_blog_config(blog_default_version)}));case 3:case"end":return e.stop()}},e)}));return function(){return e.apply(this,arguments)}}(),choose_the_newest_version=function(c,o){function s(e){var t=e.split(".")[0];return[parseInt(t),e.replace(t+".","")]}return function e(t,n){var r=_slicedToArray(s(t),2),a=r[0],t=r[1],r=_slicedToArray(s(n),2),n=r[0],r=r[1];return n<a?c:a<n?o:t.match(/\./)||r.match(/\./)?e(t,r):parseInt(t)>parseInt(r)?c:o}(c,o)};setInterval(_asyncToGenerator(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,set_newest_blogver();case 2:case"end":return e.stop()}},e)})),12e4),setTimeout(_asyncToGenerator(regeneratorRuntime.mark(function e(){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,set_newest_blogver();case 2:case"end":return e.stop()}},e)})),1e3),self.addEventListener("fetch",function(){var t=_asyncToGenerator(regeneratorRuntime.mark(function e(t){return regeneratorRuntime.wrap(function(e){for(;;)switch(e.prev=e.next){case 0:try{t.respondWith(handle(t.request))}catch(e){t.respondWith(handleerr(t.request,e))}case 1:case"end":return e.stop()}},e)}));return function(e){return t.apply(this,arguments)}}());
+const CACHE_NAME = 'MuggledyBlogCacheHelper';
+let cachelist = ["/404.html"];
+
+const blog_default_version = '1.0.21'
+
+self.cons = {
+    s: (m) => {
+        console.log(`%c[SUCCESS]%c ${m}`, 'color:white;background:green;', '')
+    },
+    w: (m) => {
+        console.log(`%c[WARNING]%c ${m}`, 'color:brown;background:yellow;', '')
+    },
+    i: (m) => {
+        console.log(`%c[INFO]%c ${m}`, 'color:white;background:blue;', '')
+    },
+    e: (m) => {
+        console.log(`%c[ERROR]%c ${m}`, 'color:white;background:red;', '')
+    },
+    d: (m) => {
+        console.log(`%c[DEBUG]%c ${m}`, 'color:white;background:black;', '')
+    }
+}
+
+self.db = {
+    read: (key, config) => {
+        if (!config) { config = { type: "text" } }
+        return new Promise((resolve, reject) => {
+            caches.open(CACHE_NAME).then(cache => {
+                cache.match(new Request(`https://LOCALCACHE/${encodeURIComponent(key)}`)).then(function (res) {
+                    if (!res) resolve(null)
+                    res.text().then(text => resolve(text))
+                }).catch(() => {
+                    resolve(null)
+                })
+            })
+        })
+    },
+    write: (key, value) => {
+        return new Promise((resolve, reject) => {
+            caches.open(CACHE_NAME).then(function (cache) {
+                cache.put(new Request(`https://LOCALCACHE/${encodeURIComponent(key)}`), new Response(value));
+                resolve()
+            }).catch(() => {
+                reject()
+            })
+        })
+    }
+}
+
+const generate_uuid = () => {
+    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+        return v.toString(16);
+    });
+}
+
+self.addEventListener('activate', async function (installEvent) {
+    self.clients.claim()
+})
+
+self.addEventListener('install', async function (installEvent) {
+    self.skipWaiting();
+
+    installEvent.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(async function (cache) {
+                if (!await db.read('uuid')) {
+                    await db.write('uuid', generate_uuid())
+                }
+                return cache.addAll(cachelist);
+            })
+    );
+});
+
+const handleerr = async (req, msg) => {
+    return new Response(`<h1>MuggledyBlogCacheHelper Error</h1>
+    <b>${msg}</b>`, { headers: { "content-type": "text/html; charset=utf-8" } })
+}
+
+//每一项譬如gh项中的所有cdn必须能够相互转换，如果不能，则需要特殊处理
+//unpkg_version项特别用于_config.butterfly.yml中诸如vue, jquery, pjax等unpkg cdn资源的加速，尽量确保这些重量级js依赖库能够最先最快地加载完毕
+let cdn = {
+    "gh": {
+        statically: {
+            "url": "https://cdn.statically.io/gh"
+        },
+        jsdelivr: {
+            "url": "https://cdn.jsdelivr.net/gh"
+        }, //或许替换为https://fastly.jsdelivr.net/gh会更稳定些
+        githack: {
+            "url": "https://rawcdn.githack.com"
+        } //直接从GitHub，Bitbucket或GitLab提供原始文件(http://raw.githack.com/)，用法类似staticaly(但不支持min最小化)，see https://www.31du.cn/blog/jsdelivr.html
+    },
+    "combine": {
+        jsdelivr: {
+            "url": "https://cdn.jsdelivr.net/combine"
+        }
+    },
+    "unpkg_version": {
+        unpkg: {
+            "url": "https://unpkg.com"
+        },
+        jsdelivr: {
+            "url": "https://cdn.jsdelivr.net/npm"
+        },
+        eleme: {
+            "url": "https://npm.elemecdn.com"
+        },
+        jjz: {
+            "url": "https://jsd.onmicrosoft.cn/npm"
+        },
+        sourceg: {
+            "url": "https://npm.sourcegcdn.com"
+        },
+        cloudflare: {
+            "url": "https://cdnjs.cloudflare.com/ajax/libs"
+        }, //cloudflare和上面五个（前五个可直接转换）需要特殊处理才能互转
+        bootcss: {
+            "url": "https://cdn.bootcss.com"
+        } //bootcss和cloudflare直接转换
+    },
+    "npm": {
+        eleme: {
+            "url": "https://npm.elemecdn.com"
+        },
+        jsdelivr: {
+            "url": "https://cdn.jsdelivr.net/npm"
+        },
+        jjz: {
+            "url": "https://jsd.onmicrosoft.cn/npm"
+        },
+        jjz_unpkg: {
+            "url": "https://npkg.onmicrosoft.cn"
+        },
+        sourceg: {
+            "url": "https://npm.sourcegcdn.com"
+        },
+        GNT: {
+            "url": "https://cdn.bilicdn.tk/npm"
+        },
+    }
+}
+
+const handle = async function (req) {
+    set_blog_config(await db.read('blog_version') || blog_default_version)
+    const reqdata = await req.clone()
+    const urlStr = req.url
+    let urlObj = new URL(urlStr)
+    const uuid = await db.read('uuid')
+    const pathname = urlObj.href.substr(urlObj.origin.length)
+    const domain = (urlStr.split('/'))[2]
+    if (pathname.match(/\/sw\.js/g)) { return fetch(req) }
+    const query = q => urlObj.searchParams.get(q)
+    let urls = []
+    let url_tmp = null
+    let jsdelivr_repo = null //unpkg_repo
+    let staticaly_repo = null //cloudflare_repo
+    let temp = null
+    let msg = JSON.parse(await db.read('msg')) || (async () => { await db.write('msg', '[]'); return '[]' })()
+    const nqurl = urlStr.split('?')[0]
+    const nqreq = new Request(nqurl)
+    const cache_delete = async (url) => {
+        const cache = await caches.open(CACHE_NAME)
+        await cache.delete(url)
+    }
+    if (query('nosw') == 'true') {
+        return fetch(req)
+    }
+    if (query('delete') == 'true') {
+        cache_delete(nqreq);
+        msg.push(
+            {
+                "name": "文件已删除",
+                "time": new Date(),
+                "info": `已删除${nqurl}`
+            }
+        )
+        await db.write('msg', JSON.stringify(msg))
+        return new Response(JSON.stringify({ ok: 1 }))
+    }
+    //update cache
+    if (query('forceupdate') == 'true') {
+        msg.push(
+            {
+                "name": "文件已强制更新",
+                "time": new Date(),
+                "info": `已更新${nqurl}`
+            }
+        )
+        await db.write('msg', JSON.stringify(msg))
+        await fetch(req).then(function (res) {
+            return caches.open(CACHE_NAME).then(function (cache) {
+                cache_delete(nqreq);
+                cache.put(req, res.clone());
+                return res;
+            });
+        });
+        return new Response(JSON.stringify({ ok: 1 }))
+    }
+    //intercept cdn link request
+    for (let i in cdn) {
+        for (let j in cdn[i]) {
+            if (domain == cdn[i][j].url.split('https://')[1].split('/')[0] && urlStr.match(cdn[i][j].url)) {
+                urls = []
+                for (let k in cdn[i]) {
+                    url_tmp = urlStr.replace(cdn[i][j].url, cdn[i][k].url)
+                    /* demo: https://cdn.statically.io/gh/celestezj/pangu.js/master/dist/browser/pangu.min.js ->
+                       https://cdn.jsdelivr.net/gh/celestezj/pangu.js/master/dist/browser/pangu.min.js is invalid 
+                       demo: https://cdn.jsdelivr.net/gh/celestezj/ImageHosting/img/20210207093620.ico is ok
+                       but when convert to https://cdn.statically.io/gh/celestezj/ImageHosting/img/20210207093620.ico
+                       it will be invalid
+                       因此两者的相互转换需要特殊处理
+                    */
+                    if (i === "gh") {
+                        /*convert from staticaly/githack to jsdelivr*/
+                        if (url_tmp.match("https://cdn.jsdelivr.net/gh") && !urlStr.match("https://cdn.jsdelivr.net/gh")) {
+                            jsdelivr_repo = url_tmp.split("https://")[1].split("/")
+                            if (jsdelivr_repo[3].match("@") === null) { //this if is no needed
+                                url_tmp = url_tmp.replace(`${jsdelivr_repo[2]}/${jsdelivr_repo[3]}/`, `${jsdelivr_repo[2]}/${jsdelivr_repo[3]}@`)
+                            }
+                        } else if (url_tmp.match("https://cdn.statically.io/gh") && urlStr.match("https://cdn.jsdelivr.net/gh")) { /*convert from jsdelivr to staticaly*/
+                            staticaly_repo = url_tmp.split("https://")[1].split("/")
+                            if (staticaly_repo[3].match("@") !== null) {
+                                url_tmp = url_tmp.replace(`${staticaly_repo[2]}/${staticaly_repo[3]}/`, `${staticaly_repo[2]}/${staticaly_repo[3].split("@").join("/")}/`)
+                            } else {
+                                url_tmp = url_tmp.replace(`${staticaly_repo[2]}/${staticaly_repo[3]}/`, `${staticaly_repo[2]}/${staticaly_repo[3]}/master/`) //假定缺省分支名为master，但不一定正确
+                            }
+                        } else if (url_tmp.match("https://rawcdn.githack.com") && !urlStr.match("https://rawcdn.githack.com")) {
+                            staticaly_repo = url_tmp.split("https://")[1].split("/")
+                            if (urlStr.match("https://cdn.jsdelivr.net/gh")) { /*convert from jsdelivr to githack*/
+                                if (staticaly_repo[2].match("@") !== null) {
+                                    url_tmp = url_tmp.replace(`${staticaly_repo[1]}/${staticaly_repo[2]}/`, `${staticaly_repo[1]}/${staticaly_repo[2].split("@").join("/")}/`)
+                                } else {
+                                    url_tmp = url_tmp.replace(`${staticaly_repo[1]}/${staticaly_repo[2]}/`, `${staticaly_repo[1]}/${staticaly_repo[2]}/master/`)
+                                }
+                            }
+                            /*https://rawcdn.githack.com/celestezj/ImageHosting/master/data/git_calendar/gitcalendar.min.js is invalid
+                              but https://rawcdn.githack.com/celestezj/ImageHosting/master/data/swiper/swiper.min.css is valid*/
+                            if ((staticaly_repo[staticaly_repo.length-1].endsWith(".min.js") || staticaly_repo[staticaly_repo.length-1].endsWith(".min.css")) && 
+                                !(staticaly_repo[1] === 'celestezj' && 
+                                (/\b(swiper.min.css|swiper.min.js|swiper_init.min.js|APlayer.min.js|APlayer.min.css|all.min.css|font-awesome-animation.min.css|buttons.min.css|Valine.min.js|activate-power-mode.min.js)\b/)
+                                    .test(staticaly_repo[staticaly_repo.length-1]))) {
+                                url_tmp = url_tmp.replace(/(.*).min.(js|css)/, '$1.$2')
+                            }
+                        }
+                    } else if (i === "unpkg_version") {
+                        /* demo: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.2/katex.min.css ->
+                           https://unpkg.com/katex@0.15.2/dist/katex.min.css */
+                        if (url_tmp.match("https://cdnjs.cloudflare.com/ajax/libs") && !(urlStr.match("https://cdnjs.cloudflare.com/ajax/libs") 
+                                    || urlStr.match("https://cdn.bootcss.com"))) { /*convert from unpkg/eleme/etc. to cloudflare*/
+                            staticaly_repo = url_tmp.split("https://")[1].split("/")
+                            if (staticaly_repo[3].startsWith("@")) {
+                                /*https://unpkg.com/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js(urlStr) -> https://cdnjs.cloudflare.com/ajax/libs/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js(url_tmp)
+                                 is invalid, we need to delete @fancyapps/ firstly*/
+                                url_tmp = url_tmp.replace(`${staticaly_repo[3]}/`, "")
+                                staticaly_repo = url_tmp.split("https://")[1].split("/")
+                            }
+                            if (staticaly_repo[3].match("@") !== null) {
+                                temp = url_tmp.replace(`${staticaly_repo[2]}/${staticaly_repo[3]}/${staticaly_repo[3].split("@")[0] === "typed.js" ? "lib" : "dist"}/`, 
+                                    `${staticaly_repo[2]}/${staticaly_repo[3].split("@").join("/")}/`)
+                                if (temp === url_tmp) {
+                                    /*https://unpkg.com/blueimp-md5@2.17.0/js/md5.min.js -> https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5@2.17.0/js/md5.min.js is invalid, this case cannot be converted in reverse*/
+                                    url_tmp = url_tmp.replace(`${staticaly_repo[2]}/${staticaly_repo[3]}/`, `${staticaly_repo[2]}/${staticaly_repo[3].split("@").join("/")}/`)
+                                } else { url_tmp = temp }
+                            } else { continue }
+                        } else if (url_tmp.match("https://cdn.bootcss.com") && !(urlStr.match("https://cdnjs.cloudflare.com/ajax/libs") 
+                                || urlStr.match("https://cdn.bootcss.com"))) { /*convert from unpkg/eleme/etc. to bootcss*/
+                            staticaly_repo = url_tmp.split("https://")[1].split("/")
+                            if (staticaly_repo[1].startsWith("@")) {
+                                url_tmp = url_tmp.replace(`${staticaly_repo[1]}/`, "")
+                                staticaly_repo = url_tmp.split("https://")[1].split("/")
+                            }
+                            if (staticaly_repo[1].match("@") !== null) {
+                                temp = url_tmp.replace(`${staticaly_repo[0]}/${staticaly_repo[1]}/${staticaly_repo[1].split("@")[0] === "typed.js" ? "lib" : "dist"}/`,
+                                    `${staticaly_repo[0]}/${staticaly_repo[1].split("@").join("/")}/`)
+                                if (temp === url_tmp) {
+                                    url_tmp = url_tmp.replace(`${staticaly_repo[0]}/${staticaly_repo[1]}/`, `${staticaly_repo[0]}/${staticaly_repo[1].split("@").join("/")}/`)
+                                } else { url_tmp = temp }
+                            } else { continue }
+                        } else if (!(url_tmp.match("https://cdnjs.cloudflare.com/ajax/libs") || url_tmp.match("https://cdn.bootcss.com")) 
+                                && (urlStr.match("https://cdnjs.cloudflare.com/ajax/libs") || urlStr.match("https://cdn.bootcss.com"))) { /*convert from cloudflare/bootcss to unpkg/eleme/etc.*/
+                            jsdelivr_repo = url_tmp.split("https://")[1].split("/")
+                            if (url_tmp.match("https://cdn.jsdelivr.net/npm") || url_tmp.match("https://jsd.onmicrosoft.cn/npm")) {
+                                url_tmp = url_tmp.replace(`${jsdelivr_repo[2]}/${jsdelivr_repo[3]}/`, 
+                                    `${jsdelivr_repo[2].toLowerCase()}@${jsdelivr_repo[3]}/${jsdelivr_repo[2] === "typed.js" ? "lib" : "dist"}/`) //大多数转换后unpkg路径都是在dist/下，也有些不是（type.js就在lib/路径），只能遇到逐一加规则区分
+                            } else {
+                                url_tmp = url_tmp.replace(`${jsdelivr_repo[1]}/${jsdelivr_repo[2]}/`, 
+                                    `${jsdelivr_repo[1].toLowerCase()}@${jsdelivr_repo[2]}/${jsdelivr_repo[1] === "typed.js" ? "lib" : "dist"}/`)        
+                            }
+                        }
+                    }
+                    urls.push(url_tmp)
+                }
+                if (!await privconf.read('cache')) return lfetch(urls, urlStr)
+                return caches.match(req).then(function (resp) {
+                    return resp || lfetch(urls, urlStr).then(function (res) {
+                        return caches.open(CACHE_NAME).then(function (cache) {
+                            cache.put(req, res.clone());
+                            return res;
+                        });
+                    });
+                })
+            }
+        }
+    }
+    for (var i in blog.origin) {
+        if (domain.split(":")[0] == blog.origin[i].split(":")[0]) {
+            if (blog.local) { return fetch(req) }
+            setTimeout(async () => {
+                await set_newest_blogver()
+            }, 30 * 1000);
+            urls = []
+            for (let k in blog.plus) {
+                urls.push(`https://${blog.plus[k]}` + fullpath(pathname))
+            }
+            for (let k in blog.npmmirror) {
+                urls.push(blog.npmmirror[k] + fullpath(pathname))
+            }
+            const generate_blog_html = async (res) => {
+                return new Response(await res.arrayBuffer(), {
+                    headers: {
+                        'Content-Type': 'text/html;charset=utf-8'
+                    },
+                    status: res.status,
+                    statusText: res.statusText
+                })
+            }
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    caches.match(req).then(function (resp) {
+                        if (!!resp) {
+                            cons.s(`Cache Hited! | Origin:${urlStr}`)
+                            setTimeout(() => {
+                                resolve(resp)
+                            }, 200);
+                            setTimeout(() => {
+                                lfetch(urls, urlStr).then(async function (res) {
+                                    return caches.open(CACHE_NAME).then(async function (cache) {
+                                        cache.delete(req);
+                                        cons.s(`Cache Updated! | Origin:${urlStr}`)
+                                        if (fullpath(pathname).match(/\.html$/g)) {
+                                            const NewRes = await generate_blog_html(res)
+                                            cache.put(req, NewRes.clone());
+                                            resolve(NewRes)
+                                        } else {
+                                            cache.put(req, res.clone());
+                                            resolve(res)
+                                        }
+                                    });
+                                });
+                            }, 0);
+                        } else {
+                            cons.w(`Cache Missed! | Origin:${urlStr}`)
+                            setTimeout(() => {
+                                lfetch(urls, urlStr).then(async function (res) {
+                                    return caches.open(CACHE_NAME).then(async function (cache) {
+                                        if (fullpath(pathname).match(/\.html$/g)) {
+                                            const NewRes = await generate_blog_html(res)
+                                            cache.put(req, NewRes.clone());
+                                            resolve(NewRes)
+                                        } else {
+                                            cache.put(req, res.clone());
+                                            resolve(res)
+                                        }
+                                    });
+                                }).catch(function (err) {
+                                    resolve(caches.match(new Request('/404.html')))
+                                })
+                            }, 0);
+                            setTimeout(() => {
+                                resolve(caches.match(new Request('/404.html')))
+                            }, 5000);
+                        }
+                    })
+                }, 0);
+            })
+        }
+    }
+    return fetch(req)
+}
+
+const lfetch = async (urls, url) => {
+    cons.i(`LFetch Handled! | Mirrors Count:${urls.length} | Origin: ${url}`)
+    console.log(urls)
+    const t1 = new Date().getTime()
+    const uuid = await db.read('uuid')
+    if (!await privconf.read('mirror')) {
+        return fetch(url)
+    }
+    if (!Promise.any) {
+        Promise.any = function (promises) {
+            return new Promise((resolve, reject) => {
+                promises = Array.isArray(promises) ? promises : []
+                let len = promises.length
+                let errs = []
+                if (len === 0) return reject(new AggregateError('All promises were rejected'))
+                promises.forEach((promise) => {
+                    promise.then(value => {
+                        resolve(value)
+                    }, err => {
+                        len--
+                        errs.push(err)
+                        if (len === 0) {
+                            reject(new AggregateError(errs))
+                        }
+                    })
+                })
+            })
+        }
+    }
+    let controller = new AbortController();
+    const PauseProgress = async (res) => {
+        return new Response(await (res).arrayBuffer(), { status: res.status, headers: res.headers });
+    };
+    let results = Promise.any(urls.map(async urls => {
+        return new Promise(async (resolve, reject) => {
+            fetch(urls, {
+                signal: controller.signal
+            })
+                .then(PauseProgress)
+                .then(async res => {
+                    const resn = res.clone()
+                    if (resn.status == 200) {
+                        setTimeout(async () => {
+                            try {
+                                db.write('HIT_HOT', await (async () => {
+                                    const hit = await (async () => { try { return JSON.parse(await db.read('HIT_HOT')) || { site: {}, static: {} } } catch (e) { return { site: {}, static: {} } } })()
+                                    const domain = urls.split('/')[2]
+                                    hit[domain] = hit[domain] ? hit[domain] + 1 : 1
+                                    if (blog.plus.indexOf(domain) > -1) {
+                                        hit.site[domain] = hit.site[domain] ? hit.site[domain] + 1 : 1
+                                    } else {
+                                        hit.static[domain] = hit.static[domain] ? hit.static[domain] + 1 : 1
+                                    }
+                                    return JSON.stringify(hit)
+                                })());
+                                db.write('HIT_HOT_SIZE', await (async () => {
+                                    const hit = await (async () => { try { return JSON.parse(await db.read('HIT_HOT_SIZE')) || { site: {}, static: {} } } catch (e) { return { site: {}, static: {} } } })()
+                                    const domain = urls.split('/')[2]
+                                    hit[domain] = hit[domain] ? hit[domain] + Number(res.headers.get('Content-Length')) : Number(res.headers.get('Content-Length'))
+                                    if (blog.plus.indexOf(domain) > -1) {
+                                        hit.site[domain] = hit.site[domain] ? hit.site[domain] + Number(res.headers.get('Content-Length')) : Number(res.headers.get('Content-Length'))
+                                    } else {
+                                        hit.static[domain] = hit.static[domain] ? hit.static[domain] + Number(res.headers.get('Content-Length')) : Number(res.headers.get('Content-Length'))
+                                    }
+                                    return JSON.stringify(hit)
+                                })())
+                            } catch (n) { }
+                        }, 0);
+                        controller.abort();
+                        cons.s(`LFetch Success! | Time: ${new Date().getTime() - t1}ms | Origin: ${url} `)
+                        resolve(resn)
+                    } else {
+                        reject(null)
+                    }
+                }).catch((e) => {
+                    if (String(e).match('The user aborted a request') || String(e).match('Failed to fetch')) {
+                        //console.log(e)
+                    } else if (String(e).match('been blocked by CORS policy')) {
+                        cons.e(`LFetch Blocked by CORS policy! | Origin: ${url}`)
+                    }
+                    else {
+                        cons.e(`LFetch Error! | Origin: ${url} | Resean: ${e}`)
+                    }
+                    reject(null)
+                })
+        }
+        )
+    }
+    )).then(res => { return res }).catch(() => { return null })
+    return results
+}
+
+const privconf = {
+    read: async (key) => {
+        try {
+            const priv_config = JSON.parse(await db.read('priv_config') || '{}')
+            return typeof priv_config[key] === 'boolean' ? priv_config[key] : (key == "globalcompute" ? false : true)
+        } catch (e) {
+            return true
+        }
+    },
+    change: async (key) => {
+        const priv_config = JSON.parse(await db.read('priv_config') || '{}')
+        if (typeof priv_config[key] != 'boolean') priv_config[key] = true
+        priv_config[key] = !priv_config[key]
+        await db.write('priv_config', JSON.stringify(priv_config))
+    }
+}
+
+const fullpath = (path) => {
+    path = path.split('?')[0].split('#')[0]
+    if (path.match(/\/$/)) {
+        path += 'index'
+    }
+    if (!path.match(/\.[a-zA-Z]+$/)) {
+        path += '.html'
+    }
+    return path
+}
+
+const set_blog_config = (version) => {
+    self.packagename = "muggledy-blog-html"
+    self.blogversion = version
+    self.blog = {
+        local: 0, //1 for hexo local debug, when deploy to internet, must set to 0
+        origin: [
+            "muggledy.top",
+            "muggledy.github.io",
+            "localhost:4000",
+            "127.0.0.1:4000"
+        ],
+        plus: [
+            "vercel.muggledy.top"
+        ], //plus站点中的页面除了cdn链接，都不会被sw拦截并行请求，勉强可以认为plus站点不受sw影响
+        npmmirror: [
+            `https://unpkg.com/${packagename}@${blogversion}`,
+            `https://npm.elemecdn.com/${packagename}@${blogversion}`,
+            `https://cdn.jsdelivr.net/npm/${packagename}@${blogversion}`,
+            `https://cdn-jsd.pigax.cn/npm/${packagename}@${blogversion}`,
+            `https://fastly.jsdelivr.net/npm/${packagename}@${blogversion}`,
+            `https://testingcf.jsdelivr.net/npm/${packagename}@${blogversion}`,
+            `https://originfastly.jsdelivr.net/npm/${packagename}@${blogversion}`,
+            `https://gcore.jsdelivr.net/npm/${packagename}@${blogversion}`,
+            `https://quantil.jsdelivr.net/npm/${packagename}@${blogversion}`
+        ] //https://91ai.net/thread-975880-1-1.html
+    };
+}
+
+const set_newest_blogver = async () => {
+    self.packagename = "muggledy-blog-html"
+    const mirror = [
+        `https://registry.npmmirror.com/${packagename}/latest`,
+        `https://registry.npmjs.org/${packagename}/latest`,
+        `https://mirrors.cloud.tencent.com/npm/${packagename}/latest`
+    ]
+    //cons.i(`Searching For The Newest Version Of Blog...`)
+    return lfetch(mirror, mirror[0])
+        .then(res => res.json())
+        .then(async res => {
+            if (!res.version) throw ('No Version Found!')
+            const gVer = choose_the_newest_version(res.version, await db.read('blog_version') || blog_default_version)
+            cons.d(`Newest Version: ${res.version} ; Local Version: ${await db.read('blog_version')} | Update answer: ${gVer}`)
+            //cons.s(`Update Blog Version To ${gVer}`);
+            await db.write('blog_version', gVer)
+            set_blog_config(gVer)
+        })
+        .catch(e => {
+            cons.e(`Get Blog Newest Version Erorr!Reseon:${e}`);
+            set_blog_config(blog_default_version)
+        })
+}
+
+const choose_the_newest_version = (g1, g2) => {
+    const spliter = (v) => {
+        const fpart = v.split('.')[0]
+        return [parseInt(fpart), v.replace(fpart + '.', '')]
+    }
+    const compare_npmversion = (v1, v2) => {
+        const [n1, s1] = spliter(v1)
+        const [n2, s2] = spliter(v2)
+        //cons.d(`n1:${n1} s1:${s1} n2:${n2} s2:${s2}`)
+        if (n1 > n2) {
+            return g1
+        } else if (n1 < n2) {
+            return g2
+        } else if (!s1.match(/\./) && !s2.match(/\./)) {
+            if (parseInt(s1) > parseInt(s2)) return g1
+            else return g2
+        } else {
+            return compare_npmversion(s1, s2)
+        }
+    }
+    return compare_npmversion(g1, g2)
+}
+
+setInterval(async () => {
+    //cons.i('Trying to fetch the newest blog version...')
+    await set_newest_blogver()
+}, 120 * 1000);
+setTimeout(async () => {
+    await set_newest_blogver()
+}, 1000);
+
+self.addEventListener('fetch', async event => {
+    try {
+        event.respondWith(handle(event.request))
+    } catch (msg) {
+        event.respondWith(handleerr(event.request, msg))
+    }
+});
+
+//see https://blog.cyfan.top/p/d3c51290.html
+//https://kmar.top/posts/73014407/
