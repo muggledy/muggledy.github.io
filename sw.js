@@ -1,7 +1,7 @@
 const CACHE_NAME = 'MuggledyBlogCacheHelper';
 let cachelist = ["/404.html"];
 
-const blog_default_version = '1.0.22'
+const blog_default_version = '1.0.24'
 
 self.cons = {
     s: (m) => {
