@@ -1,1 +1,1 @@
-{"name":"muggledy-blog-html","version":"1.0.26","description":"muggledy's hexo blog(html file)","main":"index.js","directories":{"lib":"lib"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":"muggledy","license":"ISC","dependencies":{"node-fetch":"^2.7.0"}}
+{"name":"muggledy-blog-html","version":"1.0.27","description":"muggledy's hexo blog(html file)","main":"index.js","directories":{"lib":"lib"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1"},"author":"muggledy","license":"ISC","dependencies":{"node-fetch":"^2.7.0"}}
