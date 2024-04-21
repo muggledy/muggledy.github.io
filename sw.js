@@ -1,7 +1,7 @@
 const CACHE_NAME = 'MuggledyBlogCacheHelper';
 let cachelist = ["/404.html"];
 
-const blog_default_version = '1.0.26'
+const blog_default_version = '1.0.27'
 
 self.cons = {
     s: (m) => {
@@ -381,7 +381,7 @@ const handle = async function (req) {
 
 const lfetch = async (urls, url) => {
     cons.i(`LFetch Handled! | Mirrors Count:${urls.length} | Origin: ${url}`)
-    console.log(urls)
+    //console.log(urls)
     const t1 = new Date().getTime()
     const uuid = await db.read('uuid')
     if (!await privconf.read('mirror')) {
