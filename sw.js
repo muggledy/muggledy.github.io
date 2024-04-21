@@ -5,19 +5,19 @@ const blog_default_version = '1.0.27'
 
 self.cons = {
     s: (m) => {
-        console.log(`%c[SUCCESS]%c ${m}`, 'color:white;background:green;', '')
+        //console.log(`%c[SUCCESS]%c ${m}`, 'color:white;background:green;', '')
     },
     w: (m) => {
-        console.log(`%c[WARNING]%c ${m}`, 'color:brown;background:yellow;', '')
+        //console.log(`%c[WARNING]%c ${m}`, 'color:brown;background:yellow;', '')
     },
     i: (m) => {
-        console.log(`%c[INFO]%c ${m}`, 'color:white;background:blue;', '')
+        //console.log(`%c[INFO]%c ${m}`, 'color:white;background:blue;', '')
     },
     e: (m) => {
-        console.log(`%c[ERROR]%c ${m}`, 'color:white;background:red;', '')
+        //console.log(`%c[ERROR]%c ${m}`, 'color:white;background:red;', '')
     },
     d: (m) => {
-        console.log(`%c[DEBUG]%c ${m}`, 'color:white;background:black;', '')
+        //console.log(`%c[DEBUG]%c ${m}`, 'color:white;background:black;', '')
     }
 }
 
@@ -530,9 +530,9 @@ const set_blog_config = (version) => {
 const set_newest_blogver = async () => {
     self.packagename = "muggledy-blog-html"
     const mirror = [
-        `https://registry.npmmirror.com/${packagename}/latest`,
         `https://registry.npmjs.org/${packagename}/latest`,
-        `https://mirrors.cloud.tencent.com/npm/${packagename}/latest`
+        `https://mirrors.cloud.tencent.com/npm/${packagename}/latest`,
+        //`https://registry.npmmirror.com/${packagename}/latest` //the latest version get from mirrorsite may be old
     ]
     //cons.i(`Searching For The Newest Version Of Blog...`)
     return lfetch(mirror, mirror[0])
