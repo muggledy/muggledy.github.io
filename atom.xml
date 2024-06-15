@@ -120,6 +120,27 @@
   </entry>
   
   <entry>
+    <title>Numpy基础教程</title>
+    <link href="https://muggledy.top/posts/10423/"/>
+    <id>https://muggledy.top/posts/10423/</id>
+    <published>2021-04-21T12:25:45.000Z</published>
+    <updated>2024-06-15T09:09:31.100Z</updated>
+    
+    
+    <summary type="html">NumPy是Python语言的一个扩展程序库，支持大量的维度数组与矩阵运算，此外也针对数组运算提供大量的数学函数库。在机器学习和图像处理方向，使用numpy替代原生python计算能够带来极大的速度提升...</summary>
+    
+    
+    
+    <category term="计算机基础" scheme="https://muggledy.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/"/>
+    
+    <category term="编程语言" scheme="https://muggledy.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+    
+    <category term="Python" scheme="https://muggledy.top/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Butterfly魔改部分记录</title>
     <link href="https://muggledy.top/posts/65257/"/>
     <id>https://muggledy.top/posts/65257/</id>
