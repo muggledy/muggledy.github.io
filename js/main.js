@@ -70,6 +70,45 @@ function fetch_v2(input, init) {
 function reshowhideblock(ele){
     ele.parentNode.previousElementSibling.classList.remove("open");
 }
+function debounce(fn, delay) { //函数消抖（https://blog.csdn.net/qq_30436011/article/details/123252713）
+  var ctx;
+  var args;
+  var timer = null;
+  var later = function () {
+    fn.apply(ctx, args);
+    // 当事件真正执行后，清空定时器
+    timer = null;
+  };
+  return function () {
+    ctx = this;
+    args = arguments;
+    // 当持续触发事件时，若发现事件触发的定时器已设置时，则清除之前的定时器
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
+    // 重新设置事件触发的定时器
+    timer = setTimeout(later, delay);
+  };
+}
+function resize_plotly_delay_500ms() {
+    if ((typeof window.plotly_js_imported !== 'undefined') && window.plotly_js_imported && (typeof Plotly !== 'undefined')) {
+        setTimeout(() => {
+          const plotlydivs = Array.from(document.getElementsByClassName('dyplotlydiv'));
+          if (plotlydivs.length > 0) {
+              plotlydivs.forEach(function(plotlydiv) {
+                  if (plotlydiv.tagName.toLowerCase() === 'div') {//console.log(plotlydiv);
+                      if (document.getElementById(plotlydiv.id)) {Plotly.update(plotlydiv.id, {}, { height: plotlydiv.clientHeight, width: plotlydiv.clientWidth });}
+                      setTimeout(() => {//console.log(plotlydiv);
+                        const _plotlydiv = plotlydiv;
+                        if (document.getElementById(_plotlydiv.id)) {Plotly.update(_plotlydiv.id, {}, { height: _plotlydiv.clientHeight, width: _plotlydiv.clientWidth });}
+                      }, 250)
+                  }
+              });
+          }
+        }, 10)
+      }
+}
 document.addEventListener('DOMContentLoaded', function () {
   const $blogName = document.getElementById('site-name')
   let blogNameWidth = $blogName && $blogName.offsetWidth
@@ -683,6 +722,7 @@ document.addEventListener('DOMContentLoaded', function () {
         ? saveToLocal.set('aside-status', 'show', 2)
         : saveToLocal.set('aside-status', 'hide', 2)
       $htmlDom.toggle('hide-aside')
+      //resize_plotly_delay_500ms(); //已经添加了onresize事件进行resize处理，此处就没必要重复处理了
     },
     toggleArticleDouble: () => { //由于文章双栏插件的实现是纯css的，因此关闭该功能只需要删除此css文件即可消除样式，再启用，就再引入即可，切换的方法确实很low，但是有效~
         var dyallcsslinks = document.querySelectorAll('link[rel=stylesheet]');
@@ -724,6 +764,8 @@ document.addEventListener('DOMContentLoaded', function () {
       // document.getElementById('font-text').innerText = newValue
     }
   }
+  //如果页面创建了plotly绘图，在页面尺寸变化时，plotly会监测并立即做resize，但是侧边栏显示或隐藏有一个延时动画，plotly无法立即获取最终的resize尺寸，导致resize不正确影响观感，因此此处额外监控，当侧边栏显隐时，延迟约500ms再次resize各个plotly绘图（https://community.plotly.com/t/how-to-make-plot-resize-based-on-event-in-webpage-containing-plot-div/26401/2）
+  window.addEventListener('resize', debounce(resize_plotly_delay_500ms, 200)); //为窗口resize事件添加消抖处理，在快速多次调整窗口大小时，只会在停止调整后的200毫秒后执行一次onResize函数，避免了频繁的无效操作
 
   if (document.getElementById('rightside')!=null) {
   document.getElementById('rightside').addEventListener('click', function (e) {
